@@ -4,128 +4,85 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products - Mokume Frames</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { 
-      font-family: Arial, sans-serif; 
-      margin: 0; 
-      background-color: #f7f5f0; 
-      color: #333; 
+    :root {
+      --primary: #8b5e34; 
+      --secondary: #b3875a;
+      --background: #f7f5f0;
+      --text: #333;
+      --accent: #d9c7b3;
     }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; background-color: var(--background); color: var(--text); }
+
     header { 
-      background: #8b5e34; 
+      background: var(--primary); 
       color: white; 
-      padding: 20px; 
-      text-align: center; 
-    }
-    nav { 
-      background: #b3875a; 
-      padding: 10px; 
-      text-align: center; 
-    }
-    nav a { 
-      color: white; 
-      text-decoration: none; 
-      margin: 0 15px; 
-      font-weight: bold; 
-    }
-    nav a:hover { 
-      text-decoration: underline; 
-    }
-    .section { 
       padding: 40px 20px; 
-      max-width: 900px; 
-      margin: 30px auto; 
-      background: white; 
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-      border-radius: 10px; 
-    }
-    .section h2 { 
-      color: #8b5e34; 
-      margin-bottom: 15px; 
-    }
-    .product { 
-      margin-bottom: 30px; 
-    }
-    .product p { 
-      font-size: 16px; 
-      line-height: 1.5; 
-    }
-    .product ul { 
-      list-style: disc; 
-      margin-left: 20px; 
-    }
-    footer { 
-      background: #8b5e34; 
-      color: white; 
       text-align: center; 
-      padding: 20px; 
-      margin-top: 40px; 
+    }
+    header h1 { font-size: 3em; margin-bottom: 10px; }
+    header p { font-size: 1.2em; }
+
+    nav {
+      background: var(--secondary);
+      text-align: center;
+      padding: 15px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: 0.3s;
+    }
+    nav a:hover { color: var(--accent); }
+
+    .section {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    .card h2 { color: var(--primary); margin-bottom: 20px; text-align: center; }
+    .card p { line-height: 1.6; font-size: 1.1em; margin-bottom: 15px; }
+    .card ul { list-style: disc; margin-left: 20px; font-size: 1em; }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+      margin-top: 50px;
+      font-size: 0.9em;
+    }
+
+    @media(max-width:600px){
+      header h1 { font-size: 2em; }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Our Products</h1>
     <p>Handcrafted Frames Made With Care</p>
-  </header>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products.html">Products</a>
-    <a href="commission.html">Commission</a>
-  </nav>
-
-  <section class="section">
-    <div class="product">
-      <h2>Picture Frames</h2>
-      <p>Handcrafted wooden picture frames perfect for displaying your cherished memories.</p>
-      <p><strong>Available Materials:</strong></p>
-      <ul>
-        <li>Pine</li>
-        <li>Walnut</li>
-        <li>Oak</li>
-      </ul>
-      <p><strong>Frame Sizes:</strong></p>
-      <ul>
-        <li>4x6 in</li>
-        <li>5x7 in</li>
-        <li>8x10 in</li>
-        <li>8.5x11 in</li>
-        <li>9x12 in</li>
-        <li>11x14 in</li>
-        <li>12x16 in</li>
-        <li>16x20 in</li>
-        <li>18x24 in</li>
-        <li>20x24 in</li>
-      </ul>
-    </div>
-
-    <div class="product">
-      <h2>Canvas Frames</h2>
-      <p>Canvas frames ideal for artwork, posters, and decorative pieces.</p>
-      <p><strong>Available Materials:</strong></p>
-      <ul>
-        <li>Pine</li>
-        <li>Walnut</li>
-        <li>Oak</li>
-      </ul>
-      <p><strong>Frame Sizes:</strong></p>
-      <ul>
-        <li>8x10 in</li>
-        <li>9x12 in</li>
-        <li>11x14 in</li>
-        <li>12x16 in</li>
-        <li>16x20 in</li>
-        <li>18x24 in</li>
-        <li>20x24 in</li>
-        <li>20x30 in</li>
-        <li>24x36 in</li>
-        <li>30x40 in</li>
-      </ul>
-    </div>
-  </section>
-
-  <footer>© 2025 Mokume Frames</footer>
-</body>
-</html>
