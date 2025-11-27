@@ -4,33 +4,129 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mokume Frames - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background-color: #f7f5f0; color: #333; }
-    header { background: #8b5e34; color: white; padding: 20px; text-align: center; }
-    nav { background: #b3875a; padding: 10px; text-align: center; }
-    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
-    .hero { padding: 60px 20px; text-align: center; }
-    .hero img { width: 200px; }
-    .section { padding: 40px 20px; max-width: 900px; margin: auto; }
-    footer { background: #8b5e34; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    :root {
+      --primary: #8b5e34; 
+      --secondary: #b3875a;
+      --background: #f7f5f0;
+      --text: #333;
+      --accent: #d9c7b3;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; background-color: var(--background); color: var(--text); }
+    
+    header { 
+      background: var(--primary); 
+      color: white; 
+      padding: 40px 20px; 
+      text-align: center; 
+      position: relative;
+    }
+    header h1 { font-size: 3em; margin-bottom: 10px; }
+    header p { font-size: 1.2em; }
+
+    nav {
+      background: var(--secondary);
+      text-align: center;
+      padding: 15px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: 0.3s;
+    }
+    nav a:hover { color: var(--accent); }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: url('hero-bg.jpg') center/cover no-repeat;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    }
+    .hero img { width: 150px; margin-bottom: 20px; }
+    .hero h2 { font-size: 2.5em; margin-bottom: 10px; }
+    .hero p { font-size: 1.2em; }
+
+    .section { 
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    .card h3 { color: var(--primary); margin-bottom: 15px; }
+    .card p { line-height: 1.6; }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+      margin-top: 50px;
+      font-size: 0.9em;
+    }
+
+    @media(max-width:600px){
+      header h1 { font-size: 2em; }
+      .hero h2 { font-size: 1.8em; }
+    }
   </style>
 </head>
 <body>
+
   <header>
+    <img src="logo.png" alt="Mokume Frames Logo">
     <h1>Mokume Frames</h1>
-    <p>Handcrafted Picture Frames & Canvas Frames</p>
+    <p>Handcrafted Picture & Canvas Frames</p>
   </header>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="products.html">Products</a>
-    <a href="commission.html">Commission</a>
+    <a href="order.html">Order a Frame</a>
   </nav>
+
   <section class="hero">
-    <img src="logo.png" alt="Mokume Frames Logo" />
     <h2>Beautiful Frames, Handmade With Care</h2>
-    <p>Custom picture frames and canvas frames.</p>
+    <p>Custom frames crafted from Pine, Walnut, and Oak for your cherished memories and artwork</p>
   </section>
-  <footer>© 2025 Mokume Frames</footer>
+
+  <section class="section">
+    <h2 style="text-align:center; margin-bottom:50px; color:var(--primary);">Our Products</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Picture Frames</h3>
+        <p>Handcrafted wooden picture frames available in Pine, Walnut, and Oak. Perfect for showcasing your memories with elegance and style.</p>
+      </div>
+      <div class="card">
+        <h3>Canvas Frames</h3>
+        <p>Premium wooden canvas frames ideal for artwork, posters, and decorative pieces. Each frame is meticulously crafted for a flawless finish.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2025 Mokume Frames | Only selling in Reading, England</footer>
+
 </body>
 </html>
