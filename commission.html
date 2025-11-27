@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Commission - Mokume Frames</title>
+  <title>Order a Frame - Mokume Frames</title>
   <style>
     body { 
       font-family: Arial, sans-serif; 
@@ -82,7 +82,7 @@
 </head>
 <body>
   <header>
-    <h1>Commission a Custom Frame</h1>
+    <h1>Order a Frame</h1>
     <p>Handcrafted just for you</p>
   </header>
 
@@ -90,12 +90,12 @@
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="products.html">Products</a>
-    <a href="commission.html">Commission</a>
+    <a href="commission.html">Order a Frame</a>
   </nav>
 
   <section class="section">
-    <h2>Custom Order Form</h2>
-    <p style="text-align:center;">Choose your wood type, frame type, and size for your custom frame.</p>
+    <h2>Order a Frame</h2>
+    <p style="text-align:center;">Choose your wood type, frame type, and frame size.</p>
     <form>
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" placeholder="Your full name" required>
@@ -130,36 +130,19 @@
 
   <script>
     const pictureSizes = [
-      "4x6 in",
-      "5x7 in",
-      "8x10 in",
-      "8.5x11 in",
-      "9x12 in",
-      "11x14 in",
-      "12x16 in",
-      "16x20 in",
-      "18x24 in",
-      "20x24 in"
+      "4x6 in", "5x7 in", "8x10 in", "8.5x11 in", "9x12 in",
+      "11x14 in", "12x16 in", "16x20 in", "18x24 in", "20x24 in"
     ];
 
     const canvasSizes = [
-      "8x10 in",
-      "9x12 in",
-      "11x14 in",
-      "12x16 in",
-      "16x20 in",
-      "18x24 in",
-      "20x24 in",
-      "20x30 in",
-      "24x36 in",
-      "30x40 in"
+      "8x10 in", "9x12 in", "11x14 in", "12x16 in", "16x20 in",
+      "18x24 in", "20x24 in", "20x30 in", "24x36 in", "30x40 in"
     ];
 
     function updateSizes() {
       const frameType = document.getElementById("frameType").value;
       const sizeSelect = document.getElementById("size");
 
-      // Clear previous options
       sizeSelect.innerHTML = '<option value="">--Select Size--</option>';
 
       let sizes = [];
