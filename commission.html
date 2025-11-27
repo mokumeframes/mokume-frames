@@ -95,13 +95,13 @@
 
   <section class="section">
     <h2>Custom Order Form</h2>
-    <p style="text-align:center;">Choose your wood type and frame size for your custom frame.</p>
+    <p style="text-align:center;">Choose your wood type, frame type, and size for your custom frame.</p>
     <form>
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" placeholder="Your full name">
+      <input type="text" id="name" name="name" placeholder="Your full name" required>
 
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Your email address">
+      <input type="email" id="email" name="email" placeholder="Your email address" required>
 
       <label for="wood">Wood Type:</label>
       <select id="wood" name="wood">
@@ -111,26 +111,15 @@
       </select>
 
       <label for="frameType">Frame Type:</label>
-      <select id="frameType" name="frameType">
-        <option>Picture Frame</option>
-        <option>Canvas Frame</option>
+      <select id="frameType" name="frameType" onchange="updateSizes()">
+        <option value="">--Select Frame Type--</option>
+        <option value="picture">Picture Frame</option>
+        <option value="canvas">Canvas Frame</option>
       </select>
 
       <label for="size">Frame Size:</label>
       <select id="size" name="size">
-        <!-- Picture frame sizes -->
-        <option class="picture">8x10 in (Picture Frame)</option>
-        <option class="picture">10x12 in (Picture Frame)</option>
-        <option class="picture">11x14 in (Picture Frame)</option>
-        <option class="picture">16x20 in (Picture Frame)</option>
-        <option class="picture">18x24 in (Picture Frame)</option>
-
-        <!-- Canvas frame sizes -->
-        <option class="canvas">12x16 in (Canvas Frame)</option>
-        <option class="canvas">16x20 in (Canvas Frame)</option>
-        <option class="canvas">18x24 in (Canvas Frame)</option>
-        <option class="canvas">20x30 in (Canvas Frame)</option>
-        <option class="canvas">24x36 in (Canvas Frame)</option>
+        <option value="">--Select Size--</option>
       </select>
 
       <button type="submit">Submit</button>
@@ -138,5 +127,52 @@
   </section>
 
   <footer>© 2025 Mokume Frames</footer>
+
+  <script>
+    const pictureSizes = [
+      "4x6 in",
+      "5x7 in",
+      "8x10 in",
+      "8.5x11 in",
+      "9x12 in",
+      "11x14 in",
+      "12x16 in",
+      "16x20 in",
+      "18x24 in",
+      "20x24 in"
+    ];
+
+    const canvasSizes = [
+      "8x10 in",
+      "9x12 in",
+      "11x14 in",
+      "12x16 in",
+      "16x20 in",
+      "18x24 in",
+      "20x24 in",
+      "20x30 in",
+      "24x36 in",
+      "30x40 in"
+    ];
+
+    function updateSizes() {
+      const frameType = document.getElementById("frameType").value;
+      const sizeSelect = document.getElementById("size");
+
+      // Clear previous options
+      sizeSelect.innerHTML = '<option value="">--Select Size--</option>';
+
+      let sizes = [];
+      if(frameType === "picture") sizes = pictureSizes;
+      if(frameType === "canvas") sizes = canvasSizes;
+
+      sizes.forEach(size => {
+        const option = document.createElement("option");
+        option.value = size;
+        option.textContent = size;
+        sizeSelect.appendChild(option);
+      });
+    }
+  </script>
 </body>
 </html>
