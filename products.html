@@ -4,21 +4,86 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products - Mokume Frames</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 0; 
+      background-color: #f7f5f0; 
+      color: #333; 
+    }
+    header { 
+      background: #8b5e34; 
+      color: white; 
+      padding: 20px; 
+      text-align: center; 
+    }
+    nav { 
+      background: #b3875a; 
+      padding: 10px; 
+      text-align: center; 
+    }
+    nav a { 
+      color: white; 
+      text-decoration: none; 
+      margin: 0 15px; 
+      font-weight: bold; 
+    }
+    nav a:hover { 
+      text-decoration: underline; 
+    }
+    .section { 
+      padding: 40px 20px; 
+      max-width: 900px; 
+      margin: 30px auto; 
+      background: white; 
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+      border-radius: 10px; 
+    }
+    .section h2 { 
+      color: #8b5e34; 
+      margin-bottom: 15px; 
+    }
+    .product { 
+      margin-bottom: 30px; 
+    }
+    .product p { 
+      font-size: 16px; 
+      line-height: 1.5; 
+    }
+    footer { 
+      background: #8b5e34; 
+      color: white; 
+      text-align: center; 
+      padding: 20px; 
+      margin-top: 40px; 
+    }
+  </style>
 </head>
 <body>
-  <header><h1>Our Products</h1></header>
+  <header>
+    <h1>Our Products</h1>
+    <p>Handcrafted Frames Made With Care</p>
+  </header>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="products.html">Products</a>
     <a href="commission.html">Commission</a>
   </nav>
-  <section class="section">
-    <h2>Picture Frames</h2>
-    <p>Handcrafted wooden picture frames available in multiple sizes.</p>
 
-    <h2>Canvas Frames</h2>
-    <p>canvas frames perfect for artwork, posters, and decor.</p>
+  <section class="section">
+    <div class="product">
+      <h2>Picture Frames</h2>
+      <p>Handcrafted wooden picture frames available in multiple sizes, perfect for displaying your cherished memories.</p>
+    </div>
+
+    <div class="product">
+      <h2>Canvas Frames</h2>
+      <p>Canvas frames ideal for artwork, posters, and decorative pieces. Each frame is made with precision and care to showcase your art beautifully.</p>
+    </div>
   </section>
+
+  <footer>© 2025 Mokume Frames</footer>
 </body>
 </html>
