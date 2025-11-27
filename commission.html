@@ -1,167 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Commission a Frame - Mokume Frames</title>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f7f5f0;
-      color: #333;
-    }
-
-    header {
-      background: #8b5e34;
-      color: white;
-      padding: 25px;
-      text-align: center;
-    }
-
-    nav {
-      background: #b3875a;
-      padding: 12px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 18px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: 30px auto;
-      background: white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      border-radius: 10px;
-    }
-
-    h2 {
-      color: #8b5e34;
-      margin-bottom: 20px;
-    }
-
-    form label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #bbb;
-      border-radius: 6px;
-      font-size: 15px;
-    }
-
-    textarea {
-      height: 120px;
-      resize: vertical;
-    }
-
-    button {
-      margin-top: 25px;
-      padding: 12px 20px;
-      background: #8b5e34;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    button:hover {
-      background: #754a29;
-    }
-
-    footer {
-      background: #8b5e34;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order a Frame - Mokume Frames</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#5C3A21;--secondary:#A67C52;--accent:#D9C7B3;--background:#F7F3EE;--text:#333;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Roboto',sans-serif;background:var(--background);color:var(--text);}
+a{text-decoration:none;}
+header{background:var(--primary);color:white;text-align:center;padding:60px 20px;}
+header h1{font-family:'Playfair Display',serif;font-size:3em;margin-bottom:10px;}
+header p{font-size:1.2em;}
+nav{background:var(--secondary);display:flex;justify-content:center;align-items:center;padding:15px 0;flex-wrap:wrap;}
+nav a{color:white;font-weight:bold;margin:0 20px;padding:5px 10px;transition:0.3s;}
+nav a:hover{color:var(--accent);}
+.cta{background:var(--accent); color:var(--primary); border-radius:5px; padding:8px 15px; font-weight:bold;}
+.cta:hover{background:white;color:var(--primary);}
+.section{max-width:800px;margin:60px auto;padding:0 20px;}
+form{background:white;padding:40px 30px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.1);}
+form h2{font-family:'Playfair Display',serif;color:var(--primary);margin-bottom:20px;text-align:center;}
+form label{display:block;margin-bottom:8px;font-weight:bold;margin-top:15px;}
+form input, form select, form textarea{width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:5px;font-size:1em; transition:0.3s;}
+form input:focus, form select:focus, form textarea:focus{border-color:var(--secondary); outline:none;}
+form button{background:var(--accent); color:var(--primary); border:none; padding:12px 20px; border-radius:5px; font-weight:bold; cursor:pointer; transition:0.3s; width:100%; font-size:1.1em;}
+form button:hover{background:white;color:var(--primary); border:1px solid var(--primary);}
+.note{margin-top:15px;font-size:0.9em;color:var(--text);text-align:center;}
+footer{background:var(--primary);color:white;text-align:center;padding:25px 20px;margin-top:50px;font-size:0.9em;}
+@media(max-width:600px){header h1{font-size:2em;}}
+</style>
 </head>
-
 <body>
-  <header>
-    <h1>Commission a Frame</h1>
-    <p>Custom handcrafted frames made to your exact requirements.</p>
-  </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products.html">Products</a>
-    <a href="commission.html">Commission</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<header>
+<h1>Order a Frame</h1>
+<p>Custom Frames Handcrafted for You</p>
+</header>
 
-  <section class="section">
-    <h2>Order a Custom Frame</h2>
-    <p>Fill out the form below and we will email you back confirming if the materials are in stock along with the full price estimate.</p>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="products.html">Products</a>
+<a href="commission.html" class="cta">Order a Frame</a> 
+<a href="contact.html">Contact</a>
+</nav>
 
-    <form action="https://usebasin.com/f/788777e39c19" method="POST">
+<section class="section">
 
-      <label>Your Name</label>
-      <input type="text" name="name" required>
+<form action="https://usebasin.com/f/788777e39c19" method="POST">
+<h2>Custom Frame Order Form</h2>
 
-      <label>Your Email</label>
-      <input type="email" name="email" required>
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required>
 
-      <label>Frame Type</label>
-      <select name="frameType" required>
-        <option value="">Select frame type…</option>
-        <option value="Picture Frame">Picture Frame</option>
-        <option value="Canvas Frame">Canvas Frame</option>
-      </select>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
 
-      <label>Wood Type</label>
-      <select name="woodType" required>
-        <option value="">Choose wood…</option>
-        <option value="Pine">Pine</option>
-        <option value="Walnut">Walnut</option>
-        <option value="Oak">Oak</option>
-      </select>
+<label for="frameType">Frame Type:</label>
+<select id="frameType" name="frameType" required>
+  <option value="">Select Frame Type</option>
+  <option value="picture">Picture Frame</option>
+  <option value="canvas">Canvas Frame</option>
+</select>
 
-      <label>Size</label>
-      <select name="size" required>
-        <option value="">Choose a size…</option>
+<label for="woodType">Wood Type:</label>
+<select id="woodType" name="woodType" required>
+  <option value="">Select Wood</option>
+  <option value="pine">Pine</option>
+  <option value="walnut">Walnut</option>
+  <option value="oak">Oak</option>
+</select>
 
-        <!-- Picture & Canvas Sizes Combined -->
-        <option>4x6 in</option>
-        <option>5x7 in</option>
-        <option>8x10 in</option>
-        <option>11x14 in</option>
-        <option>12x16 in</option>
-        <option>16x20 in</option>
-        <option>18x24 in</option>
-        <option>20x24 in</option>
-        <option>24x30 in</option>
-        <option>24x36 in</option>
-      </select>
+<label for="size">Frame Size:</label>
+<select id="size" name="size" required>
+  <option value="">Select Size</option>
+</select>
 
-      <label>Additional Details (optional)</label>
-      <textarea name="details" placeholder="Anything else you want us to know…"></textarea>
+<label for="details">Additional Details:</label>
+<textarea id="details" name="details" rows="5" placeholder="Any extra info..."></textarea>
 
-      <button type="submit">Submit Commission Request</button>
-    </form>
-  </section>
+<button type="submit">Submit Order</button>
 
-  <footer>© 2025 Mokume Frames</footer>
+<p class="note">You will be emailed to confirm stock availability and pricing. We only sell in Reading, England.</p>
+</form>
+
+</section>
+
+<footer>© 2025 Mokume Frames</footer>
+
+<script>
+// Frame sizes
+const sizes = {
+  picture: ["4x6 in","5x7 in","8x10 in","8.5x11 in","9x12 in","11x14 in","12x16 in","16x20 in","18x24 in","20x24 in"],
+  canvas: ["8x10 in","9x12 in","11x14 in","12x16 in","16x20 in","18x24 in","20x24 in","20x30 in","24x36 in","30x40 in"]
+};
+
+const frameType = document.getElementById('frameType');
+const sizeSelect = document.getElementById('size');
+
+frameType.addEventListener('change', function() {
+  sizeSelect.innerHTML = '<option value="">Select Size</option>';
+  if(this.value && sizes[this.value]){
+    sizes[this.value].forEach(sz => {
+      const option = document.createElement('option');
+      option.value = sz;
+      option.textContent = sz;
+      sizeSelect.appendChild(option);
+    });
+  }
+});
+</script>
+
 </body>
 </html>
