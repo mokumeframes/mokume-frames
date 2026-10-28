@@ -1,0 +1,152 @@
+[
+  {
+    "id": "explosion",
+    "name": "Explosion",
+    "role": "Pressure / precision and recoil",
+    "resource": "Blast strain",
+    "color": -26801,
+    "moves": [
+      "palm_burst",
+      "blast_dash",
+      "ap_shot",
+      "recoil_dodge",
+      "stun_grenade",
+      "burst_volley",
+      "aerial_redirection",
+      "howitzer_impact"
+    ],
+    "starters": [
+      "palm_burst",
+      "blast_dash"
+    ]
+  },
+  {
+    "id": "half_cold_half_hot",
+    "name": "Half-Cold Half-Hot",
+    "role": "Area control / rescue routes",
+    "resource": "Temperature",
+    "color": -9844235,
+    "moves": [
+      "ice_shot",
+      "flame_jet",
+      "ice_wall",
+      "ice_ramp",
+      "flame_sweep",
+      "flashfreeze",
+      "thermal_shock",
+      "flashfreeze_heatwave"
+    ],
+    "starters": [
+      "ice_shot",
+      "flame_jet",
+      "ice_ramp"
+    ]
+  },
+  {
+    "id": "hardening",
+    "name": "Hardening",
+    "role": "Close protection / counterattacks",
+    "resource": "Fatigue",
+    "color": -2332066,
+    "moves": [
+      "harden",
+      "braced_step",
+      "hardened_strike",
+      "counter_guard",
+      "stone_anchor",
+      "breakline",
+      "bodyguard_advance",
+      "unbreakable"
+    ],
+    "starters": [
+      "harden",
+      "braced_step"
+    ]
+  },
+  {
+    "id": "electrification",
+    "name": "Electrification",
+    "role": "Disruption / aimed discharge",
+    "resource": "Charge / overload",
+    "color": -8343,
+    "moves": [
+      "spark_touch",
+      "grounding_step",
+      "directional_arc",
+      "static_net",
+      "charge_capacitor",
+      "chain_discharge",
+      "grounding_stance",
+      "maximum_discharge"
+    ],
+    "starters": [
+      "spark_touch",
+      "grounding_step"
+    ]
+  },
+  {
+    "id": "blueflame",
+    "name": "Blueflame",
+    "role": "Ranged pressure / thermal discipline",
+    "resource": "Heat",
+    "color": -11162881,
+    "moves": [
+      "cobalt_stream",
+      "ash_step",
+      "blue_lance",
+      "cinder_fan",
+      "controlled_cooling",
+      "azure_ring",
+      "scorched_retreat",
+      "bluefire_front"
+    ],
+    "starters": [
+      "cobalt_stream",
+      "ash_step"
+    ]
+  },
+  {
+    "id": "umbrakinesis",
+    "name": "Umbrakinesis",
+    "role": "Shadow binding / distraction",
+    "resource": "Shade",
+    "color": -5006603,
+    "moves": [
+      "shadow_lash",
+      "shade_slip",
+      "umbral_bind",
+      "dusk_mantle",
+      "silhouette_decoy",
+      "shadow_reel",
+      "midnight_stride",
+      "eclipse_well"
+    ],
+    "starters": [
+      "shadow_lash",
+      "shade_slip"
+    ]
+  },
+  {
+    "id": "kinetic_reservoir",
+    "name": "Kinetic Reservoir",
+    "role": "Impact storage / timed counters",
+    "resource": "Stored impact / guard fatigue",
+    "color": -14488,
+    "moves": [
+      "absorb_brace",
+      "inertial_jab",
+      "recoil_step",
+      "counter_release",
+      "damping_guard",
+      "stored_vault",
+      "impact_wave",
+      "kinetic_bulwark",
+      "singular_release"
+    ],
+    "starters": [
+      "absorb_brace",
+      "inertial_jab",
+      "recoil_step"
+    ]
+  }
+]

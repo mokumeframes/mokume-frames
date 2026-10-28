@@ -1,0 +1,1029 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.2.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :createMinecraftArtifacts UP-TO-DATE
+
+> Task :compileJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :processResources UP-TO-DATE
+> Task :classes
+> Task :jarJar NO-SOURCE
+> Task :jar
+> Task :sourcesJar
+> Task :assemble
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test
+> Task :check
+> Task :build
+> Task :downloadAssets UP-TO-DATE
+> Task :writeGameTestServerLegacyClasspath UP-TO-DATE
+> Task :prepareGameTestServerRun UP-TO-DATE
+
+> Task :runGameTestServer
+WARN StatusConsoleListener Advanced terminal features are not available in this environment
+[19:20:50] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserverdev, --gameDir, ., --fml.fmlVersion, 4.0.42, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.217, --fml.neoFormVersion, 20240808.144430]
+[19:20:50] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.12.1+1-LTS
+[19:20:50] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.12.1 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[19:20:50] [main/INFO] [ne.ne.fm.lo.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserverdev
+[19:20:50] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/ewanm/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%2394!/ Service=ModLauncher Env=SERVER
+[19:20:51] [main/WARN] [ne.ne.ja.se.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: kilagraph. Using Mod File: C:\Users\ewanm\.gradle\caches\modules-2\files-2.1\com.lowdragmc.kilagraph\kilagraph-neoforge-1.21.1\21.1.0.15\118a5d8a9dd0bbc2bfb23f658fb90daf02244cd7\kilagraph-neoforge-1.21.1-21.1.0.15.jar
+[19:20:51] [main/INFO] [ne.ne.fm.lo.mo.lo.JarInJarDependencyLocator/]: Found 5 dependencies adding them to mods collection
+[19:20:51] [main/INFO] [ne.ne.fm.lo.mo.ModDiscoverer/]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		Bendy lib 5.1 (bendylib)
+		GeckoLib 4 4.9.3 (geckolib)
+		KilaGraph 21.1.0.15 (kilagraph)
+		LowDragLib2 2.2.44 (ldlib2)
+		MHA: Rising Heroes 0.1.0-dev (mha)
+		Minecraft 1.21.1 (minecraft)
+		NeoForge 21.1.217 (neoforge)
+		Photon 2.2.9 (photon)
+		Player Animator 2.0.4+1.21.1 (playeranimator)
+[19:20:52] [main/INFO] [mixin/]: Compatibility level set to JAVA_21
+[19:20:52] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeserverdev' with arguments [--gameDir, .]
+[19:20:52] [main/WARN] [mixin/]: Reference map 'geckolib.refmap.json' for geckolib.mixins.json could not be read. If this is a development environment you can ignore this message
+[19:20:53] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.0).
+[19:20:58] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[19:20:58] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[19:20:58] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[19:20:59] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[19:20:59] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[19:20:59] [modloading-worker-0/INFO] [LowDragLib2/]: LowDragLib2 is initializing on platform: NeoForge
+[19:20:59] [modloading-worker-0/INFO] [LowDragLib2/]: Created assets folder .\ldlib2\assets
+[19:20:59] [modloading-worker-0/INFO] [LowDragLib2/]: Created ldlib2 assets folder .\ldlib2\assets
+[19:20:59] [modloading-worker-0/INFO] [ne.ne.ne.co.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.217, for MC 1.21.1
+[19:20:59] [modloading-worker-0/INFO] [de.ri.RisingHeroes/]: MHA: Rising Heroes foundation loaded; gameplay is experimental.
+[19:20:59] [modloading-worker-0/INFO] [co.lo.ki.Kilagraph/]: KilaGraph blueprint nodes loaded: 524
+[19:20:59] [modloading-worker-0/INFO] [co.lo.ki.Kilagraph/]: KilaGraph rendertype nodes loaded: 176
+[19:20:59] [modloading-worker-0/INFO] [Photon/]: Photon is initializing on platform: NeoForge
+[19:20:59] [modloading-worker-0/INFO] [Photon/]: Created photon assets folder
+[19:20:59] [main/ERROR] [minecraft/Settings]: Failed to load properties from file: server.properties
+java.nio.file.NoSuchFileException: server.properties
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85) ~[?:?] {}
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?] {}
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?] {}
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:234) ~[?:?] {}
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380) ~[?:?] {}
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432) ~[?:?] {}
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420) ~[?:?] {}
+	at java.base/java.nio.file.Files.newInputStream(Files.java:160) ~[?:?] {}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.dedicated.Settings.loadFromFile(Settings.java:38) ~[neoforge-21.1.217.jar%23125!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.dedicated.DedicatedServerProperties.fromFile(DedicatedServerProperties.java:132) ~[neoforge-21.1.217.jar%23125!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.dedicated.DedicatedServerSettings.<init>(DedicatedServerSettings.java:12) ~[neoforge-21.1.217.jar%23125!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.Main.main(Main.java:125) ~[neoforge-21.1.217.jar%23125!/:?] {re:classloading}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:136) ~[loader-4.0.42.jar%23102!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.serverService(CommonLaunchHandler.java:128) ~[loader-4.0.42.jar%23102!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.NeoForgeServerDevLaunchHandler.runService(NeoForgeServerDevLaunchHandler.java:23) ~[loader-4.0.42.jar%23102!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:118) ~[loader-4.0.42.jar%23102!/:4.0] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:103) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210) [bootstraplauncher-2.0.2.jar:?] {}
+	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69) [bootstraplauncher-2.0.2.jar:?] {}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?] {}
+[19:20:59] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[19:20:59] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/ewanm/Documents/Codex/2026-10-28/files-pasted-by-the-user-master/outputs/mha-rising-heroes/build/moddev/artifacts/neoforge-21.1.217.jar%23125!/assets/.mcassetsroot' uses unexpected schema
+[19:20:59] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/ewanm/Documents/Codex/2026-10-28/files-pasted-by-the-user-master/outputs/mha-rising-heroes/build/moddev/artifacts/neoforge-21.1.217.jar%23125!/data/.mcassetsroot' uses unexpected schema
+[19:20:59] [main/INFO] [ne.ne.ne.ga.GameTestHooks/]: Enabled Gametest Namespaces: [mha]
+[19:21:00] [main/INFO] [minecraft/RecipeManager]: Loaded 1292 recipes
+[19:21:01] [main/INFO] [minecraft/AdvancementTree]: Loaded 1400 advancements
+[19:21:01] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
+[19:21:01] [worldgen/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 2%
+[19:21:02] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 147 ms
+[19:21:02] [Server thread/INFO] [minecraft/GameTestServer]: Started game test server
+[19:21:02] [Server thread/INFO] [ne.ne.ne.se.pe.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[19:21:02] [Server thread/INFO] [minecraft/GameTestServer]: 15 tests are now running at position 13412474, -59, 9230411!
+[19:21:02] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'defaultBatch:0' (15 tests)...
+[19:21:02] [Server thread/INFO] [minecraft/GameTestServer]: [               ]
+[19:21:02] [Server thread/INFO] [minecraft/PlayerList]: hero-test[embedded] logged in with entity id 1 at (-2.5, -60.0, 2.5)
+[19:21:02] [Server thread/INFO] [minecraft/MinecraftServer]: hero-test joined the game
+[19:21:03] [Server thread/INFO] [minecraft/PlayerList]: hero-test[embedded] logged in with entity id 2 at (4.5, -60.0, 3.5)
+[19:21:03] [Server thread/INFO] [minecraft/MinecraftServer]: hero-test joined the game
+[19:21:03] [Server thread/INFO] [minecraft/PlayerList]: hero-test[embedded] logged in with entity id 3 at (-3.5, -60.0, 5.5)
+[19:21:03] [Server thread/INFO] [minecraft/MinecraftServer]: hero-test joined the game
+[19:21:03] [Server thread/INFO] [minecraft/PlayerList]: hero-test[embedded] logged in with entity id 4 at (-9.5, -60.0, 4.5)
+[19:21:03] [Server thread/INFO] [minecraft/MinecraftServer]: hero-test joined the game
+[19:21:03] [Server thread/INFO] [minecraft/PlayerList]: hero-test[embedded] logged in with entity id 8 at (10.5, -60.0, -0.5)
+[19:21:03] [Server thread/INFO] [minecraft/MinecraftServer]: hero-test joined the game
+[19:21:03] [Server thread/INFO] [minecraft/GameTestServer]: [_____++__+     ]
+[19:21:03] [Server thread/INFO] [minecraft/PlayerList]: hero-test[embedded] logged in with entity id 9 at (-9.5, -60.0, -6.5)
+[19:21:03] [Server thread/INFO] [minecraft/MinecraftServer]: hero-test joined the game
+[19:21:03] [Server thread/INFO] [minecraft/PlayerList]: hero-test[embedded] logged in with entity id 11 at (7.5, -60.0, -2.5)
+[19:21:03] [Server thread/INFO] [minecraft/MinecraftServer]: hero-test joined the game
+[19:21:03] [Server thread/INFO] [minecraft/PlayerList]: hero-test[embedded] logged in with entity id 12 at (-4.5, -60.0, 10.5)
+[19:21:03] [Server thread/INFO] [minecraft/MinecraftServer]: hero-test joined the game
+[19:21:03] [Server thread/INFO] [minecraft/PlayerList]: hero-test[embedded] logged in with entity id 13 at (-4.5, -60.0, 3.5)
+[19:21:03] [Server thread/INFO] [minecraft/MinecraftServer]: hero-test joined the game
+[19:21:03] [Server thread/INFO] [minecraft/PlayerList]: hero-test[embedded] logged in with entity id 15 at (5.5, -60.0, 2.5)
+[19:21:03] [Server thread/INFO] [minecraft/MinecraftServer]: hero-test joined the game
+[19:21:03] [Server thread/ERROR] [minecraft/LogTestReporter]: blueflamewaitsforwindupandcoolingusestheactivewindow failed at 13412494, -60, 9230422! The active stream did not apply its server-owned hit
+[19:21:03] [Server thread/INFO] [minecraft/GameTestServer]: [_____+++_+X_+__]
+[19:21:04] [Server thread/INFO] [minecraft/MinecraftServer]: hero-test has made the advancement [Bring Home the Beacon]
+[19:21:04] [Server thread/INFO] [minecraft/GameTestServer]: [_____+++_+X_++_]
+[19:21:04] [Server thread/INFO] [minecraft/GameTestServer]: [_____+++_+X_++_]
+[19:21:04] [Server thread/INFO] [minecraft/GameTestServer]: [_____+++_+X_++_]
+[19:21:04] [Server thread/INFO] [minecraft/GameTestServer]: [__+__+++_+X_++_]
+[19:21:04] [Server thread/INFO] [minecraft/GameTestServer]: [__++_+++_+X_+++]
+[19:21:05] [Server thread/INFO] [minecraft/GameTestServer]: [__++_+++_+X++++]
+[19:21:05] [Server thread/INFO] [minecraft/GameTestServer]: [__++_+++_+X++++]
+[19:21:05] [Server thread/INFO] [minecraft/GameTestServer]: [__++_+++_+X++++]
+[19:21:05] [Server thread/INFO] [minecraft/GameTestServer]: [__++_+++_+X++++]
+[19:21:05] [Server thread/INFO] [minecraft/GameTestServer]: [__++_+++_+X++++]
+[19:21:05] [Server thread/INFO] [minecraft/GameTestServer]: [__++_+++_+X++++]
+[19:21:05] [Server thread/INFO] [minecraft/GameTestServer]: [__++_+++_+X++++]
+[19:21:05] [Server thread/INFO] [minecraft/PlayerList]: hero-test[embedded] logged in with entity id 29 at (8.5, -60.0, -5.5)
+[19:21:05] [Server thread/INFO] [minecraft/MinecraftServer]: hero-test joined the game
+[19:21:05] [Server thread/INFO] [minecraft/PlayerList]: hero-test[embedded] logged in with entity id 30 at (10.5, -60.0, -5.5)
+[19:21:05] [Server thread/INFO] [minecraft/MinecraftServer]: hero-test joined the game
+[19:21:06] [Server thread/INFO] [minecraft/GameTestServer]: [__++++++++X++++]
+[19:21:06] [Server thread/INFO] [minecraft/GameTestServer]: [__++++++++X++++]
+[19:21:06] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_assessment / briefing
+[19:21:06] [Server thread/INFO] [minecraft/GameTestServer]: [__++++++++X++++]
+[19:21:06] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_assessment / assessment_robots
+[19:21:07] [Server thread/INFO] [minecraft/GameTestServer]: [__++++++++X++++]
+[19:21:07] [Server thread/INFO] [minecraft/GameTestServer]: [__++++++++X++++]
+[19:21:07] [Server thread/INFO] [minecraft/GameTestServer]: [__++++++++X++++]
+[19:21:07] [Server thread/INFO] [minecraft/GameTestServer]: [__++++++++X++++]
+[19:21:07] [Server thread/INFO] [minecraft/GameTestServer]: [__++++++++X++++]
+[19:21:07] [Server thread/INFO] [minecraft/GameTestServer]: [__++++++++X++++]
+[19:21:07] [Server thread/INFO] [minecraft/GameTestServer]: [__++++++++X++++]
+[19:21:07] [Server thread/INFO] [minecraft/GameTestServer]: [__++++++++X++++]
+[19:21:07] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_assessment / assessment_rescue
+[19:21:07] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:07] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:07] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:07] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:07] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:07] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_assessment / assessment_exit
+[19:21:08] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:08] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:08] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:08] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_orientation / student_record
+[19:21:08] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_orientation / workshop
+[19:21:08] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_orientation / dorm_briefing
+[19:21:08] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_orientation / training_plan
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_fundamentals / cover_a
+[19:21:09] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_fundamentals / cover_b
+[19:21:09] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_fundamentals / civilian_priority
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_fundamentals / first_aid
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_fundamentals / safe_zone
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:09] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_battle_trial / classmate
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:10] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:11] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_battle_trial / opposition
+[19:21:11] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:11] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:11] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:11] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:11] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:11] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:11] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:11] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:11] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_battle_trial / objective
+[19:21:11] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:11] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:11] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:11] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_usj / flood_entry
+[19:21:11] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_usj / flood_rescue
+[19:21:11] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:11] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:11] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:11] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:11] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_usj / fire_valve
+[19:21:12] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_usj / rubble_route
+[19:21:12] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_usj / evacuation
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_festival / race_one
+[19:21:12] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_festival / race_two
+[19:21:12] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_festival / race_three
+[19:21:12] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_festival / team_support
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:12] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_festival / exhibition
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_internship / dispatch
+[19:21:13] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_internship / patrol_one
+[19:21:13] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_internship / patrol_two
+[19:21:13] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_internship / incident_priority
+[19:21:13] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_internship / bystander
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_internship / containment
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:13] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_provisional_exam / exam_judgment
+[19:21:14] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_provisional_exam / exam_rescue
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_provisional_exam / exam_teamwork
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_provisional_exam / exam_protection
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:14] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:15] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:15] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:15] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:15] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:15] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:15] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:15] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:15] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_provisional_exam / exam_combat
+[19:21:15] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:15] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:15] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:15] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:15] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:15] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:15] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:15] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:15] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_provisional_exam / exam_report
+[19:21:15] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:15] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:15] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:15] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_work_study / licensed_dispatch
+[19:21:15] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_work_study / field_shelter
+[19:21:15] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:15] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_work_study / field_medic
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_work_study / field_sentinel
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:16] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_work_study / field_report
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_graduation / leadership
+[19:21:17] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_graduation / final_evacuation
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:17] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_graduation / final_support
+[19:21:18] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:18] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:18] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:18] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:18] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:18] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_graduation / final_bulwark
+[19:21:18] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:18] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:18] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:18] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:18] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:18] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:18] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:18] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:18] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: school_graduation / qualification_record
+[19:21:18] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:18] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:18] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: underground_introduction / contact
+[19:21:18] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:18] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: underground_introduction / quiet_route
+[19:21:18] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: underground_introduction / signal
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: contact_contract / observation
+[19:21:19] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: contact_contract / records
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: contact_contract / informant
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:19] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: resource_operation / guards
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:20] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: resource_operation / supplies
+[19:21:20] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: resource_operation / extraction
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: faction_recruitment / crew_aid
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: faction_recruitment / crew_shelter
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:21] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: faction_recruitment / recruitment
+[19:21:21] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: agency_infiltration / entry_route
+[19:21:22] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: agency_infiltration / inner_route
+[19:21:22] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: agency_infiltration / archive
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: agency_infiltration / clean_exit
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: guarded_shipment / escort_guards
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: guarded_shipment / manifest
+[19:21:22] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: guarded_shipment / courier
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:22] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: rival_encounter / position
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: rival_encounter / rival_sentinel
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:23] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: hideout_development / workshop_plan
+[19:21:24] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: hideout_development / engineer
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:24] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: hideout_development / workshop_defence
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:24] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: hideout_development / safehouse_record
+[19:21:24] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: rising_notoriety / crew_extraction
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: rising_notoriety / pursuit
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:25] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: rising_notoriety / operation_record
+[19:21:26] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:26] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:26] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:26] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: crew_leadership / crew_priority
+[19:21:26] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: crew_leadership / crew_recovery
+[19:21:26] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:26] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:26] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:26] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:26] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:26] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: crew_leadership / leadership_boss
+[19:21:26] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:26] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:26] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:26] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:26] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:26] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:26] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:26] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:26] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: crew_leadership / leadership_record
+[19:21:26] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:27] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:27] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:27] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: neighbourhood_watch / watch_one
+[19:21:27] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: neighbourhood_watch / witness_record
+[19:21:27] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: neighbourhood_watch / local_aid
+[19:21:27] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:27] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:27] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:27] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:27] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:27] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:27] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:27] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:27] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: evidence_trail / clue_one
+[19:21:27] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: evidence_trail / trail
+[19:21:27] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: evidence_trail / clue_two
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: flood_contract / water_entry
+[19:21:28] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: flood_contract / stranded_resident
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: flood_contract / resident_exit
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:28] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: community_support / volunteer
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: community_support / community_shelter
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:29] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: community_support / supplies_record
+[19:21:30] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:30] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:30] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:30] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: bounty_contract / bounty_judgment
+[19:21:30] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: bounty_contract / bounty_bystander
+[19:21:30] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:30] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:30] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:30] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:30] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:30] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:30] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: bounty_contract / bounty_target
+[19:21:30] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:30] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:30] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:30] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:30] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:30] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:30] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:30] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:30] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:30] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:30] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: rooftop_search / search_one
+[19:21:30] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: rooftop_search / search_two
+[19:21:30] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: rooftop_search / lost_record
+[19:21:30] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:30] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: rooftop_search / search_partner
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: mutual_aid / response_plan
+[19:21:31] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: mutual_aid / response_partner
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: mutual_aid / response_shelter
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:31] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: mutual_aid / response_sentinel
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: independent_operation / operation_priority
+[19:21:32] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: independent_operation / operation_evacuation
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:32] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:33] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: independent_operation / operation_aid
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:33] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: independent_operation / operation_boss
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: [_+++++++++X++++]
+[19:21:33] [Server thread/INFO] [de.ri.RisingHeroes/]: Campaign verification checkpoint: independent_operation / independent_record
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: [++++++++++X++++]
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: ========= 15 GAME TESTS COMPLETE IN 31.71 s ======================
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: 1 required tests failed :(
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]:    - blueflamewaitsforwindupandcoolingusestheactivewindow
+[19:21:33] [Server thread/INFO] [minecraft/GameTestServer]: ====================================================
+[19:21:33] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+[19:21:33] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
+[19:21:34] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: hero-test lost connection: Server closed
+[19:21:34] [Server thread/INFO] [minecraft/MinecraftServer]: hero-test left the game
+[19:21:34] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: hero-test lost connection: Server closed
+[19:21:34] [Server thread/INFO] [minecraft/MinecraftServer]: hero-test left the game
+[19:21:34] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: hero-test lost connection: Server closed
+[19:21:34] [Server thread/INFO] [minecraft/MinecraftServer]: hero-test left the game
+[19:21:34] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: hero-test lost connection: Server closed
+[19:21:34] [Server thread/INFO] [minecraft/MinecraftServer]: hero-test left the game
+[19:21:34] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: hero-test lost connection: Server closed
+[19:21:34] [Server thread/INFO] [minecraft/MinecraftServer]: hero-test left the game
+[19:21:34] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: hero-test lost connection: Server closed
+[19:21:34] [Server thread/INFO] [minecraft/MinecraftServer]: hero-test left the game
+[19:21:34] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+[19:21:36] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:overworld
+[19:21:36] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_nether
+[19:21:36] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_end
+[19:21:36] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[19:21:36] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[19:21:36] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[19:21:36] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[19:21:36] [Server thread/INFO] [minecraft/GameTestServer]: Game test server shutting down
+
+> Task :runGameTestServer FAILED
+
+[Incubating] Problems report is available at: file:///C:/Users/ewanm/Documents/Codex/2026-10-28/files-pasted-by-the-user-master/outputs/mha-rising-heroes/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':runGameTestServer'.
+> Process 'command 'C:\Users\ewanm\Documents\Codex\2026-10-28\files-pasted-by-the-user-master\work\tools\jdk-21.0.12.1+1\bin\java.exe'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to generate a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1m 2s
+11 actionable tasks: 5 executed, 6 up-to-date

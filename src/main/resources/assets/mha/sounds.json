@@ -1,0 +1,56 @@
+{
+  "explosion.tell": {
+    "subtitle": "subtitles.mha.explosion.tell",
+    "sounds": [
+      {
+        "name": "mha:explosion/tell",
+        "attenuation_distance": 16
+      }
+    ]
+  },
+  "explosion.charge": {
+    "subtitle": "subtitles.mha.explosion.charge",
+    "sounds": [
+      {
+        "name": "mha:explosion/charge",
+        "attenuation_distance": 16
+      }
+    ]
+  },
+  "explosion.burst": {
+    "subtitle": "subtitles.mha.explosion.burst",
+    "sounds": [
+      {
+        "name": "mha:explosion/burst",
+        "attenuation_distance": 16
+      }
+    ]
+  },
+  "explosion.heavy": {
+    "subtitle": "subtitles.mha.explosion.heavy",
+    "sounds": [
+      {
+        "name": "mha:explosion/heavy",
+        "attenuation_distance": 16
+      }
+    ]
+  },
+  "explosion.recoil": {
+    "subtitle": "subtitles.mha.explosion.recoil",
+    "sounds": [
+      {
+        "name": "mha:explosion/recoil",
+        "attenuation_distance": 16
+      }
+    ]
+  },
+  "ui.select": {
+    "subtitle": "subtitles.mha.ui.select",
+    "sounds": [
+      {
+        "name": "mha:ui/select",
+        "attenuation_distance": 8
+      }
+    ]
+  }
+}

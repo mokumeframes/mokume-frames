@@ -1,0 +1,93 @@
+{
+  "version": 3,
+  "name": "singular_release",
+  "author": "Rising Heroes project",
+  "description": "Original Kinetic Reservoir animation; game adaptation.",
+  "emote": {
+    "beginTick": 0,
+    "endTick": 65,
+    "stopTick": 66,
+    "isLoop": false,
+    "degrees": true,
+    "moves": [
+      {
+        "tick": 0,
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 30,
+        "easing": "easeOutQuad",
+        "rightArm": {
+          "pitch": -52.25000000000001,
+          "roll": 7.0,
+          "bend": 55,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -52.25000000000001,
+          "roll": -7.0,
+          "bend": 55,
+          "axis": 0
+        },
+        "body": {
+          "pitch": -8,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 31,
+        "rightArm": {
+          "pitch": -95,
+          "roll": 10,
+          "bend": 20,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -95,
+          "roll": -10,
+          "bend": 20,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 65,
+        "easing": "easeInOutSine",
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      }
+    ]
+  }
+}

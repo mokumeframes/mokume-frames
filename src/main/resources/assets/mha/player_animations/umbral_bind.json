@@ -1,0 +1,93 @@
+{
+  "version": 3,
+  "name": "umbral_bind",
+  "author": "Rising Heroes project",
+  "description": "Original Umbrakinesis animation; game adaptation.",
+  "emote": {
+    "beginTick": 0,
+    "endTick": 29,
+    "stopTick": 30,
+    "isLoop": false,
+    "degrees": true,
+    "moves": [
+      {
+        "tick": 0,
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 12,
+        "easing": "easeOutQuad",
+        "rightArm": {
+          "pitch": -41.25,
+          "roll": 12.6,
+          "bend": 55,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -35.75,
+          "roll": -12.6,
+          "bend": 55,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": -10
+        }
+      },
+      {
+        "tick": 13,
+        "rightArm": {
+          "pitch": -75,
+          "roll": 18,
+          "bend": 20,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -65,
+          "roll": -18,
+          "bend": 20,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 10
+        }
+      },
+      {
+        "tick": 29,
+        "easing": "easeInOutSine",
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      }
+    ]
+  }
+}

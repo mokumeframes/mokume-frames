@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.risingheroes.core.LoadoutPresetsTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-28T11:05:40.874Z" hostname="EWAN" time="0.01">
+  <properties/>
+  <testcase name="presetsAreQuirkSpecificAndArchived()" classname="dev.risingheroes.core.LoadoutPresetsTest" time="0.004"/>
+  <testcase name="invalidPresetSlotCannotCreateUnboundedSavedData()" classname="dev.risingheroes.core.LoadoutPresetsTest" time="0.001"/>
+  <testcase name="presetSnapshotsDoNotAliasLiveSlotsAndSurviveSerialization()" classname="dev.risingheroes.core.LoadoutPresetsTest" time="0.001"/>
+  <testcase name="revokedTechniqueInvalidatesPresetWithoutMutatingCurrentSlots()" classname="dev.risingheroes.core.LoadoutPresetsTest" time="0.001"/>
+  <testcase name="activeTrialAndCombatBlockPresetSwapping()" classname="dev.risingheroes.core.LoadoutPresetsTest" time="0.001"/>
+  <testcase name="presetRestoresSlotsWithoutRefreshingCooldownOrResources()" classname="dev.risingheroes.core.LoadoutPresetsTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

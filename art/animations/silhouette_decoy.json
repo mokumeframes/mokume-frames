@@ -1,0 +1,112 @@
+{
+  "version": 3,
+  "name": "silhouette_decoy",
+  "author": "Rising Heroes project",
+  "description": "Original Umbrakinesis animation; game adaptation.",
+  "emote": {
+    "beginTick": 0,
+    "endTick": 108,
+    "stopTick": 109,
+    "isLoop": false,
+    "degrees": true,
+    "moves": [
+      {
+        "tick": 0,
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 12,
+        "easing": "easeOutQuad",
+        "rightArm": {
+          "pitch": -27.500000000000004,
+          "roll": 8.399999999999999,
+          "bend": 55,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -44.0,
+          "roll": -21.0,
+          "bend": 55,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": -10
+        }
+      },
+      {
+        "tick": 13,
+        "rightArm": {
+          "pitch": -50,
+          "roll": 12,
+          "bend": 65,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -80,
+          "roll": -30,
+          "bend": 65,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 10
+        }
+      },
+      {
+        "tick": 92,
+        "rightArm": {
+          "pitch": -50,
+          "roll": 12,
+          "bend": 65,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -80,
+          "roll": -30,
+          "bend": 65,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 10
+        }
+      },
+      {
+        "tick": 108,
+        "easing": "easeInOutSine",
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      }
+    ]
+  }
+}

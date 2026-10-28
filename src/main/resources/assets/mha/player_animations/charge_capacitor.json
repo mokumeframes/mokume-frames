@@ -1,0 +1,112 @@
+{
+  "version": 3,
+  "name": "charge_capacitor",
+  "author": "Rising Heroes project",
+  "description": "Original Electrification animation; game adaptation.",
+  "emote": {
+    "beginTick": 0,
+    "endTick": 62,
+    "stopTick": 63,
+    "isLoop": false,
+    "degrees": true,
+    "moves": [
+      {
+        "tick": 0,
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 10,
+        "easing": "easeOutQuad",
+        "rightArm": {
+          "pitch": -19.25,
+          "roll": 17.5,
+          "bend": 55,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -19.25,
+          "roll": -17.5,
+          "bend": 55,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 11,
+        "rightArm": {
+          "pitch": -35,
+          "roll": 25,
+          "bend": 65,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -35,
+          "roll": -25,
+          "bend": 65,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 50,
+        "rightArm": {
+          "pitch": -35,
+          "roll": 25,
+          "bend": 65,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -35,
+          "roll": -25,
+          "bend": 65,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 62,
+        "easing": "easeInOutSine",
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      }
+    ]
+  }
+}

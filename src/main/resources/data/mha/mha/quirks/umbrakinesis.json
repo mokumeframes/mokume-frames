@@ -1,0 +1,33 @@
+{
+  "id": "umbrakinesis",
+  "name": "Umbrakinesis",
+  "localizedNames": [
+    "Umbrakinesis (mod-original label)",
+    "Umbrakinesis (working English label)"
+  ],
+  "knownUsers": [
+    "No official wielder — original to MHA: Rising Heroes."
+  ],
+  "sourceMedium": "Mod-original / non-canon",
+  "sourceWork": "MHA: Rising Heroes original collection",
+  "continuity": "Explicitly non-canon, created for this mod.",
+  "firstCharacterAppearance": "Not applicable — mod-original.",
+  "firstDemonstration": "No verified TV season/episode.",
+  "firstNamedExplanation": "Not applicable — original label.",
+  "lore": "An original ability to shape finite shade into marks, a projectile veil and a brief distracting silhouette.",
+  "adaptation": "All moves, numerical values, challenges and resources are mod adaptations. Grounded footwork and physical jabs are complementary training. This is an experimental development kit.",
+  "role": "Shadow binding / distraction",
+  "resource": "Shade is 0–100. Low light accelerates recovery; brightness 12 or above increases costs by 25%. Daylight remains playable.",
+  "drawback": "Finite shade, solid cover, short marks and control resistance limit pressure. Dusk Mantle does not stop melee.",
+  "counters": [
+    "Break line of sight and punish startup/recovery.",
+    "Avoid predictable guard windows; reposition beyond effective range."
+  ],
+  "nonCombatUtility": [
+    "Timed rescue positioning and supervised field objectives."
+  ],
+  "equipment": "The Cadet suit is equipment and grants no quirk. Ordinary jabs and grounded footwork are explicitly complementary training.",
+  "acquisition": "Operator-enabled experimental pools and permission-checked creative tokens only. Earn mastery and field milestones per quirk; no automatic maximum mastery.",
+  "verification": "Original design recorded 28 October 2026; no official source or character is claimed.",
+  "references": []
+}

@@ -1,0 +1,93 @@
+{
+  "version": 3,
+  "name": "blue_lance",
+  "author": "Rising Heroes project",
+  "description": "Original Blueflame animation; game adaptation.",
+  "emote": {
+    "beginTick": 0,
+    "endTick": 29,
+    "stopTick": 30,
+    "isLoop": false,
+    "degrees": true,
+    "moves": [
+      {
+        "tick": 0,
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 12,
+        "easing": "easeOutQuad",
+        "rightArm": {
+          "pitch": -53.900000000000006,
+          "roll": 0.0,
+          "bend": 55,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -23.1,
+          "roll": -8.399999999999999,
+          "bend": 55,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": -10
+        }
+      },
+      {
+        "tick": 13,
+        "rightArm": {
+          "pitch": -98,
+          "roll": 0,
+          "bend": 20,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -42,
+          "roll": -12,
+          "bend": 20,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 10
+        }
+      },
+      {
+        "tick": 29,
+        "easing": "easeInOutSine",
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      }
+    ]
+  }
+}

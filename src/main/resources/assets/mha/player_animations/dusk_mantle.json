@@ -1,0 +1,112 @@
+{
+  "version": 3,
+  "name": "dusk_mantle",
+  "author": "Rising Heroes project",
+  "description": "Original Umbrakinesis animation; game adaptation.",
+  "emote": {
+    "beginTick": 0,
+    "endTick": 57,
+    "stopTick": 58,
+    "isLoop": false,
+    "degrees": true,
+    "moves": [
+      {
+        "tick": 0,
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 5,
+        "easing": "easeOutQuad",
+        "rightArm": {
+          "pitch": -30.250000000000004,
+          "roll": 42.0,
+          "bend": 55,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -30.250000000000004,
+          "roll": -42.0,
+          "bend": 55,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 6,
+        "rightArm": {
+          "pitch": -55,
+          "roll": 60,
+          "bend": 65,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -55,
+          "roll": -60,
+          "bend": 65,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 45,
+        "rightArm": {
+          "pitch": -55,
+          "roll": 60,
+          "bend": 65,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -55,
+          "roll": -60,
+          "bend": 65,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 57,
+        "easing": "easeInOutSine",
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      }
+    ]
+  }
+}

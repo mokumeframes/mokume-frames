@@ -1,0 +1,33 @@
+{
+  "id": "kinetic_reservoir",
+  "name": "Kinetic Reservoir",
+  "localizedNames": [
+    "Kinetic Reservoir (mod-original label)",
+    "Kinetic Reservoir (working English label)"
+  ],
+  "knownUsers": [
+    "No official wielder — original to MHA: Rising Heroes."
+  ],
+  "sourceMedium": "Mod-original / non-canon",
+  "sourceWork": "MHA: Rising Heroes original collection",
+  "continuity": "Explicitly non-canon, created for this mod.",
+  "firstCharacterAppearance": "Not applicable — mod-original.",
+  "firstDemonstration": "No verified TV season/episode.",
+  "firstNamedExplanation": "Not applicable — original label.",
+  "lore": "An original ability to bank a capped portion of legitimate guarded impacts and release it in counters or rescue movement.",
+  "adaptation": "All moves, numerical values, challenges and resources are mod adaptations. Grounded footwork and physical jabs are complementary training. This is an experimental development kit.",
+  "role": "Impact storage / timed counters",
+  "resource": "Stored impact begins at zero and caps at sixty. Only guarded hostile physical/projectile damage charges it. Fatigue breaks guards at 100.",
+  "drawback": "Empty storage prevents demanding releases. Energy decays outside combat; self, allied and environmental damage do not charge it.",
+  "counters": [
+    "Break line of sight and punish startup/recovery.",
+    "Avoid predictable guard windows; reposition beyond effective range."
+  ],
+  "nonCombatUtility": [
+    "Timed rescue positioning and supervised field objectives."
+  ],
+  "equipment": "The Cadet suit is equipment and grants no quirk. Ordinary jabs and grounded footwork are explicitly complementary training.",
+  "acquisition": "Operator-enabled experimental pools and permission-checked creative tokens only. Earn mastery and field milestones per quirk; no automatic maximum mastery.",
+  "verification": "Original design recorded 28 October 2026; no official source or character is claimed.",
+  "references": []
+}

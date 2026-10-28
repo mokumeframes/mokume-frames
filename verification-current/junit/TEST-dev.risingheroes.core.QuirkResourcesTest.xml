@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.risingheroes.core.QuirkResourcesTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-10-28T19:20:48.213Z" hostname="EWAN" time="0.018">
+  <properties/>
+  <testcase name="heavyDischargeSpendsChargeAndPreservesOverloadAcrossAssignment()" classname="dev.risingheroes.core.QuirkResourcesTest" time="0.001"/>
+  <testcase name="catalogueOwnsEveryMoveExactlyOnce()" classname="dev.risingheroes.core.QuirkResourcesTest" time="0.001"/>
+  <testcase name="thermalExtremesRejectSameSideButAllowTheOppositeSide()" classname="dev.risingheroes.core.QuirkResourcesTest" time="0.002"/>
+  <testcase name="fatigueIsIndependentOfArchivedBlastStrainAndCannotOverflow()" classname="dev.risingheroes.core.QuirkResourcesTest" time="0.001"/>
+  <testcase name="alternatingThermalStartersBalancesTemperatureWithoutRefreshingCooldowns()" classname="dev.risingheroes.core.QuirkResourcesTest" time="0.001"/>
+  <testcase name="newKitPracticeGrantsOnlyItsFirstTrainingMasteryAndNoDuplicateCurrency()" classname="dev.risingheroes.core.QuirkResourcesTest" time="0.001"/>
+  <testcase name="spoofedCrossKitUnlockCannotBeEquippedOrCast()" classname="dev.risingheroes.core.QuirkResourcesTest" time="0.001"/>
+  <testcase name="[1] explosion" classname="dev.risingheroes.core.QuirkResourcesTest" time="0.001"/>
+  <testcase name="[2] half_cold_half_hot" classname="dev.risingheroes.core.QuirkResourcesTest" time="0.001"/>
+  <testcase name="[3] hardening" classname="dev.risingheroes.core.QuirkResourcesTest" time="0.001"/>
+  <testcase name="[4] electrification" classname="dev.risingheroes.core.QuirkResourcesTest" time="0.001"/>
+  <testcase name="[5] blueflame" classname="dev.risingheroes.core.QuirkResourcesTest" time="0.0"/>
+  <testcase name="[6] umbrakinesis" classname="dev.risingheroes.core.QuirkResourcesTest" time="0.001"/>
+  <testcase name="[7] kinetic_reservoir" classname="dev.risingheroes.core.QuirkResourcesTest" time="0.0"/>
+  <testcase name="balancedTechniquesAndUnderwaterRulesAreEnforced()" classname="dev.risingheroes.core.QuirkResourcesTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,77 @@
+{
+  "version": 3,
+  "name": "ap_shot",
+  "author": "Rising Heroes project",
+  "description": "Original palm-cast animation; mod adaptation.",
+  "emote": {
+    "beginTick": 0,
+    "endTick": 22,
+    "stopTick": 23,
+    "isLoop": false,
+    "degrees": true,
+    "moves": [
+      {
+        "tick": 0,
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        }
+      },
+      {
+        "tick": 9,
+        "easing": "easeOutQuad",
+        "rightArm": {
+          "pitch": -65,
+          "roll": -15,
+          "bend": 55,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -35,
+          "roll": 20,
+          "bend": 35,
+          "axis": 0
+        }
+      },
+      {
+        "tick": 10,
+        "rightArm": {
+          "pitch": -90,
+          "roll": -8,
+          "bend": 8,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -75,
+          "roll": 8,
+          "bend": 15,
+          "axis": 0
+        }
+      },
+      {
+        "tick": 22,
+        "easing": "easeInOutSine",
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        }
+      }
+    ]
+  }
+}

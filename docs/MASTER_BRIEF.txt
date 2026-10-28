@@ -1,0 +1,878 @@
+# MASTER DEVELOPMENT PROMPT — MHA: RISING HEROES
+
+Build an ambitious, polished **My Hero Academia mod for Minecraft Java Edition 1.21.1 using NeoForge**. Working title: **MHA: Rising Heroes**.
+
+Treat this as a complete game-development project covering programming, combat, progression, world content, animation, VFX, models, interface design, audio, documentation, and testing.
+
+The goal is an exceptional MHA experience with expressive quirks, satisfying progression, spectacular readable combat, a compact professional HUD, and dependable multiplayer.
+
+Include:
+
+- A playable MHA map with **U.A. High and the important series and movie locations**.
+- A required **school-to-hero-licence campaign**.
+- Substantial **villain and independent/vigilante campaigns**.
+- Main-series, movie, and clearly labelled original/non-canon quirks.
+- A complete in-game guidebook explaining every implemented quirk, its users, its source, and its gameplay.
+
+Translate the ambition into measurable features and a playable implementation. Work in complete, buildable milestones while preserving the full roadmap.
+
+## 1. Required technology and compatibility proof
+
+Use:
+
+- **Minecraft Java Edition 1.21.1**.
+- **NeoForge 21.1.x**.
+- **Java 21**.
+- **Photon** for attack effects and other quirk VFX.
+- **Player Animator** for player animation.
+- **Bendy Lib** for supported limb bending.
+- A compatible **GeckoLib 4.x** release for animated armour and suitable entities/items.
+- **Blockbench, including its browser editor, or Blender** for original models and animations.
+
+Before major implementation, verify exact releases, loader metadata, dependencies, licensing, distribution requirements, and client/server requirements from author-maintained sources. Pin a reproducible working combination.
+
+Include Photon’s required supporting libraries. Do not invent Maven coordinates or copy examples from a different Minecraft or GeckoLib major version.
+
+Investigate Bendy Lib through its author’s artifacts and source, rather than relying solely on an old standalone download listing. Record Player Animator’s maintenance status. Preserve my requested stack; propose a replacement only if a specific blocker is demonstrated, explaining the tradeoff before changing it.
+
+Build an early integration scene containing:
+
+- One server-authoritative attack.
+- A Photon effect.
+- A Player Animator animation.
+- Bendy limb movement.
+- A GeckoLib armour set correctly following the player.
+
+Verify standard and slim skins, first and third person, another player observing, walking, sprinting, crouching, jumping, swimming, riding, equipment changes, and interrupted attacks.
+
+Check shoulders, elbows, knees, held items, and attachments. Treat armour pose transfer and bending as an integration task; do not assume the libraries automatically share a rig.
+
+Keep client rendering code out of dedicated-server execution. Produce a dependency matrix and get both client and dedicated server to start before expanding content.
+
+## 2. Overall experience and creative direction
+
+The main loop is:
+
+**Discover a quirk → learn its controls → train through meaningful activities → complete missions → unlock techniques → specialise → earn a licence or equivalent reputation → challenge bosses → master advanced abilities.**
+
+Support single-player survival, LAN, and dedicated servers. Preserve the usefulness of food, crafting, exploration, shelters, equipment, and building. Also provide configuration for adventure and roleplay servers.
+
+Provide **hero, villain, and independent/vigilante paths**. These change missions, relationships, headquarters, and cosmetics. A player’s quirk must not dictate their alignment or lock them out of essential progression. Make changing direction possible through meaningful quests.
+
+Use a cohesive anime-inspired visual identity:
+
+- Strong silhouettes and purposeful poses.
+- Clean icons and readable typography.
+- Restrained interface decoration.
+- Distinct colour languages for different quirks.
+- Detailed costumes with consistent proportions.
+- Spectacular effects that preserve combat readability.
+
+The HUD should feel deliberately designed, smooth, and compact. Avoid oversized panels, muddy generated textures, fake lettering, and inconsistent icon styles.
+
+Create a style guide covering palettes, typography, icon grids, proportions, materials, VFX intensity, and audio levels.
+
+## 3. Random starting quirk and onboarding
+
+Assign exactly **one enabled, completed quirk** on a player’s first eligible join. The server owns the random selection and persists it before displaying the reveal.
+
+Death, reconnecting, dimension changes, and repeated requests must never produce another free roll.
+
+Use configurable pools and weights. Make every starting result viable. Acquisition rarity must not automatically mean greater combat power.
+
+Allow separate main-series, movie, and original-content pools, plus individual allowlists and exclusions. Story-gated quirks stay outside ordinary rolls unless the server explicitly enables them.
+
+Provide a brief, skippable reveal showing:
+
+- Quirk name.
+- Combat/support role.
+- Main resource and drawback.
+- Beginner controls.
+- First suggested training objective.
+
+Give two useful starter techniques and the guidebook. Make the tutorial replayable.
+
+Do not randomly give quirkless starts by default. Provide a deliberate optional quirkless challenge with equipment-based progression.
+
+Persist current quirk, individual quirk masteries, unlocks, loadouts, reputation, mission state, tutorial completion, cosmetics, and pending reroll offers in versioned player data.
+
+## 4. Creative quirk tokens and administrator tools
+
+Create a **separate named, searchable creative token for every implemented quirk**, including movie and original quirks.
+
+Examples:
+
+- Explosion Quirk Token.
+- Half-Cold Half-Hot Quirk Token.
+- One For All Quirk Token.
+- Reflect Quirk Token.
+- Voidstep Quirk Token.
+
+Give each a coherent icon and tooltip describing its role, resource, and assignment behaviour.
+
+Using a token assigns that specific quirk to its user through the authoritative quirk-assignment system. Verify creative mode or configured administrative permission on the server.
+
+Possessing a creative token in survival must not bypass progression by default.
+
+Ordinary assignment restores that quirk’s previously earned mastery or starts it at zero. Provide separate, clearly labelled creative testing controls for maximum mastery, all moves, and resource overrides.
+
+Changing a quirk must not silently grant everything or wipe all character progress.
+
+Provide documented permission-controlled commands under `/mha` for:
+
+- Inspecting a player.
+- Assigning a quirk.
+- Granting a reroll.
+- Setting mastery.
+- Granting or revoking a move.
+- Managing reputation.
+- Testing abilities.
+- Changing content pools.
+
+Separate quirk assignment from destructive resets. Include a clear scope and confirmation for resets.
+
+Cancel old transformations, modifiers, summons, sustained effects, and resources when replacing a quirk. Only the equipped quirk contributes passives.
+
+## 5. Earnable rerolls and targeted acquisition
+
+Create a survival **Quirk Reroll Token** distinct from creative assignment tokens.
+
+Award one bound introductory token after the tutorial. Provide further routes through mission credits, research tasks, bosses, and a balanced crafting or exchange recipe.
+
+Target roughly **45–90 minutes of purposeful early play** for another reroll, then adjust through testing.
+
+Before spending it, explain exactly what changes and what is retained.
+
+On confirmation:
+
+1. Consume one token.
+2. Generate up to three distinct eligible alternatives.
+3. Exclude the current quirk when the pool permits.
+4. Save the offers immediately.
+5. Let the player select an alternative or keep their current quirk.
+
+Reopening the menu or reconnecting must show the same choices. Offer fewer choices for small pools. If no eligible alternative exists, explain why and do not consume a token.
+
+Explicitly state that generating offers spends the token even if the player keeps their current quirk.
+
+Prevent duplicate consumption, free refreshes, and reward duplication. Disable rerolls during combat, duels, transformations, and missions requiring stable loadouts.
+
+Retain general rank, story progress, currency, recipes, cosmetics, and archived mastery for previously trained quirks. A new quirk begins at its own earned mastery. Archived powers do not remain active.
+
+Preserve relevant cooldown and exhaustion restrictions so switching cannot refresh combat resources unfairly.
+
+Add a longer deterministic research or attunement route toward an eligible desired quirk. Players should not be trapped behind endless random rolls.
+
+Avoid paid rolls, login streaks, mandatory daily tasks, and real-time waiting gates.
+
+## 6. Progression and move unlocks
+
+Separate three understandable tracks:
+
+| Track | Purpose |
+|---|---|
+| Character rank, approximately 1–50 | Opens missions, licences, equipment, and facilities. |
+| Quirk mastery, 0–100 per quirk | Unlocks control, techniques, branches, and advanced forms. |
+| Technique proficiency | Provides a few modest refinements or alternative behaviours. |
+
+Progression should mainly add options, control, and build variety. Keep health, damage, and defence growth bounded so newer players can contribute.
+
+Suggested mastery milestones:
+
+| Mastery | Reward |
+|---|---|
+| 0 | Starter kit and resource tutorial. |
+| 5 | First additional technique. |
+| 12 | Utility or efficiency improvement. |
+| 20 | Signature move and first specialisation. |
+| 35 | Advanced defence or movement. |
+| 50 | Ultimate trial. |
+| 65 | Technique variant. |
+| 80 | Advanced combinations. |
+| 100 | Capstone trial. |
+
+Treat these as tunable defaults.
+
+Unlock moves through a visible mastery requirement plus a short, relevant challenge. Examples include:
+
+- Rescuing civilians without fall damage.
+- Controlling temperature.
+- Completing an Explosion movement course.
+- Protecting allies.
+- Maintaining and breaking line of sight correctly.
+
+Permit equivalent routes when a particular structure or mentor is unavailable in an existing world.
+
+Reward effective combat, legitimate healing, protection, rescue work, traversal objectives, and mission contributions.
+
+Prevent AFK casting, friendly damage, self-damage, and repeated trivial targets from generating unlimited mastery. Training dummies should teach mechanics and provide limited introductory progress.
+
+Aim for a useful unlock in the first **10–20 minutes** and a recognisable build within the first hour. Verify pacing through actual play.
+
+Use two or three meaningful specialisation branches per major quirk, with tradeoffs in range, mobility, recovery, cost, or utility. Allow an accessible respec.
+
+Do not force a lore-inaccurate awakening onto every quirk. A perfected technique, advanced stance, or support capstone can fill that role.
+
+## 7. Quirk roster and content categories
+
+Treat the following as a development roadmap. Ship only fully playable, tested entries.
+
+Do not put unfinished tokens or nonfunctional abilities into the normal release, random pools, or advertised completed roster.
+
+### Main-series foundation
+
+Explosion, Half-Cold Half-Hot, Hardening, Electrification, Zero Gravity, Engine, Frog, Acid, Tape, Dark Shadow, Creation, and Earphone Jack.
+
+### Expanded main-series roster
+
+Tail, Dupli-Arms, Navel Laser, Steel, Fierce Wings, Hellflame, Blueflame, Rabbit, Whirlwind, Brainwashing, Manifest, and Wave Motion.
+
+### Advanced main-series roster
+
+One For All, All For One, Copy, Erasure, Permeation, Decay, Overhaul, Transform, Double, Compress, Warp Gate, and Rewind.
+
+Implement advanced quirks after their special technical and balance requirements are supported. Expand further into other verified quirks when quality gates are met.
+
+### Movie quirks
+
+Include movie content as a substantial part of the project.
+
+Research and implement these initial targets, verifying exact localised quirk names and abilities before publishing their guidebook entries:
+
+| Movie | Initial research and implementation targets |
+|---|---|
+| **Two Heroes** | Wolfram and his metal-manipulation abilities. |
+| **Heroes Rising** | Nine, Chimera, Slice, Mummy, Katsuma Shimano, and Mahoro Shimano; investigate Weather Manipulation, Chimera, Slice, Mummification, Cell Activation, and Hologram respectively. |
+| **World Heroes’ Mission** | Flect Turn’s Reflect and Rody Soul’s Soul; expand to other verified movie characters such as Beros and the Serpenters. |
+| **You’re Next** | Dark Might’s Alchemy and Anna Scervino’s Overmodification; research additional film-specific abilities separately. |
+
+Distinguish a character’s original quirk from copied, inherited, temporarily acquired, or amplified powers.
+
+Nine’s collection must not be described as one ordinary weather move set. Do not turn support-oriented movie powers into unrelated destructive magic merely to pad combat kits.
+
+Support verified OVA, game-original, and spin-off material as separate labelled categories.
+
+**Track source medium and continuity claims separately.** Movie-only or anime-only must not automatically be labelled non-canon.
+
+### Original/non-canon quirks
+
+Create an optional, clearly identified mod-original collection. Starting proposals:
+
+- **Voidstep:** short hops between visible, temporary anchors.
+- **Resonance:** timed vibration marks that combine into controlled pulses.
+- **Glassweave:** fragile prism shields and constructs with limited projectile redirection.
+- **Vector Thread:** temporary tethers that redirect movement around permitted anchors.
+- **Inkbound:** finite ink traps and small constructs, with water-related counterplay.
+- **Kinetic Reservoir:** store a capped portion of legitimate blocked impacts for later release.
+- **Aurora Forge:** temporary light weapons and shields governed by a shared energy budget.
+- **Verdant Pulse:** limited plant tethers, protective growth, and rescue/support techniques.
+
+Give these complete kits, weaknesses, and visual identities. Clearly label their powers and associated NPCs as original to this mod.
+
+## 8. Quality standard for every quirk
+
+Write a design sheet before implementation covering:
+
+- Identity, role, source, and associated users.
+- Category, resource, and drawback.
+- Passives and techniques.
+- Movement and defence options.
+- Ultimate or equivalent capstone.
+- Specialisations and mastery path.
+- Counters and non-combat utility.
+
+Most major quirks should offer **six to ten meaningful techniques plus variants**, while allowing only a small equipped selection.
+
+Narrower canonical powers may use complementary equipment or combat techniques. Distinguish that equipment from the actual quirk.
+
+Each move needs:
+
+- ID, name, and input type.
+- Aim rules.
+- Startup, active, and recovery timing.
+- Stamina and special-resource costs.
+- Cooldown.
+- Hitbox shape and range.
+- Damage and status behaviour.
+- Interruption rules.
+- Movement effects and terrain policy.
+- Unlock requirements.
+- Animation, Photon effect, audio, and icon.
+- PvE and PvP tuning.
+
+Record whether its name and behaviour are source-based or a mod adaptation.
+
+Define interactions with water, airborne targets, walls, allies, armour, shields, immunity, bosses, suppression, and quirk changes.
+
+Keep numerical values in shared validated data. The guidebook, tooltips, and HUD must read the same effective values, including server adjustments.
+
+## 9. Reference kits to establish the standard
+
+### Explosion
+
+Emphasise recoil mobility, precision, and aerial pressure.
+
+Build around Palm Burst, Blast Dash, AP Shot, Recoil Dodge, Stun Grenade, Burst Volley, Aerial Redirection, and Howitzer Impact.
+
+Distinguish canonical names from newly designed variants.
+
+Use stamina and blast strain, with Precision and Propulsion specialisations. Teach aiming and movement through practical trials. Large attacks need visible windup and punishable recovery.
+
+### Half-Cold Half-Hot
+
+Use a readable temperature meter. Ice and fire move temperature in opposite directions; extremes create visible strain.
+
+Include Ice Shot, Flame Jet, Ice Wall, Ice Ramp/Slide, Flame Sweep, Flashfreeze, Thermal Shock, and a Flashfreeze Heatwave capstone.
+
+Label original move adaptations. Add temporary rescue routes, terrain control, and temperature trials. Avoid placing collision geometry inside players.
+
+### One For All
+
+Progress through controlled output bands, Full Cowling, focused strikes, air-pressure attacks, movement techniques, and separately earned inherited abilities.
+
+Blackwhip, Float, Smokescreen, Fa Jin, Danger Sense, and Gearshift need individual research, trials, and balance rules.
+
+Do not give the entire late-series toolkit on first assignment. Temporary overdrive can cause recoverable strain.
+
+### Erasure
+
+Centre the kit on line of sight, focus, and eye strain, with visible suppression and recovery/blink windows.
+
+Provide tactical movement and complementary capture equipment while identifying which actions come from gear.
+
+Cover, range, target limits, and repeated-control resistance must provide counterplay. Leave physical mutant anatomy intact and define which active behaviours can be suppressed.
+
+### Movie kits
+
+Investigate controllable metal formations for Wolfram, bounded reflection capacity for Flect Turn, support and misdirection for Rody, and resource-constrained preset transmutation for Dark Might.
+
+Faithfulness, readable limitations, and gameplay utility matter as much as spectacle.
+
+## 10. Combat, controls, and resource rules
+
+Use responsive aiming, useful melee, dodging, guarding, aerial combat, and quirk-specific mobility.
+
+Ordinary weapons and unarmed combat should remain usable. Provide readable hit confirmation and optional light camera feedback.
+
+The default loadout has **six slots**:
+
+- Four techniques.
+- One mobility/utility move.
+- One ultimate/capstone.
+
+Allow safe-area loadout changes and saved presets. Keep cooldowns attached to abilities so swapping cannot bypass them.
+
+Make all keys remappable. Offer direct move bindings and a select-and-cast option.
+
+Define press, hold, release, charging, toggles, cancellation, and buffered inputs consistently. Display actual configured keys.
+
+Preserve normal inventory, hotbar, sneak, sprint, and chat controls. Detect conflicts.
+
+Use explicit startup, active, and recovery states. Define interruption and cancellation costs.
+
+Stamina controls exertion; individual quirk resources distinguish kits. Zero stamina should prevent demanding actions without making basic survival impossible.
+
+Integrate hunger sensibly so ordinary combat does not require eating every few seconds.
+
+Use bounded crowd control, repeated-suppression resistance, limited knockback chains, and escape opportunities.
+
+Strong attacks require setup, a tell, a cost, and recovery. Provide configurable PvP, friendly fire, duels, and protected hubs.
+
+**The server owns damage, costs, cooldowns, movement validation, targets, and rewards.** Photon and animation completion must never decide authoritative hits.
+
+## 11. Special rules for difficult powers
+
+- **All For One:** bounded NPC-derived imprints, capped storage/equipped powers, and a shared resource budget. No permanent theft of another player’s quirk by default.
+- **Copy:** temporary eligible abilities, with restrictions for stockpiled power, recursive copying, and incompatible transformations.
+- **Decay:** telegraphed, finite propagation with block/entity budgets and ordinary resistible damage.
+- **Overhaul/Alchemy:** curated temporary formations and bounded reconstruction. Never duplicate inventories, containers, valuable blocks, or entity drops.
+- **Permeation/Voidstep:** bounded duration and distance, no attacking or looting while intangible, protected-area checks, safe destination validation, and fallback positions.
+- **Creation:** explicit recipes, allowlists, real costs, and caps. No administrative items, reroll tokens, progression keys, or arbitrary item generation.
+- **Double/Mummification/summons:** strict entity limits, simplified AI, finite lifetimes, and no recursive armies or duplicated inventories.
+- **Transform:** disguise appearance without copying identity, permissions, or team membership.
+- **Warp Gate:** permission-aware destinations, bounded range, and safe arrival validation.
+- **Rewind:** carefully scoped reversible effects with explicit exclusions. No arbitrary world-history rollback or permanent deletion of another player’s progress.
+- **Reflect:** capped categories, capacity, duration, and reflection depth.
+- **Hologram/Soul/Brainwashing:** state what is simulated and what is an adaptation. Illusions must not become unrestricted wall vision; control effects must remain brief and escapable.
+
+Test these interactions deliberately. Low-detail settings must not remove essential danger information.
+
+## 12. Complete in-game guidebook
+
+Create a polished **Hero Analysis Notebook**, available from onboarding, a recoverable/craftable item, and a remappable menu shortcut.
+
+It must work offline after installation and cover every implemented quirk, including movie and original content.
+
+Include search, bookmarks, alphabetical sorting, and filters for role, source work, user, quirk type, mastery, and unlocked status.
+
+Link moves, recipes, mentors, missions, and training locations. Provide a personal page showing the player’s build and next useful objective.
+
+Every quirk entry must include:
+
+1. Verified name and alternate/localised names.
+2. Known users, with character names and hero/villain aliases.
+3. Original holder, inheritors, copied users, and temporary users distinguished where applicable.
+4. Source category: anime/manga, movie, OVA, game, spin-off, or mod-original.
+5. First verified anime appearance: season and episode where established.
+6. Actual movie title for movie appearances.
+7. Optional verified manga references.
+8. Source-backed continuity information, separate from source medium.
+9. Lore explanation and a clearly labelled explanation of the mod’s adaptation.
+10. Resources, strengths, drawbacks, counters, and non-combat uses.
+11. Every move’s controls, effective stats, cooldown, cost, and exact unlock conditions.
+12. Mastery branches, capstone method, support equipment, and combinations.
+13. Acquisition options, server pool eligibility, reroll rules, and creative token.
+14. Original illustration/model preview and demonstrations where practical.
+15. References and verification notes.
+
+For original quirks, state:
+
+**“Mod-original / non-canon. No official anime season or movie appearance. No official canonical user.”**
+
+Label original NPCs separately. Do not fabricate official wielders.
+
+For movie-only, game-only, or manga-only entries without a verified TV appearance, explicitly say **“No verified TV season/episode.”**
+
+Build spoiler controls for anime progress, individual movies, manga-only material, hidden identities, inherited abilities, and later forms.
+
+Apply selected spoiler preferences to search results, token tooltips, unlock previews, and quirk reveals where practical, while keeping essential mechanics understandable.
+
+Use structured source records containing source work, medium, season, episode/chapter where verified, users, localisation, references, confidence, and spoiler tags.
+
+Distinguish:
+
+- First character appearance.
+- First quirk demonstration.
+- First named explanation.
+- Later upgrades and forms.
+
+A TV quirk appearing in a movie must not be relabelled as originating there.
+
+The guidebook must display server-effective gameplay values. Missing source information must be resolved or honestly labelled before release.
+
+## 13. Compact custom HUD and menus
+
+Design a smooth, attractive interface with consistent spacing, crisp silhouettes, readable type, subtle transitions, and restrained colours.
+
+Keep combat information around the lower edge and the centre clear.
+
+### Default layout
+
+- **Bottom centre:** custom nine-slot hotbar with selection feedback, item counts, durability, and offhand support.
+- **Immediately above/around the hotbar:** slim custom health, stamina, and food bars.
+- **Bottom left:** compact two-row, three-slot move panel with icons, live key hints, cooldowns, and clear ability states.
+- **Contextual:** small quirk-resource gauge, integrated ultimate indicator, and collapsible quest tracker.
+
+For a 1920×1080 reference mockup, start around 420–460 pixels wide for the hotbar and 210–260 pixels wide for the move panel.
+
+Treat these as design guides, adapting through Minecraft GUI scaling and usability checks. Aim for persistent panels to occupy less than roughly 10% of the screen.
+
+Health and food must reflect real game state.
+
+Preserve absorption, armour, air, experience, status effects, boss bars, mount information, spectator needs, subtitles, and chat. Avoid duplicate vanilla bars.
+
+Provide:
+
+- Draggable anchors.
+- Scale and opacity.
+- Compact mode.
+- Optional labels and numbers.
+- Layout presets and reset controls.
+- Alternate move-panel placement.
+- Colour-accessible states.
+- Reduced motion.
+- Camera-shake and flash controls.
+- Sound sliders and readable text scaling.
+
+Test at 1280×720, 1920×1080, ultrawide, and multiple GUI scales.
+
+Do not bake key names or important text into textures. Create editable interface assets and supported runtime exports.
+
+Build matching screens for character status, progression, loadouts, quests, equipment, guidebook, and configuration.
+
+Locked moves must say exactly what remains to unlock them.
+
+## 14. Photon effects, animation, and audio
+
+Use Photon for bespoke charging, attacks, trails, beams, shockwaves, impacts, transformations, suppression, and environmental effects.
+
+Give each quirk its own visual language: explosive sparks, angular ice, directional flame, branching electricity, feather movement, shadow mass, sound rings, or controlled light shapes.
+
+Coordinate windup, animation, sound, hit windows, and recovery through a shared move timeline.
+
+Support correct hand, foot, weapon, and world attachment points. End looping effects reliably on interruption, death, logout, dimension change, and quirk replacement.
+
+Create Player Animator animations with anticipation, weight, follow-through, and clean blending.
+
+Separate upper-body actions where appropriate. Keep first-person views readable and provide options to reduce obstructive arms, particles, and camera movement.
+
+Implement distance culling, effect lifetimes, quality presets, and simultaneous-effect caps.
+
+Lower settings must retain inexpensive attack outlines and tells. Effects should communicate the actual danger area.
+
+Create coherent original or appropriately licensed audio with distance attenuation and volume controls. Record asset provenance.
+
+## 15. Models, costumes, and asset production
+
+Create actual editable Blockbench or Blender assets and tested runtime exports.
+
+Preserve `.bbmodel`/`.blend` sources, textures, animation projects, Photon projects, and export instructions.
+
+Use GeckoLib armour models for recognisable hero/villain costumes and original custom suits.
+
+Include appropriate masks, helmets, gloves, boots, belts, support equipment, and animated accessories.
+
+Support standard/slim proportions, partial equipment sets, crouching, swimming, held items, damage rendering, and equipment changes.
+
+Build one representative costume and validate the complete pipeline before making many.
+
+Do not assume arbitrary Blender meshes are compatible with GeckoLib armour. Prove the geometry, rig, conversion/export, and rendering path.
+
+Prevent clipping, floating pieces, and double-applied bone transforms. Keep rigid pieces rigid while supported limb sections follow bending.
+
+Use sensible geometry and texture budgets. Offer cosmetic recolours and transmog within server rules.
+
+Distinguish defensive equipment, cosmetic appearance, and the character’s actual quirk.
+
+If browser Blockbench or Blender cannot be operated in the environment, state that accurately and produce valid editable assets through available methods. Never claim unperformed visual testing.
+
+## 16. Playable MHA map, U.A. High, and important locations
+
+Create a **playable, populated MHA adventure map** with recognisable locations, usable interiors, NPCs, missions, traversal routes, and environmental storytelling.
+
+A map image, minimap, empty city shell, or isolated decorative school does not fulfil this requirement.
+
+Author original builds based on researched references.
+
+Deliver a ready-to-play adventure world or a reproducible authored adventure region/dimension with a documented entry point.
+
+Support ordinary survival worlds through safe structure placement and campaign access. Never overwrite existing builds or strand players because an old world lacks a required school.
+
+### U.A. High
+
+Make U.A. the complete central hero-school hub, including:
+
+- Main entrance and recognisable exterior.
+- Class 1-A and 1-B classrooms.
+- Staff and principal offices.
+- Cafeteria and infirmary.
+- Support-course workshops.
+- Gyms and training facilities.
+- Ground Beta.
+- Correctly distinguished Ground Gamma and Gym Gamma.
+- Sports Festival stadium.
+- Heights Alliance dormitories.
+- USJ rescue-training facility with distinct disaster zones.
+
+Research names and layouts. Let players attend lessons, use workshops, practise, visit mentors, and personalise an allocated dorm room.
+
+### Important series locations
+
+Maintain a source-checked catalogue. At minimum, research and build these as the campaign expands:
+
+| Location group | Required gameplay purpose |
+|---|---|
+| **Musutafu and everyday districts** | Residential streets, shopping, rooftops, transport, services, relevant school/home landmarks, and the early training beach. |
+| **Hero agencies** | Appropriate representations of Endeavor’s, Nighteye’s, Best Jeanist’s, Hawks’, and Fat Gum’s agencies, with mentors and missions. |
+| **Hosu City** | Investigations, patrols, rescues, and appropriate encounters. |
+| **Kamino Ward and relevant League hideouts** | Story operations, rescues, investigations, and villain content. |
+| **Forest training camp** | Wild, Wild Pussycats-associated facilities and outdoor training routes. |
+| **Shie Hassaikai compound** | Surface and underground mission spaces. |
+| **Deika City** | Faction encounters and appropriate story missions. |
+| **Jaku Hospital and underground facilities** | Investigation and advanced operations. |
+| **Gunga Mountain Villa** | Faction and raid content. |
+| **Tartarus** | Restricted prison encounters with clear capture, rescue, or breakout rules. |
+| **Other schools and examination venues** | Shiketsu High, Ketsubutsu Academy, and the verified licence-exam setting. |
+| **Later-series locations** | Spoiler-tagged chapters and battle arenas, preserving normal hub access. |
+
+### Movie locations
+
+Include:
+
+- **I-Island**, including research, expo, and tower areas.
+- **Nabu Island**, including inhabited areas and encounter locations.
+- **Otheon** and relevant Humarise sites.
+- Important fortress and urban encounter settings from **You’re Next**.
+
+Verify exact names, regional context, and story associations.
+
+Include other verified important settings identified during research; this initial list is not exhaustive.
+
+Connect regions through a clear travel system. Use a regional atlas and appropriate transport or mission entrances for separate cities and overseas locations.
+
+Do not present compressed distances or invented connecting streets as exact canon geography.
+
+Unlock convenient travel through discovery or story progress, with combat restrictions.
+
+Every major location needs an atlas entry showing its source season/movie, associated characters, marker, spoiler tag, access requirements, NPCs, activities, missions, and implementation status.
+
+A location counts as finished only when players can reach it and use its advertised content.
+
+### Map interface
+
+Include a full-screen world map and optional small minimap with:
+
+- Discovered regions.
+- Readable labels.
+- Relevant interiors/floors.
+- Personal waypoints.
+- Tracked objectives.
+- Services.
+- Mission prerequisites.
+- Travel points.
+
+Respect server rules for hidden players and undiscovered faction bases. Viewing the map must not load the entire world or become wall vision.
+
+## 17. Required school campaign and hero licences
+
+In the default hero campaign, players **must attend U.A. and complete school missions and examinations to earn their hero licence**.
+
+Quirk mastery or possession of a licence item must not bypass this progression.
+
+Make requirements visible in the notebook, map, and quest journal.
+
+Build this connected, game-adapted progression chain:
+
+1. **Application and entrance assessment:** demonstrate basic control, combat, and rescue potential; meet staff and enrol.
+2. **Orientation:** receive a student record, dorm access, beginner costume/support options, and a training plan.
+3. **Fundamental lessons:** control, stamina, movement, targeting, defence, first aid, and judgement around civilians.
+4. **Battle trials and team exercises:** complete objectives with classmates or competent NPC allies.
+5. **USJ rescue training:** handle flood, fire, rubble, and evacuation scenarios through different valid approaches.
+6. **Sports Festival and assessments:** participate in movement, team, and combat events; first place and PvP victories must not be mandatory.
+7. **Supervised internships and field assignments:** work with an agency and complete city missions.
+8. **Provisional hero licence examination:** pass checkpointed rescue, combat, teamwork, and judgement tasks.
+9. **Licensed work studies and patrols:** unlock sanctioned fieldwork, advanced contracts, and appropriate equipment.
+10. **Advanced qualification and graduation:** complete further training and a major operation to earn the mod’s professional-hero status, then develop or join an agency.
+
+Identify invented qualification requirements and mission sequencing as the mod’s adaptation. Verify canonical terminology.
+
+Use memorable missions, conversations, objective changes, and rewards. Do not reduce every lesson to killing mobs or clicking through dialogue.
+
+Grade control, rescue, efficiency, teamwork, and collateral damage. Support defensive, mobility, support, and equipment-based builds.
+
+No rare quirk, mandatory PvP win, paid item, or real-time attendance schedule may be required.
+
+Keep lessons playable, with practice options, checkpoints, feedback, and reasonable retries.
+
+Licences should unlock meaningful opportunities: student activities, provisional patrols, agency work, specialised vendors, advanced missions, and professional operations.
+
+Store enrolment, completed lessons, examination results, and licence level on the server.
+
+The physical licence is a recoverable credential displaying identity/status. Obtaining or duplicating the item cannot grant its privileges.
+
+Provide a separate administrator bypass for testing.
+
+## 18. Villain, independent, and shared mission progression
+
+Provide a villain campaign with comparable depth and rewards:
+
+**Underground introduction → contact missions → resource acquisition → faction recruitment → infiltration → guarded operations → rival encounters → hideout development → rising notoriety → leadership and raids.**
+
+Connect missions to actual city locations and researched villain bases.
+
+Include scouting, retrieving contested information, intercepting guarded shipments, extracting NPC allies, infiltrating agencies, defending hideouts, and confronting rival factions.
+
+Respect server protection rules. Progress must not require harassing real players or destroying their homes.
+
+Track faction trust, notoriety, and operational rank separately from quirk mastery.
+
+Unlock contacts, workshops, equipment, safehouses, specialised missions, and crew leadership.
+
+Use pursuit and capture mechanics with bounded consequences and a clear recovery route.
+
+Give independent/vigilante players investigation, rescue, bounty, exploration, and support contracts with equivalent access to essential resources.
+
+Allow allegiance changes through rehabilitation, recruitment, or breakaway missions while retaining earned mastery. Preview effects on reputation, access, and credentials.
+
+Build reusable mission definitions containing:
+
+- ID and prerequisites.
+- Location and NPC contact.
+- Objective stages.
+- Contribution rules.
+- Failure and retry conditions.
+- Rewards and rank changes.
+- Spoiler and source tags.
+
+Persist checkpoints, branch decisions, and unique reward claims.
+
+Death, reconnects, rerolls, and party changes must not duplicate rewards or erase completed school progress. Track group participation individually.
+
+Support solo players and parties. Keep private mission progress separate from global world state.
+
+Use reserved arenas or a proven encounter-session system when story stages conflict. Never reset player builds to replay an exam or boss.
+
+Provide support-item research, crafting benches, vendors, mentors, civilians, criminals, robots, and advanced enemies with purposeful, bounded AI.
+
+Bosses need telegraphed attacks, phases, positioning challenges, interrupt opportunities, and distinct rewards.
+
+Endgame should include mastery trials, advanced missions, cooperative raids, optional arenas, agency/crew progression, build experimentation, collections, and cosmetics.
+
+Verify complete hero-school-to-licence and villain progression playthroughs before claiming campaign completion.
+
+## 19. Multiplayer, persistence, and performance
+
+Validate each cast’s quirk, unlock, slot, resource, cooldown, state, range, target, and permission on the server.
+
+Clients must not award themselves damage, movement, items, or experience.
+
+Use unique cast/reward identities and rate limits to prevent duplicate actions and packet spam.
+
+Synchronise necessary state and effect events to relevant observers. Handle late tracking, reconnects, and cancellations. Use prediction only with authoritative reconciliation.
+
+Make assignment, rerolls, purchases, and rewards transactional and repeat-safe.
+
+Version save formats and provide migrations. Clean up transient entities, effects, and modifiers while preserving durable progress.
+
+Respect PvP policy, protected regions, and terrain rules.
+
+Default destructive attacks to restrained environmental effects, with configurable real destruction.
+
+Bound blast radius, propagation, temporary-block counts, and cleanup work. Never overwrite later building changes during restoration or duplicate containers and drops.
+
+Do not force-load large regions for abilities.
+
+Bound projectile lifetimes, summons, collision queries, and AI work. Test travel near chunk boundaries, borders, liquids, and restricted areas.
+
+Establish a benchmark such as eight nearby active quirk users plus NPCs and sustained effects.
+
+Record hardware, settings, server tick times, client frame times, and memory behaviour. Measure before claiming performance.
+
+## 20. Configuration, architecture, and content tooling
+
+Use clean subsystems for quirks, moves, combat, resources, progression, quests, NPCs, networking, rendering, VFX, animation, equipment, guidebook, maps, and configuration.
+
+Keep a small integration layer around presentation libraries.
+
+Use version-appropriate NeoForge registries, persistent data, and item components.
+
+Data-drive suitable move parameters, unlock conditions, missions, pools, source metadata, and recipes. Validate references and ranges with useful errors.
+
+Provide server settings for:
+
+- Progression and rerolls.
+- Quirk pools and content categories.
+- PvP and friendly fire.
+- Destruction and summoning.
+- Boss scaling.
+- Campaign and licence requirements.
+- Special-power restrictions.
+
+Provide separate client settings for HUD, accessibility, maps, and effects. State which settings require reloads or restarts.
+
+Allow future addon quirks through documented interfaces and formats.
+
+Keep names localisable and resource IDs consistent.
+
+Include developer tools for targets, hitboxes, timing, resources, assignment, animation preview, VFX preview, and mission-state inspection. Restrict these on servers.
+
+## 21. Milestones and implementation order
+
+### Milestone 0 — Verified foundation
+
+Verify dependencies and asset pipelines, create the repository structure, and obtain successful client/server startup.
+
+### Milestone 1 — Complete playable loop
+
+Build Explosion with persistent assignment, a token, reroll, training task, earned move, six-slot loadout, guidebook, custom HUD, costume, and integrated animation/VFX.
+
+Include a usable U.A. starting area, nearby city mission, navigation, and enrolment/training objectives.
+
+### Milestone 2 — Varied combat and first campaigns
+
+Add Half-Cold Half-Hot, Hardening, and Electrification.
+
+Complete a school-to-provisional-licence chain and introductory villain chain within the first populated region. Add a boss and tune progression.
+
+### Milestone 3 — Expanded world
+
+Expand the foundation roster, full U.A. campus, named regions, mentors, equipment, and campaigns.
+
+Introduce representative movie and original quirks with source-labelled guidebook entries and associated map content.
+
+### Milestone 4 — Advanced roster and regions
+
+Add complex mechanics and the larger main-series, movie, and original roster in tested batches.
+
+Track planned, implemented, tested, and polished status.
+
+### Milestone 5 — Release quality
+
+Finish assets, accessibility, lore verification, balance, performance, migrations, documentation, and packaging.
+
+Validate advertised content through multiplayer play.
+
+Do not treat the first milestone as the entire project. Retain the full backlog and continue in order.
+
+## 22. Acceptance criteria and deliverables
+
+Verify that:
+
+- Initial assignment happens exactly once.
+- Creative tokens respect permissions.
+- Locked moves reject spoofed requests.
+- Earned unlocks work.
+- Rerolls retain offers and consume one legitimate cost.
+- Old powers cannot survive reassignment.
+- Archived mastery restores correctly.
+- Support players progress meaningfully.
+- Death, reconnects, and dimension changes preserve intended data.
+- Attacks have matching hitboxes and readable tells.
+- Armour follows animation.
+- Remote players see correct effects.
+- Interruptions clean up poses and loops.
+- Low-detail modes remain fair.
+- HUD layouts work across supported scales.
+- Guidebook values match server values.
+- Source information and spoiler settings work.
+- Advertised locations are reachable and populated.
+- Maps show correct objectives.
+- A copied licence item cannot bypass school progression.
+- Hero and villain campaigns work solo and in multiplayer.
+- Dedicated servers load safely.
+
+Test dangerous boundaries including recursive reflection, summons, item creation, phasing, destruction, copying, reward duplication, and save migration.
+
+Use focused automated tests for meaningful logic, supplemented by in-game visual and multiplayer checks.
+
+Distinguish **compiled, launched, manually observed, and tested**.
+
+Deliver:
+
+- Complete source project and Gradle wrapper.
+- Pinned dependencies.
+- Built mod JAR when successfully compiled.
+- Editable model, animation, interface, and VFX sources.
+- Exported runtime assets.
+- Authored adventure world or reproducible map assets.
+- Player/server installation instructions.
+- Configuration reference.
+- Guidebook and region atlas.
+- Mission/licence progression documentation.
+- Content/source matrix.
+- Changelog, known limitations, and test results.
+
+Use actual tools to implement and verify. Do not present pseudocode, empty classes, placeholder icons, or a plan as a finished mod.
+
+If blocked, identify the concrete blocker and continue independent work. Never fabricate test results, compatibility claims, or lore.
+
+**Start by inspecting the workspace, writing the concise dependency/content plan, and building Milestone 0. Then implement the playable loop. Ask only questions that materially block progress; make sensible reversible decisions and document them.**
+
+## Research starting points
+
+Use version-appropriate official documentation and primary MHA sources:
+
+- [NeoForge 1.21.1 documentation](https://docs.neoforged.net/docs/1.21.1/gettingstarted/)
+- [Photon](https://github.com/Low-Drag-MC/Photon)
+- [Player Animator](https://github.com/KosmX/minecraftPlayerAnimator)
+- [Bendy Lib](https://github.com/KosmX/bendy-lib)
+- [GeckoLib 4 documentation](https://wiki.geckolib.com/docs/geckolib4/)
+- [Blockbench browser editor](https://web.blockbench.net/)
+- [Official MHA anime website](https://heroaca.com/)
+- [Official terminology, U.A., and USJ](https://www.heroaca.com/special/terminology.html)
+- [Two Heroes](https://heroaca-movie.com/2018/)
+- [Heroes Rising](https://heroaca-movie.com/2019/)
+- [World Heroes’ Mission](https://heroaca-movie.com/2021/)
+- [You’re Next](https://heroaca-movie.com/)
+
+Promotional character pages may withhold powers or exact names. Verify those details from appropriate primary material rather than treating a character listing as proof of every ability.

@@ -1,0 +1,112 @@
+{
+  "version": 3,
+  "name": "kinetic_bulwark",
+  "author": "Rising Heroes project",
+  "description": "Original Kinetic Reservoir animation; game adaptation.",
+  "emote": {
+    "beginTick": 0,
+    "endTick": 94,
+    "stopTick": 95,
+    "isLoop": false,
+    "degrees": true,
+    "moves": [
+      {
+        "tick": 0,
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 14,
+        "easing": "easeOutQuad",
+        "rightArm": {
+          "pitch": -35.75,
+          "roll": 17.5,
+          "bend": 55,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -35.75,
+          "roll": -17.5,
+          "bend": 55,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 15,
+        "rightArm": {
+          "pitch": -65,
+          "roll": 25,
+          "bend": 65,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -65,
+          "roll": -25,
+          "bend": 65,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 74,
+        "rightArm": {
+          "pitch": -65,
+          "roll": 25,
+          "bend": 65,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -65,
+          "roll": -25,
+          "bend": 65,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 94,
+        "easing": "easeInOutSine",
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      }
+    ]
+  }
+}

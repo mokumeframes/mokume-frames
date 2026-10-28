@@ -1,0 +1,93 @@
+{
+  "version": 3,
+  "name": "ice_shot",
+  "author": "Rising Heroes project",
+  "description": "Original Half-Cold Half-Hot animation; game adaptation.",
+  "emote": {
+    "beginTick": 0,
+    "endTick": 16,
+    "stopTick": 17,
+    "isLoop": false,
+    "degrees": true,
+    "moves": [
+      {
+        "tick": 0,
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 6,
+        "easing": "easeOutQuad",
+        "rightArm": {
+          "pitch": -49.50000000000001,
+          "roll": 8.399999999999999,
+          "bend": 55,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0.0,
+          "roll": 0.0,
+          "bend": 55,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": -10
+        }
+      },
+      {
+        "tick": 7,
+        "rightArm": {
+          "pitch": -90,
+          "roll": 12,
+          "bend": 20,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 20,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 10
+        }
+      },
+      {
+        "tick": 16,
+        "easing": "easeInOutSine",
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      }
+    ]
+  }
+}

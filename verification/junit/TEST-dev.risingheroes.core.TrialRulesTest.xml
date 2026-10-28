@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.risingheroes.core.TrialRulesTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-28T11:05:40.885Z" hostname="EWAN" time="0.008">
+  <properties/>
+  <testcase name="expiredAttemptCannotEarnProgress()" classname="dev.risingheroes.core.TrialRulesTest" time="0.002"/>
+  <testcase name="activeTrialLocksLoadoutAndQuirkChoice()" classname="dev.risingheroes.core.TrialRulesTest" time="0.001"/>
+  <testcase name="precisionAwardsOnceAndActuallyUnlocksTheAdvancedTechnique()" classname="dev.risingheroes.core.TrialRulesTest" time="0.001"/>
+  <testcase name="precisionRequiresCorrectOrderMoveAndMeasuredDistance()" classname="dev.risingheroes.core.TrialRulesTest" time="0.0"/>
+  <testcase name="v1MigrationPreservesArchiveStoryBalancesAndCooldowns()" classname="dev.risingheroes.core.TrialRulesTest" time="0.0"/>
+  <testcase name="cancellationRetainsCompletedProgressAndDoesNotPayAReward()" classname="dev.risingheroes.core.TrialRulesTest" time="0.0"/>
+  <testcase name="capstoneCannotSkipAidRooftopOrPrecisionSections()" classname="dev.risingheroes.core.TrialRulesTest" time="0.001"/>
+  <testcase name="rooftopNeedsTheAirborneMovementWitness()" classname="dev.risingheroes.core.TrialRulesTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

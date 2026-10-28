@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.risingheroes.core.AdditionalQuirksTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-28T19:20:48.021Z" hostname="EWAN" time="0.12">
+  <properties/>
+  <testcase name="originalSourcesNeverInventOfficialWieldersOrContinuity()" classname="dev.risingheroes.core.AdditionalQuirksTest" time="0.078"/>
+  <testcase name="blueflameCannotExceedHeatOrCastFireUnderwater()" classname="dev.risingheroes.core.AdditionalQuirksTest" time="0.005"/>
+  <testcase name="[1] blueflame" classname="dev.risingheroes.core.AdditionalQuirksTest" time="0.02"/>
+  <testcase name="[2] umbrakinesis" classname="dev.risingheroes.core.AdditionalQuirksTest" time="0.003"/>
+  <testcase name="[3] kinetic_reservoir" classname="dev.risingheroes.core.AdditionalQuirksTest" time="0.002"/>
+  <testcase name="shadeUsesBrightnessAndFiniteRecovery()" classname="dev.risingheroes.core.AdditionalQuirksTest" time="0.001"/>
+  <testcase name="blockedImpactIsCappedAndGuardFatigueBreaksItsWindow()" classname="dev.risingheroes.core.AdditionalQuirksTest" time="0.002"/>
+  <testcase name="kineticHasNoFreeChargeAndItsJabWorksAtZero()" classname="dev.risingheroes.core.AdditionalQuirksTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

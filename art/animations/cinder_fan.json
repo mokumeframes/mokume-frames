@@ -1,0 +1,93 @@
+{
+  "version": 3,
+  "name": "cinder_fan",
+  "author": "Rising Heroes project",
+  "description": "Original Blueflame animation; game adaptation.",
+  "emote": {
+    "beginTick": 0,
+    "endTick": 27,
+    "stopTick": 28,
+    "isLoop": false,
+    "degrees": true,
+    "moves": [
+      {
+        "tick": 0,
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 10,
+        "easing": "easeOutQuad",
+        "rightArm": {
+          "pitch": -41.800000000000004,
+          "roll": 33.599999999999994,
+          "bend": 55,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -41.800000000000004,
+          "roll": -33.599999999999994,
+          "bend": 55,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 11,
+        "rightArm": {
+          "pitch": -76,
+          "roll": 48,
+          "bend": 20,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -76,
+          "roll": -48,
+          "bend": 20,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 27,
+        "easing": "easeInOutSine",
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      }
+    ]
+  }
+}

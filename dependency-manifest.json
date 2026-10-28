@@ -1,0 +1,48 @@
+{
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.217",
+  "java": 21,
+  "kilagraph": "21.1.0.15 nested inside Photon; do not add another JAR",
+  "artifacts": [
+    {
+      "name": "Photon",
+      "filename": "photon-neoforge-1.21.1-2.2.9-all.jar",
+      "url": "https://maven.firstdark.dev/snapshots/com/lowdragmc/photon/photon-neoforge-1.21.1/2.2.9/photon-neoforge-1.21.1-2.2.9-all.jar",
+      "sha256": "56f80e8211650c37c3085754f4e33018e8377846ac2cd9e96593bb786c0c62d6",
+      "bytes": 7286669,
+      "license": "Author custom license; see docs/DEPENDENCIES.md"
+    },
+    {
+      "name": "LDLib2",
+      "filename": "ldlib2-neoforge-1.21.1-2.2.44-all.jar",
+      "url": "https://maven.firstdark.dev/snapshots/com/lowdragmc/ldlib2/ldlib2-neoforge-1.21.1/2.2.44/ldlib2-neoforge-1.21.1-2.2.44-all.jar",
+      "sha256": "64e301522259b489ad576e0644ee7d5d0ae3912ad96879407d3c16b08ba88f39",
+      "bytes": 7702551,
+      "license": "LGPL-3.0-only"
+    },
+    {
+      "name": "Player Animator",
+      "filename": "player-animation-lib-forge-2.0.4+1.21.1.jar",
+      "url": "https://maven.kosmx.dev/dev/kosmx/player-anim/player-animation-lib-forge/2.0.4+1.21.1/player-animation-lib-forge-2.0.4+1.21.1.jar",
+      "sha256": "dbe5de45f5cd60c0e5e47af14e6d564534a98456e973cf670cb881f6938eee92",
+      "bytes": 203149,
+      "license": "MIT"
+    },
+    {
+      "name": "Bendy Lib",
+      "filename": "bendy-lib-forge-5.1.jar",
+      "url": "https://maven.kosmx.dev/io/github/kosmx/bendy-lib/bendy-lib-forge/5.1/bendy-lib-forge-5.1.jar",
+      "sha256": "8b40dcaa9f464afe1e4c22e33074a646596d818060db40c27564ce4d2bfe33ea",
+      "bytes": 36624,
+      "license": "CC-BY-4.0"
+    },
+    {
+      "name": "GeckoLib",
+      "filename": "geckolib-Grwn5rUB.jar",
+      "url": "https://api.modrinth.com/maven/maven/modrinth/geckolib/Grwn5rUB/geckolib-Grwn5rUB.jar",
+      "sha256": "20a1995e4074f387ff549e2c57ea79dd7d41ee83c6afb9dd6a6e840e592d1c47",
+      "bytes": 634531,
+      "license": "MIT"
+    }
+  ]
+}

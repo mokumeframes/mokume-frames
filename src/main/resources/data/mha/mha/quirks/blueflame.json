@@ -1,0 +1,41 @@
+{
+  "id": "blueflame",
+  "name": "Blueflame",
+  "localizedNames": [
+    "蒼炎 (official Japanese label)",
+    "Blueflame (working English label)"
+  ],
+  "knownUsers": [
+    "Dabi / 荼毘 — later identity details omitted"
+  ],
+  "sourceMedium": "Main-series anime",
+  "sourceWork": "My Hero Academia",
+  "continuity": "Main-series power; medium and continuity are recorded separately.",
+  "firstCharacterAppearance": "Not verified for publication.",
+  "firstDemonstration": "No verified TV season/episode is published for this entry yet.",
+  "firstNamedExplanation": "Japanese label verified on the official profile; first TV explanation not verified.",
+  "lore": "Dabi produces blue flames. This entry omits his later identity and forms.",
+  "adaptation": "All moves, numerical values, challenges and resources are mod adaptations. Grounded footwork and physical jabs are complementary training. This is an experimental development kit.",
+  "role": "Ranged pressure / thermal discipline",
+  "resource": "Heat rises with output and recovers gradually. Controlled Cooling removes 35 heat during its active stance.",
+  "drawback": "Heat above tolerance prevents another flame cast; underwater fire is refused. Cooling gives no immunity.",
+  "counters": [
+    "Break line of sight and punish startup/recovery.",
+    "Avoid predictable guard windows; reposition beyond effective range."
+  ],
+  "nonCombatUtility": [
+    "Timed rescue positioning and supervised field objectives."
+  ],
+  "equipment": "The Cadet suit is equipment and grants no quirk. Ordinary jabs and grounded footwork are explicitly complementary training.",
+  "acquisition": "Operator-enabled experimental pools and permission-checked creative tokens only. Earn mastery and field milestones per quirk; no automatic maximum mastery.",
+  "verification": "Japanese label, associated user and blue-flame principle verified from the official character profile on 28 October 2026. English move labels are adaptations.",
+  "references": [
+    {
+      "title": "Official Dabi character profile",
+      "url": "https://heroaca.com/character/chara_group06/06-06/",
+      "supports": "Japanese quirk label, associated user and blue-flame principle only.",
+      "season": 3,
+      "warning": "Live page contains major later identity spoilers. The offline entry omits these."
+    }
+  ]
+}

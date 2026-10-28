@@ -1,0 +1,1582 @@
+[
+  {
+    "id": "school_assessment",
+    "name": "Application / practical assessment",
+    "path": "hero",
+    "prerequisite": "",
+    "licenceRequired": 0,
+    "credits": 100,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "briefing",
+        "type": "INTERACT",
+        "role": "briefing",
+        "count": 1,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 8,
+        "text": "Read the assessment briefing at the marked console."
+      },
+      {
+        "id": "assessment_robots",
+        "type": "COMBAT",
+        "role": "assessment_robots",
+        "count": 2,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 35,
+        "text": "Disable two assessment sentinels, or hold the shutdown console for eight uninterrupted seconds."
+      },
+      {
+        "id": "assessment_rescue",
+        "type": "AID",
+        "role": "assessment_rescue",
+        "count": 1,
+        "seconds": 5,
+        "x": 14,
+        "y": 2,
+        "z": 30,
+        "text": "Reach the flood platform and provide first aid for five seconds."
+      },
+      {
+        "id": "assessment_exit",
+        "type": "MOVE",
+        "role": "assessment_exit",
+        "count": 1,
+        "seconds": 0,
+        "x": 8,
+        "y": 1,
+        "z": 8,
+        "text": "Return to the entrance checkpoint."
+      }
+    ]
+  },
+  {
+    "id": "school_orientation",
+    "name": "Orientation / a place at U.A.",
+    "path": "hero",
+    "prerequisite": "school_assessment",
+    "licenceRequired": 0,
+    "credits": 100,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "student_record",
+        "type": "INTERACT",
+        "role": "student_record",
+        "count": 1,
+        "seconds": 0,
+        "x": 12,
+        "y": 1,
+        "z": 12,
+        "text": "Collect your student record from the marked desk."
+      },
+      {
+        "id": "workshop",
+        "type": "MOVE",
+        "role": "workshop",
+        "count": 1,
+        "seconds": 0,
+        "x": 40,
+        "y": 1,
+        "z": 10,
+        "text": "Inspect the support-workshop station."
+      },
+      {
+        "id": "dorm_briefing",
+        "type": "INTERACT",
+        "role": "dorm_briefing",
+        "count": 1,
+        "seconds": 0,
+        "x": 9,
+        "y": 1,
+        "z": 39,
+        "text": "Read the dorm and survival-equipment briefing."
+      },
+      {
+        "id": "training_plan",
+        "type": "INTERACT",
+        "role": "training_plan",
+        "count": 1,
+        "seconds": 0,
+        "x": 24,
+        "y": 1,
+        "z": 8,
+        "text": "Confirm your supervised training plan."
+      }
+    ]
+  },
+  {
+    "id": "school_fundamentals",
+    "name": "Fundamentals / control and judgement",
+    "path": "hero",
+    "prerequisite": "school_orientation",
+    "licenceRequired": 0,
+    "credits": 100,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "cover_a",
+        "type": "MOVE",
+        "role": "cover_a",
+        "count": 1,
+        "seconds": 0,
+        "x": 20,
+        "y": 1,
+        "z": 18,
+        "text": "Navigate to the first cover marker."
+      },
+      {
+        "id": "cover_b",
+        "type": "MOVE",
+        "role": "cover_b",
+        "count": 1,
+        "seconds": 0,
+        "x": 28,
+        "y": 1,
+        "z": 22,
+        "text": "Keep clear of the active hazard lane and reach the second marker."
+      },
+      {
+        "id": "civilian_priority",
+        "type": "JUDGMENT",
+        "role": "rescue_first",
+        "count": 1,
+        "seconds": 0,
+        "x": 24,
+        "y": 1,
+        "z": 8,
+        "text": "A civilian is trapped while an opponent withdraws. Choose the safe response at the decision console."
+      },
+      {
+        "id": "first_aid",
+        "type": "AID",
+        "role": "first_aid",
+        "count": 1,
+        "seconds": 5,
+        "x": 14,
+        "y": 2,
+        "z": 30,
+        "text": "Carry out the rescue you prioritised."
+      },
+      {
+        "id": "safe_zone",
+        "type": "DEFEND",
+        "role": "safe_zone",
+        "count": 1,
+        "seconds": 15,
+        "x": 36,
+        "y": 1,
+        "z": 26,
+        "text": "Hold the marked shelter for fifteen seconds. Step away from incoming blast tells and return; progress pauses outside the shelter."
+      }
+    ]
+  },
+  {
+    "id": "school_battle_trial",
+    "name": "Battle trial / teamwork before score",
+    "path": "hero",
+    "prerequisite": "school_fundamentals",
+    "licenceRequired": 0,
+    "credits": 100,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "classmate",
+        "type": "ESCORT",
+        "role": "classmate",
+        "count": 1,
+        "seconds": 0,
+        "x": 39,
+        "y": 1,
+        "z": 40,
+        "text": "Lead your classmate from the entrance to the extraction pad. Stay within eight blocks; cover and collision still matter."
+      },
+      {
+        "id": "opposition",
+        "type": "COMBAT",
+        "role": "opposition",
+        "count": 2,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 35,
+        "text": "Clear the opposing exercise sentinels or reach their shutdown console."
+      },
+      {
+        "id": "objective",
+        "type": "INTERACT",
+        "role": "objective",
+        "count": 1,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 8,
+        "text": "Secure the objective console."
+      }
+    ]
+  },
+  {
+    "id": "school_usj",
+    "name": "USJ / four rescue stations",
+    "path": "hero",
+    "prerequisite": "school_battle_trial",
+    "licenceRequired": 0,
+    "credits": 100,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 1,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "flood_entry",
+        "type": "MOVE",
+        "role": "flood_entry",
+        "count": 1,
+        "seconds": 0,
+        "x": 10,
+        "y": 1,
+        "z": 26,
+        "text": "Enter the marked flood-training lane."
+      },
+      {
+        "id": "flood_rescue",
+        "type": "AID",
+        "role": "flood_rescue",
+        "count": 1,
+        "seconds": 5,
+        "x": 14,
+        "y": 2,
+        "z": 30,
+        "text": "Treat the stranded trainee on the platform."
+      },
+      {
+        "id": "fire_valve",
+        "type": "INTERACT",
+        "role": "fire_valve",
+        "count": 1,
+        "seconds": 0,
+        "x": 40,
+        "y": 1,
+        "z": 10,
+        "text": "Reach the fire-control valve using the clear corridor. The red floor lane is hazardous until the valve is closed."
+      },
+      {
+        "id": "rubble_route",
+        "type": "MOVE",
+        "role": "rubble_route",
+        "count": 1,
+        "seconds": 0,
+        "x": 28,
+        "y": 1,
+        "z": 27,
+        "text": "Use either gap around the collapsed-wall simulation."
+      },
+      {
+        "id": "evacuation",
+        "type": "ESCORT",
+        "role": "evacuation",
+        "count": 1,
+        "seconds": 0,
+        "x": 39,
+        "y": 1,
+        "z": 40,
+        "text": "Guide the evacuee to the extraction pad without leaving them behind."
+      }
+    ]
+  },
+  {
+    "id": "school_festival",
+    "name": "Sports Festival / participation assessment",
+    "path": "hero",
+    "prerequisite": "school_usj",
+    "licenceRequired": 0,
+    "credits": 100,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 2,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "race_one",
+        "type": "MOVE",
+        "role": "race_one",
+        "count": 1,
+        "seconds": 0,
+        "x": 18,
+        "y": 1,
+        "z": 8,
+        "text": "Reach the first course marker; winning a race is not required."
+      },
+      {
+        "id": "race_two",
+        "type": "MOVE",
+        "role": "race_two",
+        "count": 1,
+        "seconds": 0,
+        "x": 28,
+        "y": 1,
+        "z": 27,
+        "text": "Navigate the rubble-wall opening."
+      },
+      {
+        "id": "race_three",
+        "type": "MOVE",
+        "role": "race_three",
+        "count": 1,
+        "seconds": 0,
+        "x": 42,
+        "y": 1,
+        "z": 42,
+        "text": "Reach the final movement checkpoint."
+      },
+      {
+        "id": "team_support",
+        "type": "AID",
+        "role": "team_support",
+        "count": 1,
+        "seconds": 5,
+        "x": 12,
+        "y": 1,
+        "z": 36,
+        "text": "Support an exhausted teammate."
+      },
+      {
+        "id": "exhibition",
+        "type": "COMBAT",
+        "role": "exhibition",
+        "count": 2,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 35,
+        "text": "Complete the exhibition against exercise sentinels or use tactical shutdown."
+      }
+    ]
+  },
+  {
+    "id": "school_internship",
+    "name": "Supervised internship / city response",
+    "path": "hero",
+    "prerequisite": "school_festival",
+    "licenceRequired": 0,
+    "credits": 100,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 2,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "dispatch",
+        "type": "INTERACT",
+        "role": "dispatch",
+        "count": 1,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 8,
+        "text": "Read the supervised agency dispatch."
+      },
+      {
+        "id": "patrol_one",
+        "type": "MOVE",
+        "role": "patrol_one",
+        "count": 1,
+        "seconds": 0,
+        "x": 10,
+        "y": 1,
+        "z": 12,
+        "text": "Check the first reported location."
+      },
+      {
+        "id": "patrol_two",
+        "type": "MOVE",
+        "role": "patrol_two",
+        "count": 1,
+        "seconds": 0,
+        "x": 42,
+        "y": 1,
+        "z": 24,
+        "text": "Check the service passage."
+      },
+      {
+        "id": "incident_priority",
+        "type": "JUDGMENT",
+        "role": "rescue_first",
+        "count": 1,
+        "seconds": 0,
+        "x": 24,
+        "y": 1,
+        "z": 8,
+        "text": "A bystander needs help beside an unattended threat. Choose your response."
+      },
+      {
+        "id": "bystander",
+        "type": "AID",
+        "role": "bystander",
+        "count": 1,
+        "seconds": 5,
+        "x": 12,
+        "y": 1,
+        "z": 36,
+        "text": "Stabilise the bystander."
+      },
+      {
+        "id": "containment",
+        "type": "COMBAT",
+        "role": "containment",
+        "count": 2,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 35,
+        "text": "Contain the exercise offenders or disable their relay."
+      }
+    ]
+  },
+  {
+    "id": "school_provisional_exam",
+    "name": "Provisional licence / practical examination",
+    "path": "hero",
+    "prerequisite": "school_internship",
+    "licenceRequired": 0,
+    "credits": 250,
+    "mastery": 5,
+    "grantsLicence": 1,
+    "season": 3,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "exam_judgment",
+        "type": "JUDGMENT",
+        "role": "rescue_first",
+        "count": 1,
+        "seconds": 0,
+        "x": 24,
+        "y": 1,
+        "z": 8,
+        "text": "The exam grades rescue procedure and judgement. Choose an approach at the decision console."
+      },
+      {
+        "id": "exam_rescue",
+        "type": "AID",
+        "role": "exam_rescue",
+        "count": 1,
+        "seconds": 5,
+        "x": 14,
+        "y": 2,
+        "z": 30,
+        "text": "Provide first aid before pursuing the threat."
+      },
+      {
+        "id": "exam_teamwork",
+        "type": "ESCORT",
+        "role": "exam_teamwork",
+        "count": 1,
+        "seconds": 0,
+        "x": 39,
+        "y": 1,
+        "z": 40,
+        "text": "Work with the examiner playing an evacuee; lead them to safety."
+      },
+      {
+        "id": "exam_protection",
+        "type": "DEFEND",
+        "role": "exam_protection",
+        "count": 1,
+        "seconds": 15,
+        "x": 36,
+        "y": 1,
+        "z": 26,
+        "text": "Maintain a protected shelter for fifteen seconds."
+      },
+      {
+        "id": "exam_combat",
+        "type": "COMBAT",
+        "role": "exam_combat",
+        "count": 2,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 35,
+        "text": "Resolve the combat station through restraint or shutdown."
+      },
+      {
+        "id": "exam_report",
+        "type": "INTERACT",
+        "role": "exam_report",
+        "count": 1,
+        "seconds": 0,
+        "x": 24,
+        "y": 1,
+        "z": 8,
+        "text": "Submit the completed practical record."
+      }
+    ]
+  },
+  {
+    "id": "school_work_study",
+    "name": "Licensed work study / field protection",
+    "path": "hero",
+    "prerequisite": "school_provisional_exam",
+    "licenceRequired": 1,
+    "credits": 300,
+    "mastery": 5,
+    "grantsLicence": 0,
+    "season": 4,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "licensed_dispatch",
+        "type": "INTERACT",
+        "role": "licensed_dispatch",
+        "count": 1,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 8,
+        "text": "Accept the licensed field assignment."
+      },
+      {
+        "id": "field_shelter",
+        "type": "DEFEND",
+        "role": "field_shelter",
+        "count": 1,
+        "seconds": 15,
+        "x": 36,
+        "y": 1,
+        "z": 26,
+        "text": "Protect the field shelter through the timed pressure drill."
+      },
+      {
+        "id": "field_medic",
+        "type": "AID",
+        "role": "field_medic",
+        "count": 1,
+        "seconds": 5,
+        "x": 12,
+        "y": 1,
+        "z": 36,
+        "text": "Assist the injured field partner."
+      },
+      {
+        "id": "field_sentinel",
+        "type": "BOSS",
+        "role": "field_sentinel",
+        "count": 1,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 35,
+        "text": "Defeat Bulwark, the mod-original training sentinel, or hold its emergency shutdown console."
+      },
+      {
+        "id": "field_report",
+        "type": "INTERACT",
+        "role": "field_report",
+        "count": 1,
+        "seconds": 0,
+        "x": 24,
+        "y": 1,
+        "z": 8,
+        "text": "Report the field outcome."
+      }
+    ]
+  },
+  {
+    "id": "school_graduation",
+    "name": "Advanced qualification / final operation",
+    "path": "hero",
+    "prerequisite": "school_work_study",
+    "licenceRequired": 1,
+    "credits": 500,
+    "mastery": 5,
+    "grantsLicence": 2,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "leadership",
+        "type": "JUDGMENT",
+        "role": "rescue_first",
+        "count": 1,
+        "seconds": 0,
+        "x": 24,
+        "y": 1,
+        "z": 8,
+        "text": "Choose the priority for the final operation."
+      },
+      {
+        "id": "final_evacuation",
+        "type": "ESCORT",
+        "role": "final_evacuation",
+        "count": 1,
+        "seconds": 0,
+        "x": 39,
+        "y": 1,
+        "z": 40,
+        "text": "Lead the evacuation across the exercise set."
+      },
+      {
+        "id": "final_support",
+        "type": "AID",
+        "role": "final_support",
+        "count": 1,
+        "seconds": 5,
+        "x": 12,
+        "y": 1,
+        "z": 36,
+        "text": "Recover the exhausted partner."
+      },
+      {
+        "id": "final_bulwark",
+        "type": "BOSS",
+        "role": "final_bulwark",
+        "count": 1,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 35,
+        "text": "Complete the phased Bulwark encounter using positioning, cover and its punishable recovery."
+      },
+      {
+        "id": "qualification_record",
+        "type": "INTERACT",
+        "role": "qualification_record",
+        "count": 1,
+        "seconds": 0,
+        "x": 24,
+        "y": 1,
+        "z": 8,
+        "text": "Submit the full school record. Professional status here is the mod's qualification adaptation."
+      }
+    ]
+  },
+  {
+    "id": "underground_introduction",
+    "name": "Underground / first contact",
+    "path": "villain",
+    "prerequisite": "",
+    "licenceRequired": 0,
+    "credits": 150,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "contact",
+        "type": "INTERACT",
+        "role": "contact",
+        "count": 1,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 8,
+        "text": "Read the underground contact brief."
+      },
+      {
+        "id": "quiet_route",
+        "type": "MOVE",
+        "role": "quiet_route",
+        "count": 1,
+        "seconds": 0,
+        "x": 42,
+        "y": 1,
+        "z": 24,
+        "text": "Scout the service route without entering the hazard lane."
+      },
+      {
+        "id": "signal",
+        "type": "INTERACT",
+        "role": "signal",
+        "count": 1,
+        "seconds": 0,
+        "x": 9,
+        "y": 1,
+        "z": 39,
+        "text": "Recover the contact signal."
+      }
+    ]
+  },
+  {
+    "id": "contact_contract",
+    "name": "Contact work / contested information",
+    "path": "villain",
+    "prerequisite": "underground_introduction",
+    "licenceRequired": 0,
+    "credits": 170,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "observation",
+        "type": "MOVE",
+        "role": "observation",
+        "count": 1,
+        "seconds": 0,
+        "x": 20,
+        "y": 1,
+        "z": 18,
+        "text": "Reach the observation point."
+      },
+      {
+        "id": "records",
+        "type": "INTERACT",
+        "role": "records",
+        "count": 1,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 8,
+        "text": "Retrieve the exercise intelligence."
+      },
+      {
+        "id": "informant",
+        "type": "ESCORT",
+        "role": "informant",
+        "count": 1,
+        "seconds": 0,
+        "x": 39,
+        "y": 1,
+        "z": 40,
+        "text": "Extract the informant safely."
+      }
+    ]
+  },
+  {
+    "id": "resource_operation",
+    "name": "Resources / guarded relay",
+    "path": "villain",
+    "prerequisite": "contact_contract",
+    "licenceRequired": 0,
+    "credits": 190,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "guards",
+        "type": "COMBAT",
+        "role": "guards",
+        "count": 2,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 35,
+        "text": "Bypass the guards with relay shutdown, or defeat the exercise sentinels."
+      },
+      {
+        "id": "supplies",
+        "type": "INTERACT",
+        "role": "supplies",
+        "count": 1,
+        "seconds": 0,
+        "x": 9,
+        "y": 1,
+        "z": 39,
+        "text": "Secure the exercise supply record."
+      },
+      {
+        "id": "extraction",
+        "type": "MOVE",
+        "role": "extraction",
+        "count": 1,
+        "seconds": 0,
+        "x": 8,
+        "y": 1,
+        "z": 8,
+        "text": "Reach the extraction point."
+      }
+    ]
+  },
+  {
+    "id": "faction_recruitment",
+    "name": "Recruitment / prove reliability",
+    "path": "villain",
+    "prerequisite": "resource_operation",
+    "licenceRequired": 0,
+    "credits": 210,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "crew_aid",
+        "type": "AID",
+        "role": "crew_aid",
+        "count": 1,
+        "seconds": 5,
+        "x": 12,
+        "y": 1,
+        "z": 36,
+        "text": "Treat an injured prospective ally."
+      },
+      {
+        "id": "crew_shelter",
+        "type": "DEFEND",
+        "role": "crew_shelter",
+        "count": 1,
+        "seconds": 15,
+        "x": 36,
+        "y": 1,
+        "z": 26,
+        "text": "Hold the crew shelter through the pressure exercise."
+      },
+      {
+        "id": "recruitment",
+        "type": "INTERACT",
+        "role": "recruitment",
+        "count": 1,
+        "seconds": 0,
+        "x": 24,
+        "y": 1,
+        "z": 8,
+        "text": "Confirm the recruitment terms."
+      }
+    ]
+  },
+  {
+    "id": "agency_infiltration",
+    "name": "Infiltration / agency simulation",
+    "path": "villain",
+    "prerequisite": "faction_recruitment",
+    "licenceRequired": 0,
+    "credits": 230,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "entry_route",
+        "type": "MOVE",
+        "role": "entry_route",
+        "count": 1,
+        "seconds": 0,
+        "x": 42,
+        "y": 1,
+        "z": 24,
+        "text": "Reach the service entrance."
+      },
+      {
+        "id": "inner_route",
+        "type": "MOVE",
+        "role": "inner_route",
+        "count": 1,
+        "seconds": 0,
+        "x": 28,
+        "y": 1,
+        "z": 27,
+        "text": "Navigate around the collapsed wall."
+      },
+      {
+        "id": "archive",
+        "type": "INTERACT",
+        "role": "archive",
+        "count": 1,
+        "seconds": 0,
+        "x": 12,
+        "y": 1,
+        "z": 12,
+        "text": "Recover the marked agency-simulation record."
+      },
+      {
+        "id": "clean_exit",
+        "type": "MOVE",
+        "role": "clean_exit",
+        "count": 1,
+        "seconds": 0,
+        "x": 8,
+        "y": 1,
+        "z": 8,
+        "text": "Return through the clear extraction route."
+      }
+    ]
+  },
+  {
+    "id": "guarded_shipment",
+    "name": "Interception / guarded shipment",
+    "path": "villain",
+    "prerequisite": "agency_infiltration",
+    "licenceRequired": 0,
+    "credits": 250,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "escort_guards",
+        "type": "COMBAT",
+        "role": "escort_guards",
+        "count": 2,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 35,
+        "text": "Disable the shipment guards or their control relay."
+      },
+      {
+        "id": "manifest",
+        "type": "INTERACT",
+        "role": "manifest",
+        "count": 1,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 8,
+        "text": "Recover the contested manifest."
+      },
+      {
+        "id": "courier",
+        "type": "ESCORT",
+        "role": "courier",
+        "count": 1,
+        "seconds": 0,
+        "x": 39,
+        "y": 1,
+        "z": 40,
+        "text": "Extract the courier."
+      }
+    ]
+  },
+  {
+    "id": "rival_encounter",
+    "name": "Rivals / contested ground",
+    "path": "villain",
+    "prerequisite": "guarded_shipment",
+    "licenceRequired": 0,
+    "credits": 270,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "position",
+        "type": "DEFEND",
+        "role": "position",
+        "count": 1,
+        "seconds": 15,
+        "x": 36,
+        "y": 1,
+        "z": 26,
+        "text": "Hold the marked position under pressure."
+      },
+      {
+        "id": "rival_sentinel",
+        "type": "BOSS",
+        "role": "rival_sentinel",
+        "count": 1,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 35,
+        "text": "Defeat or disable the rival exercise sentinel."
+      }
+    ]
+  },
+  {
+    "id": "hideout_development",
+    "name": "Hideout / protect the workshop",
+    "path": "villain",
+    "prerequisite": "rival_encounter",
+    "licenceRequired": 0,
+    "credits": 290,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "workshop_plan",
+        "type": "INTERACT",
+        "role": "workshop_plan",
+        "count": 1,
+        "seconds": 0,
+        "x": 40,
+        "y": 1,
+        "z": 10,
+        "text": "Inspect the safehouse workshop plan."
+      },
+      {
+        "id": "engineer",
+        "type": "AID",
+        "role": "engineer",
+        "count": 1,
+        "seconds": 5,
+        "x": 12,
+        "y": 1,
+        "z": 36,
+        "text": "Assist the workshop engineer."
+      },
+      {
+        "id": "workshop_defence",
+        "type": "DEFEND",
+        "role": "workshop_defence",
+        "count": 1,
+        "seconds": 15,
+        "x": 36,
+        "y": 1,
+        "z": 26,
+        "text": "Protect the workshop shelter."
+      },
+      {
+        "id": "safehouse_record",
+        "type": "INTERACT",
+        "role": "safehouse_record",
+        "count": 1,
+        "seconds": 0,
+        "x": 9,
+        "y": 1,
+        "z": 39,
+        "text": "Register the earned safehouse access."
+      }
+    ]
+  },
+  {
+    "id": "rising_notoriety",
+    "name": "Notoriety / extraction under pursuit",
+    "path": "villain",
+    "prerequisite": "hideout_development",
+    "licenceRequired": 0,
+    "credits": 310,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "crew_extraction",
+        "type": "ESCORT",
+        "role": "crew_extraction",
+        "count": 1,
+        "seconds": 0,
+        "x": 39,
+        "y": 1,
+        "z": 40,
+        "text": "Lead the pursued crew member to safety."
+      },
+      {
+        "id": "pursuit",
+        "type": "COMBAT",
+        "role": "pursuit",
+        "count": 2,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 35,
+        "text": "Contain or disable the pursuing exercise sentinels."
+      },
+      {
+        "id": "operation_record",
+        "type": "INTERACT",
+        "role": "operation_record",
+        "count": 1,
+        "seconds": 0,
+        "x": 24,
+        "y": 1,
+        "z": 8,
+        "text": "Report the operation."
+      }
+    ]
+  },
+  {
+    "id": "crew_leadership",
+    "name": "Leadership / rival operation",
+    "path": "villain",
+    "prerequisite": "rising_notoriety",
+    "licenceRequired": 0,
+    "credits": 330,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "crew_priority",
+        "type": "JUDGMENT",
+        "role": "rescue_first",
+        "count": 1,
+        "seconds": 0,
+        "x": 24,
+        "y": 1,
+        "z": 8,
+        "text": "A crew member is injured during the operation. Choose your priority."
+      },
+      {
+        "id": "crew_recovery",
+        "type": "AID",
+        "role": "crew_recovery",
+        "count": 1,
+        "seconds": 5,
+        "x": 12,
+        "y": 1,
+        "z": 36,
+        "text": "Carry out the recovery."
+      },
+      {
+        "id": "leadership_boss",
+        "type": "BOSS",
+        "role": "leadership_boss",
+        "count": 1,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 35,
+        "text": "Resolve the phased rival-sentinel encounter."
+      },
+      {
+        "id": "leadership_record",
+        "type": "INTERACT",
+        "role": "leadership_record",
+        "count": 1,
+        "seconds": 0,
+        "x": 24,
+        "y": 1,
+        "z": 8,
+        "text": "Submit the leadership record."
+      }
+    ]
+  },
+  {
+    "id": "neighbourhood_watch",
+    "name": "Independent / neighbourhood watch",
+    "path": "independent",
+    "prerequisite": "",
+    "licenceRequired": 0,
+    "credits": 150,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "watch_one",
+        "type": "MOVE",
+        "role": "watch_one",
+        "count": 1,
+        "seconds": 0,
+        "x": 10,
+        "y": 1,
+        "z": 12,
+        "text": "Inspect the neighbourhood marker."
+      },
+      {
+        "id": "witness_record",
+        "type": "INTERACT",
+        "role": "witness_record",
+        "count": 1,
+        "seconds": 0,
+        "x": 12,
+        "y": 1,
+        "z": 12,
+        "text": "Read the witness report."
+      },
+      {
+        "id": "local_aid",
+        "type": "AID",
+        "role": "local_aid",
+        "count": 1,
+        "seconds": 5,
+        "x": 12,
+        "y": 1,
+        "z": 36,
+        "text": "Assist the injured resident."
+      }
+    ]
+  },
+  {
+    "id": "evidence_trail",
+    "name": "Investigation / evidence trail",
+    "path": "independent",
+    "prerequisite": "neighbourhood_watch",
+    "licenceRequired": 0,
+    "credits": 175,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "clue_one",
+        "type": "INTERACT",
+        "role": "clue_one",
+        "count": 1,
+        "seconds": 0,
+        "x": 12,
+        "y": 1,
+        "z": 12,
+        "text": "Inspect the first clue."
+      },
+      {
+        "id": "trail",
+        "type": "MOVE",
+        "role": "trail",
+        "count": 1,
+        "seconds": 0,
+        "x": 42,
+        "y": 1,
+        "z": 24,
+        "text": "Follow the service passage."
+      },
+      {
+        "id": "clue_two",
+        "type": "INTERACT",
+        "role": "clue_two",
+        "count": 1,
+        "seconds": 0,
+        "x": 9,
+        "y": 1,
+        "z": 39,
+        "text": "Recover the second clue."
+      }
+    ]
+  },
+  {
+    "id": "flood_contract",
+    "name": "Rescue / flood contract",
+    "path": "independent",
+    "prerequisite": "evidence_trail",
+    "licenceRequired": 0,
+    "credits": 200,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "water_entry",
+        "type": "MOVE",
+        "role": "water_entry",
+        "count": 1,
+        "seconds": 0,
+        "x": 10,
+        "y": 1,
+        "z": 26,
+        "text": "Enter the flood lane."
+      },
+      {
+        "id": "stranded_resident",
+        "type": "AID",
+        "role": "stranded_resident",
+        "count": 1,
+        "seconds": 5,
+        "x": 14,
+        "y": 2,
+        "z": 30,
+        "text": "Stabilise the stranded resident."
+      },
+      {
+        "id": "resident_exit",
+        "type": "ESCORT",
+        "role": "resident_exit",
+        "count": 1,
+        "seconds": 0,
+        "x": 39,
+        "y": 1,
+        "z": 40,
+        "text": "Guide the resident to the extraction pad."
+      }
+    ]
+  },
+  {
+    "id": "community_support",
+    "name": "Support / community shelter",
+    "path": "independent",
+    "prerequisite": "flood_contract",
+    "licenceRequired": 0,
+    "credits": 225,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "volunteer",
+        "type": "AID",
+        "role": "volunteer",
+        "count": 1,
+        "seconds": 5,
+        "x": 12,
+        "y": 1,
+        "z": 36,
+        "text": "Assist the injured volunteer."
+      },
+      {
+        "id": "community_shelter",
+        "type": "DEFEND",
+        "role": "community_shelter",
+        "count": 1,
+        "seconds": 15,
+        "x": 36,
+        "y": 1,
+        "z": 26,
+        "text": "Hold the community shelter."
+      },
+      {
+        "id": "supplies_record",
+        "type": "INTERACT",
+        "role": "supplies_record",
+        "count": 1,
+        "seconds": 0,
+        "x": 9,
+        "y": 1,
+        "z": 39,
+        "text": "Log the delivered supplies."
+      }
+    ]
+  },
+  {
+    "id": "bounty_contract",
+    "name": "Bounty / restrained containment",
+    "path": "independent",
+    "prerequisite": "community_support",
+    "licenceRequired": 0,
+    "credits": 250,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "bounty_judgment",
+        "type": "JUDGMENT",
+        "role": "rescue_first",
+        "count": 1,
+        "seconds": 0,
+        "x": 24,
+        "y": 1,
+        "z": 8,
+        "text": "A bystander is caught near the exercise target. Choose your priority."
+      },
+      {
+        "id": "bounty_bystander",
+        "type": "AID",
+        "role": "bounty_bystander",
+        "count": 1,
+        "seconds": 5,
+        "x": 12,
+        "y": 1,
+        "z": 36,
+        "text": "Protect the bystander first."
+      },
+      {
+        "id": "bounty_target",
+        "type": "COMBAT",
+        "role": "bounty_target",
+        "count": 2,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 35,
+        "text": "Contain or disable the exercise target."
+      }
+    ]
+  },
+  {
+    "id": "rooftop_search",
+    "name": "Exploration / service-route search",
+    "path": "independent",
+    "prerequisite": "bounty_contract",
+    "licenceRequired": 0,
+    "credits": 275,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "search_one",
+        "type": "MOVE",
+        "role": "search_one",
+        "count": 1,
+        "seconds": 0,
+        "x": 40,
+        "y": 1,
+        "z": 10,
+        "text": "Search the northern service route."
+      },
+      {
+        "id": "search_two",
+        "type": "MOVE",
+        "role": "search_two",
+        "count": 1,
+        "seconds": 0,
+        "x": 28,
+        "y": 1,
+        "z": 27,
+        "text": "Search beyond the collapsed-wall simulation."
+      },
+      {
+        "id": "lost_record",
+        "type": "INTERACT",
+        "role": "lost_record",
+        "count": 1,
+        "seconds": 0,
+        "x": 9,
+        "y": 1,
+        "z": 39,
+        "text": "Recover the missing field record."
+      },
+      {
+        "id": "search_partner",
+        "type": "ESCORT",
+        "role": "search_partner",
+        "count": 1,
+        "seconds": 0,
+        "x": 39,
+        "y": 1,
+        "z": 40,
+        "text": "Guide your search partner home."
+      }
+    ]
+  },
+  {
+    "id": "mutual_aid",
+    "name": "Mutual aid / coordinated response",
+    "path": "independent",
+    "prerequisite": "rooftop_search",
+    "licenceRequired": 0,
+    "credits": 300,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "response_plan",
+        "type": "INTERACT",
+        "role": "response_plan",
+        "count": 1,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 8,
+        "text": "Read the coordinated response plan."
+      },
+      {
+        "id": "response_partner",
+        "type": "AID",
+        "role": "response_partner",
+        "count": 1,
+        "seconds": 5,
+        "x": 12,
+        "y": 1,
+        "z": 36,
+        "text": "Assist your response partner."
+      },
+      {
+        "id": "response_shelter",
+        "type": "DEFEND",
+        "role": "response_shelter",
+        "count": 1,
+        "seconds": 15,
+        "x": 36,
+        "y": 1,
+        "z": 26,
+        "text": "Protect the response shelter."
+      },
+      {
+        "id": "response_sentinel",
+        "type": "BOSS",
+        "role": "response_sentinel",
+        "count": 1,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 35,
+        "text": "Resolve the field-sentinel encounter."
+      }
+    ]
+  },
+  {
+    "id": "independent_operation",
+    "name": "Independent / major operation",
+    "path": "independent",
+    "prerequisite": "mutual_aid",
+    "licenceRequired": 0,
+    "credits": 325,
+    "mastery": 3,
+    "grantsLicence": 0,
+    "season": 0,
+    "source": "Mod-original scenario and sequencing; school/USJ/licence terminology informed by the official anime terminology page. Reserved compressed exercise set, not exact canon geography.",
+    "stages": [
+      {
+        "id": "operation_priority",
+        "type": "JUDGMENT",
+        "role": "rescue_first",
+        "count": 1,
+        "seconds": 0,
+        "x": 24,
+        "y": 1,
+        "z": 8,
+        "text": "Choose the safe priority for the major operation."
+      },
+      {
+        "id": "operation_evacuation",
+        "type": "ESCORT",
+        "role": "operation_evacuation",
+        "count": 1,
+        "seconds": 0,
+        "x": 39,
+        "y": 1,
+        "z": 40,
+        "text": "Lead the evacuation."
+      },
+      {
+        "id": "operation_aid",
+        "type": "AID",
+        "role": "operation_aid",
+        "count": 1,
+        "seconds": 5,
+        "x": 12,
+        "y": 1,
+        "z": 36,
+        "text": "Recover the field partner."
+      },
+      {
+        "id": "operation_boss",
+        "type": "BOSS",
+        "role": "operation_boss",
+        "count": 1,
+        "seconds": 0,
+        "x": 35,
+        "y": 1,
+        "z": 35,
+        "text": "Resolve Bulwark using cover, positioning or emergency shutdown."
+      },
+      {
+        "id": "independent_record",
+        "type": "INTERACT",
+        "role": "independent_record",
+        "count": 1,
+        "seconds": 0,
+        "x": 24,
+        "y": 1,
+        "z": 8,
+        "text": "Submit the independent operation record."
+      }
+    ]
+  }
+]

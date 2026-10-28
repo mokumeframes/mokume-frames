@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-28",
+  "state": "paused-by-user",
+  "scope": "Source handoff, not a release",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.217",
+  "java": 21,
+  "profile_schema": 4,
+  "network_protocol": 5,
+  "internal_version": "0.1.0-dev",
+  "kits": 7,
+  "moves": 57,
+  "junit": {
+    "tests": 80,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "junit_suites": [
+    {
+      "name": "dev.risingheroes.client.ui.HudLayoutTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "dev.risingheroes.client.ui.MenuLayoutTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "dev.risingheroes.core.AdditionalQuirksTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "dev.risingheroes.core.HeroRulesTest",
+      "tests": "21",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "dev.risingheroes.core.LoadoutPresetsTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "dev.risingheroes.core.MissionRulesTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "dev.risingheroes.core.QuirkResourcesTest",
+      "tests": "15",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "dev.risingheroes.core.TrialRulesTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "engine": {
+    "total": 15,
+    "passed": 14,
+    "failed": 1,
+    "failing_case": "blueflameWaitsForWindupAndCoolingUsesTheActiveWindow",
+    "message": "The active stream did not apply its server-owned hit",
+    "hypothesis": "Husk armour may reduce the 3-damage hit; unconfirmed"
+  },
+  "client_visuals": "Unobserved in Minecraft",
+  "preview": "7.5-second asset-study GIF, not Minecraft footage",
+  "complete_mod": false,
+  "binaries": [
+    {
+      "file": "mha-rising-heroes-0.1.0-dev-sources.jar",
+      "bytes": 2710193,
+      "sha256": "57b537fcbdc14e9aac9dcd3fbb3b0a472430cfe2e81caea017ec9a8022ed6290"
+    },
+    {
+      "file": "mha-rising-heroes-0.1.0-dev.jar",
+      "bytes": 2899911,
+      "sha256": "7df410817db0ddcabc94a6b0aff2e0627d76b551722dda4c4718eae6e8776937"
+    }
+  ]
+}

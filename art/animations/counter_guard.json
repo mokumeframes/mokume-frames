@@ -1,0 +1,112 @@
+{
+  "version": 3,
+  "name": "counter_guard",
+  "author": "Rising Heroes project",
+  "description": "Original Hardening animation; game adaptation.",
+  "emote": {
+    "beginTick": 0,
+    "endTick": 32,
+    "stopTick": 33,
+    "isLoop": false,
+    "degrees": true,
+    "moves": [
+      {
+        "tick": 0,
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      },
+      {
+        "tick": 2,
+        "easing": "easeOutQuad",
+        "rightArm": {
+          "pitch": -19.25,
+          "roll": 28.0,
+          "bend": 55,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -41.25,
+          "roll": -17.5,
+          "bend": 55,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": -10
+        }
+      },
+      {
+        "tick": 3,
+        "rightArm": {
+          "pitch": -35,
+          "roll": 40,
+          "bend": 65,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -75,
+          "roll": -25,
+          "bend": 65,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 10
+        }
+      },
+      {
+        "tick": 22,
+        "rightArm": {
+          "pitch": -35,
+          "roll": 40,
+          "bend": 65,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": -75,
+          "roll": -25,
+          "bend": 65,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 10
+        }
+      },
+      {
+        "tick": 32,
+        "easing": "easeInOutSine",
+        "rightArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "leftArm": {
+          "pitch": 0,
+          "roll": 0,
+          "bend": 0,
+          "axis": 0
+        },
+        "body": {
+          "pitch": 0,
+          "yaw": 0
+        }
+      }
+    ]
+  }
+}

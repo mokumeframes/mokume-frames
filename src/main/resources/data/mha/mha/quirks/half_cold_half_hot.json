@@ -1,0 +1,41 @@
+{
+  "id": "half_cold_half_hot",
+  "name": "Half-Cold Half-Hot",
+  "localizedNames": [
+    "半冷半燃 (official Japanese label)",
+    "Half-Cold Half-Hot (working English label)"
+  ],
+  "knownUsers": [
+    "Shoto Todoroki / 轟焦凍 — original user; later story details omitted"
+  ],
+  "sourceMedium": "Main-series anime; manga references not yet separately verified",
+  "sourceWork": "My Hero Academia",
+  "continuity": "Main-series quirk. No additional continuity claim is inferred from source medium.",
+  "firstCharacterAppearance": "Not yet verified against primary episode material.",
+  "firstDemonstration": "No verified TV season/episode is published for this entry yet.",
+  "firstNamedExplanation": "Japanese label verified on the official character profile; first TV explanation not yet verified.",
+  "lore": "The official profile describes right-side ice and left-side heat/flame.",
+  "adaptation": "The eight-action kit, resources, training requirements and numerical balance are mod adaptations. Ordinary footwork/support actions are complementary training, not new canonical powers.",
+  "role": "Area control / rescue routes",
+  "resource": "Signed temperature and stamina; alternate sides to maintain control.",
+  "drawback": "Overusing one side reaches a thermal extreme. Underwater fire is refused.",
+  "counters": [
+    "Solid cover and flanking.",
+    "Bait repeated use of one side; punish windup/recovery."
+  ],
+  "nonCombatUtility": [
+    "Finite collision-safe ice cover and temporary stepped rescue routes."
+  ],
+  "equipment": "The Cadet suit is ordinary equipment. It never assigns this quirk or grants a move. New support equipment is distinguished from the actual power.",
+  "acquisition": "Experimental development kit. Permission-checked creative assignment restores earned mastery. Field objectives and meaningful per-quirk mission practice unlock techniques; general rewards are single-claim. Server-enabled starting/reroll pools are authoritative.",
+  "verification": "Original user, Japanese label and the stated basic principle checked on the official profile on 28 October 2026. English labels are working labels; no unverified first-appearance claim is made.",
+  "references": [
+    {
+      "title": "Official character profile",
+      "url": "https://www.heroaca.com/character/chara_group01/01-05/",
+      "supports": "Original user, Japanese quirk label and basic principle only.",
+      "season": 1,
+      "warning": "The live official page contains later-series spoilers. This offline entry omits those details."
+    }
+  ]
+}

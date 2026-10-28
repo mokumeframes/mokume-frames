@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.risingheroes.client.ui.HudLayoutTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-28T19:20:47.926Z" hostname="EWAN" time="0.081">
+  <properties/>
+  <testcase name="[1] 320, 240" classname="dev.risingheroes.client.ui.HudLayoutTest" time="0.064"/>
+  <testcase name="[2] 426, 240" classname="dev.risingheroes.client.ui.HudLayoutTest" time="0.002"/>
+  <testcase name="[3] 640, 360" classname="dev.risingheroes.client.ui.HudLayoutTest" time="0.001"/>
+  <testcase name="[4] 960, 540" classname="dev.risingheroes.client.ui.HudLayoutTest" time="0.001"/>
+  <testcase name="[5] 853, 360" classname="dev.risingheroes.client.ui.HudLayoutTest" time="0.001"/>
+  <testcase name="[6] 1280, 540" classname="dev.risingheroes.client.ui.HudLayoutTest" time="0.001"/>
+  <testcase name="draggingBeyondScreenClampsAndInvalidNumbersCannotReachRenderer()" classname="dev.risingheroes.client.ui.HudLayoutTest" time="0.003"/>
+  <testcase name="editorPreviewFitsBetweenItsControlsAndLargeSurvivalRowsStayClear()" classname="dev.risingheroes.client.ui.HudLayoutTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

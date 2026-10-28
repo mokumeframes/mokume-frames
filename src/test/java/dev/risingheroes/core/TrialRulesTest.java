@@ -1,0 +1,18 @@
+package dev.risingheroes.core;
+
+import org.junit.jupiter.api.Test;
+import java.util.*;
+import static org.junit.jupiter.api.Assertions.*;
+
+class TrialRulesTest {
+    HeroProfile ready(){var p=new HeroProfile();HeroRules.assign(p,"explosion");p.schoolStage=4;p.masteries.put("explosion",20);p.trials.addAll(Set.of("control","movement","rescue"));HeroRules.unlockEarned(p);p.slots.set(1,"ap_shot");return p;}
+    void precision(HeroProfile p){TrialRules.start(p,"precision",100);for(int i=0;i<3;i++)assertTrue(TrialRules.target(p,"lane_"+i,"ap_shot",12,200+i));}
+    @Test void precisionRequiresCorrectOrderMoveAndMeasuredDistance(){var p=ready();TrialRules.start(p,"precision",100);assertFalse(TrialRules.target(p,"lane_1","ap_shot",12,110));assertFalse(TrialRules.target(p,"lane_0","palm_burst",12,110));assertFalse(TrialRules.target(p,"lane_0","ap_shot",3,110));assertEquals(0,p.trialStep);}
+    @Test void precisionAwardsOnceAndActuallyUnlocksTheAdvancedTechnique(){var p=ready();precision(p);assertEquals(35,p.mastery());assertTrue(p.currentUnlocks().contains("burst_volley"));assertEquals(125,p.credits);assertThrows(IllegalArgumentException.class,()->TrialRules.start(p,"precision",300));assertEquals(125,p.credits);}
+    @Test void expiredAttemptCannotEarnProgress(){var p=ready();TrialRules.start(p,"precision",100);assertFalse(TrialRules.target(p,"lane_0","ap_shot",12,1001));assertEquals(0,p.trialStep);}
+    @Test void rooftopNeedsTheAirborneMovementWitness(){var p=ready();precision(p);TrialRules.start(p,"aerial",300);assertFalse(TrialRules.rooftop(p,310));p.rooftopImpulse=true;assertTrue(TrialRules.rooftop(p,311));assertTrue(p.currentUnlocks().contains("aerial_redirection"));assertEquals(35,p.mastery());}
+    @Test void capstoneCannotSkipAidRooftopOrPrecisionSections(){var p=ready();precision(p);TrialRules.start(p,"aerial",300);p.rooftopImpulse=true;TrialRules.rooftop(p,310);TrialRules.start(p,"capstone",400);assertFalse(TrialRules.finish(p,410));assertFalse(TrialRules.target(p,"lane_0","ap_shot",12,411));assertTrue(TrialRules.aid(p,412));assertFalse(TrialRules.rooftop(p,413));p.rooftopImpulse=true;assertTrue(TrialRules.rooftop(p,414));for(int i=0;i<3;i++)assertTrue(TrialRules.target(p,"lane_"+i,"ap_shot",12,415+i));assertTrue(TrialRules.finish(p,420));assertEquals(50,p.mastery());assertTrue(p.currentUnlocks().contains("howitzer_impact"));assertEquals(0,p.licence);}
+    @Test void activeTrialLocksLoadoutAndQuirkChoice(){var p=ready();TrialRules.start(p,"precision",100);assertThrows(IllegalArgumentException.class,()->HeroRules.equip(p,2,"recoil_dodge",120));assertThrows(IllegalArgumentException.class,()->HeroRules.chooseReroll(p,"fake","keep",120));}
+    @Test void cancellationRetainsCompletedProgressAndDoesNotPayAReward(){var p=ready();TrialRules.start(p,"precision",100);TrialRules.target(p,"lane_0","ap_shot",12,110);TrialRules.cancel(p);assertEquals(20,p.mastery());assertEquals(4,p.schoolStage);assertEquals(0,p.credits);assertTrue(p.activeTrial.isEmpty());}
+    @Test void v1MigrationPreservesArchiveStoryBalancesAndCooldowns(){var p=ready();p.version=1;p.credits=42;p.cooldowns.put("ap_shot",900L);p.liveTokens.add("owned-token");p.offers.add("synthetic_test_quirk");p.offerIdentity="saved-offer";var restored=HeroProfile.fromJson(Catalog.JSON.toJson(p));assertEquals(4,restored.version);assertEquals(20,restored.mastery());assertEquals(4,restored.schoolStage);assertEquals(42,restored.credits);assertEquals(900L,restored.cooldowns.get("ap_shot"));assertEquals(p.offers,restored.offers);assertEquals(p.liveTokens,restored.liveTokens);restored.migrate();assertEquals(42,restored.credits);}
+}

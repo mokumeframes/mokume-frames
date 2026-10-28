@@ -1,0 +1,45 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="All Rights Reserved"
+[[mods]]
+modId="mha"
+version="0.1.0-dev"
+displayName="MHA: Rising Heroes"
+description='''Experimental development build. See the included test report for implemented and verified scope.'''
+[[mixins]]
+config="mha.client.mixins.json"
+[[dependencies.mha]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"
+side="BOTH"
+[[dependencies.mha]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.217,21.2)"
+side="BOTH"
+[[dependencies.mha]]
+modId="photon"
+type="required"
+versionRange="[2.2.9]"
+side="BOTH"
+[[dependencies.mha]]
+modId="ldlib2"
+type="required"
+versionRange="[2.2.44]"
+side="BOTH"
+[[dependencies.mha]]
+modId="playeranimator"
+type="required"
+versionRange="[2.0.4+1.21.1]"
+side="BOTH"
+[[dependencies.mha]]
+modId="bendylib"
+type="required"
+versionRange="[5.1]"
+side="CLIENT"
+[[dependencies.mha]]
+modId="geckolib"
+type="required"
+versionRange="[4.9.3]"
+side="BOTH"

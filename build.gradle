@@ -1,0 +1,53 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.148'
+}
+version = '0.1.0-dev'
+group = 'dev.risingheroes'
+base { archivesName = 'mha-rising-heroes' }
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+    withSourcesJar()
+}
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.firstdark.dev/snapshots' }
+    maven { url = 'https://maven.kosmx.dev/' }
+    maven { url = 'https://api.modrinth.com/maven' }
+}
+neoForge {
+    version = '21.1.217'
+    runs {
+        client { client(); gameDirectory = file('run/client') }
+        server { server(); programArgument '--nogui'; gameDirectory = file('run/server') }
+        gameTestServer {
+            type = 'gameTestServer'
+            gameDirectory = file(providers.gradleProperty('mhaTestDir').getOrElse('run/gametest'))
+            systemProperty 'neoforge.enabledGameTestNamespaces', 'mha'
+        }
+        configureEach {
+            logLevel = org.slf4j.event.Level.INFO
+            jvmArgument '-Xmx1536M'
+        }
+    }
+    mods { mha { sourceSet sourceSets.main } }
+}
+dependencies {
+    implementation 'com.lowdragmc.ldlib2:ldlib2-neoforge-1.21.1:2.2.44:all'
+    implementation 'com.lowdragmc.photon:photon-neoforge-1.21.1:2.2.9:all'
+    implementation 'dev.kosmx.player-anim:player-animation-lib-forge:2.0.4+1.21.1'
+    implementation 'io.github.kosmx.bendy-lib:bendy-lib-forge:5.1'
+    implementation 'maven.modrinth:geckolib:Grwn5rUB'
+    testImplementation platform('org.junit:junit-bom:5.11.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'com.google.code.gson:gson:2.10.1'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8'; options.release = 21 }
+tasks.withType(Jar).configureEach {
+    includeEmptyDirs = false
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+tasks.named('test') { useJUnitPlatform(); maxHeapSize = '512m' }
+dependencyLocking { lockAllConfigurations() }

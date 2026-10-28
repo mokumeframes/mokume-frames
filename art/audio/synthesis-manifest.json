@@ -1,0 +1,74 @@
+[
+  {
+    "event": "explosion.tell",
+    "kind": "tell",
+    "seconds": 0.2,
+    "peak_dbfs_master": -16,
+    "decoded_peak_dbfs": -15.93,
+    "seed": 271028,
+    "mono": true,
+    "sample_rate": 44100,
+    "master": "art/audio/explosion.tell.wav",
+    "runtime": "src/main/resources/assets/mha/sounds/explosion/tell.ogg"
+  },
+  {
+    "event": "explosion.charge",
+    "kind": "charge",
+    "seconds": 1.35,
+    "peak_dbfs_master": -16,
+    "decoded_peak_dbfs": -16.07,
+    "seed": 271029,
+    "mono": true,
+    "sample_rate": 44100,
+    "master": "art/audio/explosion.charge.wav",
+    "runtime": "src/main/resources/assets/mha/sounds/explosion/charge.ogg"
+  },
+  {
+    "event": "explosion.burst",
+    "kind": "burst",
+    "seconds": 0.28,
+    "peak_dbfs_master": -10,
+    "decoded_peak_dbfs": -9.49,
+    "seed": 271030,
+    "mono": true,
+    "sample_rate": 44100,
+    "master": "art/audio/explosion.burst.wav",
+    "runtime": "src/main/resources/assets/mha/sounds/explosion/burst.ogg"
+  },
+  {
+    "event": "explosion.heavy",
+    "kind": "heavy",
+    "seconds": 0.72,
+    "peak_dbfs_master": -10,
+    "decoded_peak_dbfs": -10.13,
+    "seed": 271031,
+    "mono": true,
+    "sample_rate": 44100,
+    "master": "art/audio/explosion.heavy.wav",
+    "runtime": "src/main/resources/assets/mha/sounds/explosion/heavy.ogg"
+  },
+  {
+    "event": "explosion.recoil",
+    "kind": "recoil",
+    "seconds": 0.22,
+    "peak_dbfs_master": -12,
+    "decoded_peak_dbfs": -11.7,
+    "seed": 271032,
+    "mono": true,
+    "sample_rate": 44100,
+    "master": "art/audio/explosion.recoil.wav",
+    "runtime": "src/main/resources/assets/mha/sounds/explosion/recoil.ogg"
+  },
+  {
+    "event": "ui.select",
+    "kind": "select",
+    "seconds": 0.09,
+    "peak_dbfs_master": -20,
+    "decoded_peak_dbfs": -19.92,
+    "seed": 271033,
+    "mono": true,
+    "sample_rate": 44100,
+    "master": "art/audio/ui.select.wav",
+    "runtime": "src/main/resources/assets/mha/sounds/ui/select.ogg"
+  }
+]

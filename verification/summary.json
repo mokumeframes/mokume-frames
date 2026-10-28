@@ -1,0 +1,47 @@
+{
+  "snapshot": "0.1.0-dev",
+  "packaged_at_utc": "2026-10-28T11:10:25.931517+00:00",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.217",
+  "java": 21,
+  "junit_tests": 48,
+  "junit_failures": 0,
+  "junit_suites": [
+    {
+      "name": "dev.risingheroes.client.ui.HudLayoutTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "dev.risingheroes.client.ui.MenuLayoutTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "dev.risingheroes.core.HeroRulesTest",
+      "tests": "21",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "dev.risingheroes.core.LoadoutPresetsTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "dev.risingheroes.core.TrialRulesTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0"
+    }
+  ],
+  "minecraft_required_tests_passed": 6,
+  "jar_sha256": "42314bd49292dec68c1a7d2bf721b1d9378b972c8a6141dafc0fdb7d97884a59",
+  "final_client_presentation": "Compiled; in-game visual/interaction/multiplayer checks pending",
+  "complete_master_project": false,
+  "m0_m1_acceptance_complete": false,
+  "packaged_source_rebuild_byte_identical": true
+}

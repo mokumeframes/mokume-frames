@@ -1,0 +1,26 @@
+{
+ "id":"explosion",
+ "name":"Explosion",
+ "localizedNames":["爆破 (official Japanese label)","Explosion (working English label)"],
+ "knownUsers":["Katsuki Bakugo / 爆豪勝己 — original user; later aliases omitted"],
+ "sourceMedium":"Main-series anime; manga references not yet verified for this entry",
+ "sourceWork":"My Hero Academia",
+ "continuity":"Main-series quirk. Source medium and continuity are recorded separately; no additional continuity claim is made.",
+ "firstCharacterAppearance":"Not yet verified against primary episode material.",
+ "firstDemonstration":"TV season/episode not yet verified from primary demonstration material. The episode 1 synopsis alone is not proof of a quirk demonstration.",
+ "firstNamedExplanation":"Official character page confirms the Japanese quirk label. The first named TV explanation has not been verified.",
+ "lore":"Bakugo's official character profile describes explosive, nitro-like material produced by sweat glands in his palms. The guide omits later-series identity/story details.",
+ "adaptation":"This mod turns palm explosions into a bounded pressure/mobility kit. Every resource value, cooldown, training circuit and numerical effect is a gameplay adaptation. Original move names are identified in their descriptions; canonical-name research is tracked separately.",
+ "role":"Emitter / close-to-mid-range pressure, precision and recoil traversal",
+ "resource":"Stamina and blast strain. Accepted startup pays costs and cooldown; interrupted casts do not refund them.",
+ "drawback":"Underwater casts are rejected. High strain and low stamina restrict demanding moves; neither prevents basic survival actions. Recoil does not remove collision or fall damage.",
+ "counters":["Solid cover blocks target acquisition and rays.","Predictable windup/recovery creates openings.","Armour, shields, teams and PvP policy follow the server's combat rules.","Heavy attacks consume enough strain to limit repetition."],
+ "nonCombatUtility":["Short recoil traversal and access to raised routes.","Course/rescue contributions with a support-first progression alternative.","No excavation, container duplication or destructive terrain power is advertised."],
+ "equipment":"The original Cadet suit is equipment with ordinary armour behavior. It does not assign a quirk or unlock a technique.",
+ "acquisition":"Current development starting pool: Explosion only. Creative/operator token restores earned mastery. Ordinary rerolls do not spend a token when no alternative exists.",
+ "verification":"Identity and palm-explosion principle verified from the official character profile. The named Japanese Howitzer attack is corroborated by the official episode 25 synopsis; its English localisation remains a working label. No unverified first-demonstration claim is published.",
+ "references":[
+  {"title":"Official Bakugo character profile","url":"https://heroaca.com/character/chara_group01/01-02/","supports":"Original user, Japanese quirk label and palm-explosion principle.","season":1,"warning":"The live official page contains later-series spoilers; this offline guide does not copy those details."},
+  {"title":"Official episode 25 synopsis","url":"https://heroaca.com/episodes/2nd/ep25/","supports":"Named Japanese Howitzer attack in the second anime season. This is not a claim about the quirk's first appearance.","season":2,"warning":"Includes Sports Festival story details."}
+ ]
+}

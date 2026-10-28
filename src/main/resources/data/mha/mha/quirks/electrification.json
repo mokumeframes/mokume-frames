@@ -1,0 +1,41 @@
+{
+  "id": "electrification",
+  "name": "Electrification",
+  "localizedNames": [
+    "帯電 (official Japanese label)",
+    "Electrification (working English label)"
+  ],
+  "knownUsers": [
+    "Denki Kaminari / 上鳴電気 — original user; later story details omitted"
+  ],
+  "sourceMedium": "Main-series anime; manga references not yet separately verified",
+  "sourceWork": "My Hero Academia",
+  "continuity": "Main-series quirk. No additional continuity claim is inferred from source medium.",
+  "firstCharacterAppearance": "Not yet verified against primary episode material.",
+  "firstDemonstration": "No verified TV season/episode is published for this entry yet.",
+  "firstNamedExplanation": "Japanese label verified on the official character profile; first TV explanation not yet verified.",
+  "lore": "The official profile describes bodily discharge and a temporary overload drawback above the user's tolerance.",
+  "adaptation": "The eight-action kit, resources, training requirements and numerical balance are mod adaptations. Ordinary footwork/support actions are complementary training, not new canonical powers.",
+  "role": "Disruption / aimed discharge",
+  "resource": "Stamina, charge and overload. Charge recovers; grounding lowers load.",
+  "drawback": "Underwater electrical casting is refused. Excess load creates a finite recovery period.",
+  "counters": [
+    "Separate targets and break line of sight.",
+    "Bait heavy output and punish the recharge/recovery window."
+  ],
+  "nonCombatUtility": [
+    "Controlled short disruption and supervised support exercises."
+  ],
+  "equipment": "The Cadet suit is ordinary equipment. It never assigns this quirk or grants a move. New support equipment is distinguished from the actual power.",
+  "acquisition": "Experimental development kit. Permission-checked creative assignment restores earned mastery. Field objectives and meaningful per-quirk mission practice unlock techniques; general rewards are single-claim. Server-enabled starting/reroll pools are authoritative.",
+  "verification": "Original user, Japanese label and the stated basic principle checked on the official profile on 28 October 2026. English labels are working labels; no unverified first-appearance claim is made.",
+  "references": [
+    {
+      "title": "Official character profile",
+      "url": "https://www.heroaca.com/character/chara_group01/01-11/",
+      "supports": "Original user, Japanese quirk label and basic principle only.",
+      "season": 1,
+      "warning": "The live official page contains later-series spoilers. This offline entry omits those details."
+    }
+  ]
+}
