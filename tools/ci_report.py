@@ -44,7 +44,7 @@ for name, outcome in [('mha-build.log', state['build']), ('mha-gametests.log', s
         failures = [line for line in text.splitlines() if 'failed at' in line or 'required tests failed' in line]
         if failures:
             annotation('error', '\n'.join(failures))
-if state['build'] == 'success' and (counts['tests'] < 80 or counts['failures'] or counts['errors'] or counts['skipped']):
-    raise SystemExit('Expected at least 80 passing JUnit cases with no failures, errors or skips')
-if state['engine']['outcome'] == 'success' and engine_passed < 15:
-    raise SystemExit('Expected at least 15 explicitly passing required engine cases')
+if state['build'] == 'success' and (counts['tests'] < 87 or counts['failures'] or counts['errors'] or counts['skipped']):
+    raise SystemExit('Expected at least 87 passing JUnit cases with no failures, errors or skips')
+if state['engine']['outcome'] == 'success' and engine_passed < 18:
+    raise SystemExit('Expected at least 18 explicitly passing required engine cases')

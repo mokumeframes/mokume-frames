@@ -3,7 +3,7 @@ loaderVersion="[4,)"
 license="All Rights Reserved"
 [[mods]]
 modId="mha"
-version="0.1.0-dev"
+version="0.1.1-dev"
 displayName="MHA: Rising Heroes"
 description='''Experimental development build. See the included test report for implemented and verified scope.'''
 [[mixins]]

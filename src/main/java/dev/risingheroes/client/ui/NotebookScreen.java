@@ -20,6 +20,8 @@ public final class NotebookScreen extends Screen {
     private int tab,left,top,pw,ph,scroll=0,equipSlot=0,pageScroll=0,preset=1;
     private String selected="palm_burst",query="";
     private EditBox search;
+    private HeroButton equipButton;
+    private String equipReason="";
     private final List<HeroButton> moveButtons=new ArrayList<>();
     public NotebookScreen(Screen parent,int tab){this(parent,tab,false);}
     public NotebookScreen(Screen parent,int tab,boolean reveal){this(parent,tab,reveal,"");}
@@ -39,7 +41,7 @@ public final class NotebookScreen extends Screen {
             addRenderableWidget(new HeroButton(x+2*(bw+4),bottom,bw,18,Component.literal("Quirk sources"),b->minecraft.setScreen(new QuirkIndexScreen(this)),false));
         }else if(tab==1) {
             search=new EditBox(font,x,y,Math.min(142,pw/3),18,Component.literal("Search techniques"));search.setHint(Component.literal("Search techniques"));search.setValue(query);search.setResponder(value->{query=value;scroll=0;});addRenderableWidget(search);
-            var equip=addRenderableWidget(new HeroButton(left+pw-142,bottom,130,18,Component.literal("Equip selected move"),b->{var m=ClientState.move(selected);if(m!=null){int slot=m.slot().equals("UTILITY")?4:m.slot().equals("CAPSTONE")?5:equipSlot;ClientState.send(Gameplay.EQUIP,slot,selected,"");}},true));equip.active=online&&ClientState.profile().quirk.equals(kit().id());
+            equipButton=addRenderableWidget(new HeroButton(left+pw-142,bottom,130,18,Component.literal("Equip selected move"),b->{var m=ClientState.move(selected);if(m!=null){int slot=m.slot().equals("UTILITY")?4:m.slot().equals("CAPSTONE")?5:equipSlot;ClientState.send(Gameplay.EQUIP,slot,selected,"");}},true));equipButton.active=online&&ClientState.profile().quirk.equals(kit().id());
             addRenderableWidget(new HeroButton(left+pw-270,bottom,121,18,Component.literal("Technique slot: "+(equipSlot+1)),b->{equipSlot=(equipSlot+1)%4;rebuildWidgets();},false));
             int presetW=(pw-32)/3;
             addRenderableWidget(new HeroButton(x,bottom-23,presetW,18,Component.literal("Preset "+preset),b->{preset=preset%3+1;rebuildWidgets();},false));
@@ -76,7 +78,10 @@ public final class NotebookScreen extends Screen {
             moveButtons.add(b);addRenderableWidget(b);
         }
     }
-    @Override public void tick(){if(tab==1)updateMoveButtons();}
+    @Override public void tick(){if(tab==1){updateMoveButtons();var m=ClientState.move(selected);equipReason="Join a world to equip techniques";boolean ready=false;
+        if(m!=null&&ClientState.view!=null){try{if(!ClientState.profile().quirk.equals(kit().id()))throw new IllegalArgumentException("Assign this quirk before equipping its techniques");if(!ClientPresentation.activeMove(minecraft.player.getId()).isBlank())throw new IllegalArgumentException("Finish your current action before changing equipment");int slot=m.slot().equals("UTILITY")?4:m.slot().equals("CAPSTONE")?5:equipSlot;HeroRules.equip(ClientState.profile().copy(),slot,m.id(),ClientState.now());equipReason="Ready to equip / slot "+(slot+1);ready=true;}catch(IllegalArgumentException unavailable){equipReason=unavailable.getMessage();}}
+        if(equipButton!=null)equipButton.active=ready;
+    }}
     @Override public void render(GuiGraphics g,int mx,int my,float dt) {
         Theme.background(g,width,height);g.fill(left,top,left+pw,top+ph,0xf1111b27);g.fill(left,top,left+pw,top+2,Theme.TEAL);
         g.drawString(font,font.plainSubstrByWidth(reveal?"QUIRK DISCOVERED / "+kit().name():"HERO ANALYSIS NOTEBOOK",pw-74),left+12,top+10,Theme.PAPER,false);
@@ -94,13 +99,14 @@ public final class NotebookScreen extends Screen {
             var m=ClientState.move(selected);int dx=left+Math.min(165,pw/3+22),dw=left+pw-12-dx;
             if(m!=null) {
                 g.blit(ResourceLocation.parse("mha:textures/gui/moves/"+m.id()+".png"),dx,y,20,20,0,0,24,24,24,24);
-                line(g,m.name(),dx+27,y+6,Theme.ORANGE);
+                line(g,font.plainSubstrByWidth(m.name(),Math.max(20,dw-27)),dx+27,y+6,Theme.ORANGE);
                 text(g,m.description(),dx,y+28,dw);
                 int statsY=y+(ph<270?73:84);
-                line(g,"Cost "+m.stamina()+" stamina / "+m.strain()+" resource",dx,statsY,Theme.PAPER);
+                line(g,"Cost "+m.stamina()+" stamina / "+m.strain()+" "+kit().resource(),dx,statsY,Theme.PAPER);
                 line(g,"Cooldown "+ticks(m.cooldown())+"s / range "+m.range()+" blocks",dx,statsY+13,Theme.PAPER);
                 line(g,"Damage "+m.damage()+" / "+m.startup()+"t windup",dx,statsY+26,Theme.PAPER);
                 text(g,(p.currentUnlocks().contains(m.id())?"UNLOCKED":"LOCKED / mastery "+m.mastery()+" + "+(m.trial().isEmpty()?"starter":m.trial()+" trial")),dx,statsY+43,dw);
+                text(g,equipReason,dx,statsY+67,dw);
             }
         }else if(tab==2) {
             line(g,"SCHOOL RECORD / "+(p.schoolStage==0?"APPLICANT":"ENROLLED"),x,y,Theme.TEAL);

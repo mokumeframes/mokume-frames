@@ -14,7 +14,7 @@ public final class Network {
     public static Consumer<Snapshot> snapshotReceiver = ignored -> {};
     public static Consumer<MoveCatalogue> catalogueReceiver = ignored -> {};
     public static void register(RegisterPayloadHandlersEvent event) {
-        var registrar=event.registrar("5");
+        var registrar=event.registrar("6");
         registrar.playToClient(Visual.TYPE, Visual.CODEC, (data, context) -> visualReceiver.accept(data));
         registrar.playToClient(Snapshot.TYPE, Snapshot.CODEC, (data, context) -> snapshotReceiver.accept(data));
         registrar.playToClient(MoveCatalogue.TYPE, MoveCatalogue.CODEC, (data, context) -> catalogueReceiver.accept(data));

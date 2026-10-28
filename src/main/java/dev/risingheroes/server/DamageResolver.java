@@ -43,10 +43,11 @@ public final class DamageResolver {
     public static int hit(ServerPlayer player,Move move) {
         int count=0;
         for(var target:targets(player,move)) {
-            if(target.getPersistentData().getBoolean("mha_target")){Quests.trainingHit(player,target,move);count++;continue;}
+            if(target.getPersistentData().getBoolean("mha_target")){if(!dev.risingheroes.core.MeleeCombo.owns(move.id()))Quests.trainingHit(player,target,move);count++;continue;}
             if(!UniqueQuirks.allowHit(player,target,move))continue;
             if(!target.hurt(player.damageSources().playerAttack(player),move.damage()))continue;count++;
             UniqueQuirks.landed(player,target,move);
+            if(move.id().equals("m1_kick"))target.knockback(.35,player.getX()-target.getX(),player.getZ()-target.getZ());
             if(move.id().startsWith("flame_"))target.igniteForSeconds(3);
             if(move.id().equals("breakline"))target.knockback(.7,player.getX()-target.getX(),player.getZ()-target.getZ());
             if(Set.of("stun_grenade","flashfreeze","static_net").contains(move.id())) {

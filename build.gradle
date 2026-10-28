@@ -2,7 +2,7 @@ plugins {
     id 'java-library'
     id 'net.neoforged.moddev' version '2.0.148'
 }
-version = '0.1.0-dev'
+version = '0.1.1-dev'
 group = 'dev.risingheroes'
 base { archivesName = 'mha-rising-heroes' }
 java {
@@ -50,4 +50,10 @@ tasks.withType(Jar).configureEach {
     reproducibleFileOrder = true
 }
 tasks.named('test') { useJUnitPlatform(); maxHeapSize = '512m' }
-dependencyLocking { lockAllConfigurations() }
+dependencyLocking {
+    lockAllConfigurations()
+    // Linux epoll is intentionally absent on Windows; both platforms stay strictly locked.
+    if (System.getProperty('os.name').toLowerCase(java.util.Locale.ROOT).contains('windows')) {
+        lockFile = file('gradle/platform-locks/windows.lockfile')
+    }
+}

@@ -2,7 +2,7 @@
   "version": 3,
   "name": "static_net",
   "author": "Rising Heroes project",
-  "description": "Original Electrification animation; game adaptation.",
+  "description": "Original combat choreography: anticipation, release, recoil, recovery. Camera remains free.",
   "emote": {
     "beginTick": 0,
     "endTick": 29,
@@ -12,80 +12,112 @@
     "moves": [
       {
         "tick": 0,
-        "rightArm": {
+        "easing": "easeInOutSine",
+        "leftArm": {
           "pitch": 0,
+          "yaw": 0,
           "roll": 0,
           "bend": 0,
           "axis": 0
         },
-        "leftArm": {
+        "rightArm": {
           "pitch": 0,
+          "yaw": 0,
           "roll": 0,
           "bend": 0,
           "axis": 0
         },
         "body": {
-          "pitch": 0,
-          "yaw": 0
+          "yaw": 0,
+          "pitch": 0
+        }
+      },
+      {
+        "tick": 10,
+        "easing": "easeInOutSine",
+        "body": {
+          "yaw": 0,
+          "pitch": -6
+        },
+        "leftArm": {
+          "pitch": -38,
+          "yaw": -8,
+          "roll": 12,
+          "bend": 85,
+          "axis": 0
+        },
+        "rightArm": {
+          "pitch": -38,
+          "yaw": 8,
+          "roll": -12,
+          "bend": 85,
+          "axis": 0
         }
       },
       {
         "tick": 12,
-        "easing": "easeOutQuad",
-        "rightArm": {
-          "pitch": -38.5,
-          "roll": 38.5,
-          "bend": 55,
-          "axis": 0
+        "easing": "easeOutCubic",
+        "body": {
+          "yaw": 0,
+          "pitch": 8
         },
         "leftArm": {
-          "pitch": -38.5,
-          "roll": -38.5,
-          "bend": 55,
+          "pitch": -72,
+          "yaw": -8,
+          "roll": 12,
+          "bend": 15,
           "axis": 0
         },
-        "body": {
-          "pitch": 0,
-          "yaw": 0
+        "rightArm": {
+          "pitch": -72,
+          "yaw": 8,
+          "roll": -12,
+          "bend": 15,
+          "axis": 0
         }
       },
       {
-        "tick": 13,
-        "rightArm": {
-          "pitch": -70,
-          "roll": 55,
-          "bend": 20,
-          "axis": 0
+        "tick": 26,
+        "easing": "easeInOutSine",
+        "body": {
+          "yaw": 0,
+          "pitch": 3
         },
         "leftArm": {
-          "pitch": -70,
-          "roll": -55,
-          "bend": 20,
+          "pitch": -48,
+          "yaw": -8,
+          "roll": 12,
+          "bend": 48,
           "axis": 0
         },
-        "body": {
-          "pitch": 0,
-          "yaw": 0
+        "rightArm": {
+          "pitch": -48,
+          "yaw": 8,
+          "roll": -12,
+          "bend": 48,
+          "axis": 0
         }
       },
       {
         "tick": 29,
         "easing": "easeInOutSine",
-        "rightArm": {
+        "leftArm": {
           "pitch": 0,
+          "yaw": 0,
           "roll": 0,
           "bend": 0,
           "axis": 0
         },
-        "leftArm": {
+        "rightArm": {
           "pitch": 0,
+          "yaw": 0,
           "roll": 0,
           "bend": 0,
           "axis": 0
         },
         "body": {
-          "pitch": 0,
-          "yaw": 0
+          "yaw": 0,
+          "pitch": 0
         }
       }
     ]

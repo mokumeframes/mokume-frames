@@ -2,7 +2,7 @@
   "version": 3,
   "name": "bluefire_front",
   "author": "Rising Heroes project",
-  "description": "Original Blueflame animation; game adaptation.",
+  "description": "Original combat choreography: anticipation, release, recoil, recovery. Camera remains free.",
   "emote": {
     "beginTick": 0,
     "endTick": 94,
@@ -12,99 +12,134 @@
     "moves": [
       {
         "tick": 0,
-        "rightArm": {
+        "easing": "easeInOutSine",
+        "leftArm": {
           "pitch": 0,
+          "yaw": 0,
           "roll": 0,
           "bend": 0,
           "axis": 0
         },
-        "leftArm": {
+        "rightArm": {
           "pitch": 0,
+          "yaw": 0,
           "roll": 0,
           "bend": 0,
           "axis": 0
         },
         "body": {
-          "pitch": 0,
-          "yaw": 0
+          "yaw": 0,
+          "pitch": 0
+        }
+      },
+      {
+        "tick": 28,
+        "easing": "easeInOutSine",
+        "body": {
+          "yaw": 22,
+          "pitch": -5
+        },
+        "leftArm": {
+          "pitch": -35,
+          "yaw": -8,
+          "roll": 12,
+          "bend": 60,
+          "axis": 0
+        },
+        "rightArm": {
+          "pitch": -55,
+          "yaw": 8,
+          "roll": -12,
+          "bend": 100,
+          "axis": 0
         }
       },
       {
         "tick": 30,
-        "easing": "easeOutQuad",
-        "rightArm": {
-          "pitch": -55.00000000000001,
-          "roll": 19.599999999999998,
+        "easing": "easeOutCubic",
+        "body": {
+          "yaw": -24,
+          "pitch": 5
+        },
+        "leftArm": {
+          "pitch": -48,
+          "yaw": -8,
+          "roll": 12,
           "bend": 55,
           "axis": 0
         },
+        "rightArm": {
+          "pitch": -100,
+          "yaw": 8,
+          "roll": -12,
+          "bend": 4,
+          "axis": 0
+        }
+      },
+      {
+        "tick": 61,
+        "easing": "easeInOutSine",
+        "body": {
+          "yaw": -24,
+          "pitch": 5
+        },
         "leftArm": {
-          "pitch": -55.00000000000001,
-          "roll": -19.599999999999998,
+          "pitch": -48,
+          "yaw": -8,
+          "roll": 12,
           "bend": 55,
           "axis": 0
         },
-        "body": {
-          "pitch": -8,
-          "yaw": 0
+        "rightArm": {
+          "pitch": -100,
+          "yaw": 8,
+          "roll": -12,
+          "bend": 4,
+          "axis": 0
         }
       },
       {
-        "tick": 31,
-        "rightArm": {
-          "pitch": -100,
-          "roll": 28,
-          "bend": 8,
-          "axis": 0
+        "tick": 91,
+        "easing": "easeInOutSine",
+        "body": {
+          "yaw": -10,
+          "pitch": 8
         },
         "leftArm": {
-          "pitch": -100,
-          "roll": -28,
-          "bend": 8,
+          "pitch": -40,
+          "yaw": -8,
+          "roll": 12,
+          "bend": 58,
           "axis": 0
         },
-        "body": {
-          "pitch": 0,
-          "yaw": 0
-        }
-      },
-      {
-        "tick": 62,
         "rightArm": {
-          "pitch": -100,
-          "roll": 28,
-          "bend": 8,
+          "pitch": -78,
+          "yaw": 8,
+          "roll": -12,
+          "bend": 25,
           "axis": 0
-        },
-        "leftArm": {
-          "pitch": -100,
-          "roll": -28,
-          "bend": 8,
-          "axis": 0
-        },
-        "body": {
-          "pitch": 0,
-          "yaw": 0
         }
       },
       {
         "tick": 94,
         "easing": "easeInOutSine",
-        "rightArm": {
+        "leftArm": {
           "pitch": 0,
+          "yaw": 0,
           "roll": 0,
           "bend": 0,
           "axis": 0
         },
-        "leftArm": {
+        "rightArm": {
           "pitch": 0,
+          "yaw": 0,
           "roll": 0,
           "bend": 0,
           "axis": 0
         },
         "body": {
-          "pitch": 0,
-          "yaw": 0
+          "yaw": 0,
+          "pitch": 0
         }
       }
     ]
