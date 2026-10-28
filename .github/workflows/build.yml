@@ -1,25 +1,80 @@
-name: Build
+name: Build mod JAR
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          fetch-depth: 0
-          fetch-tags: true
+          persist-credentials: false
 
-      - name: Setup JDK 21
-        uses: actions/setup-java@v4
+      - name: Set up Java 21
+        uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
         with:
           java-version: '21'
-          distribution: 'temurin'
+          distribution: temurin
 
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
+      - name: Compile, run unit tests and build JARs
+        id: compile
+        run: |
+          mkdir -p build
+          bash ./gradlew --no-daemon --console=plain build 2>&1 | tee build/mha-build.log
 
-      - name: Build with Gradle
-        run: ./gradlew build
+      - name: Run headless Minecraft tests
+        id: engine
+        run: |
+          bash ./gradlew --no-daemon --console=plain runGameTestServer "-PmhaTestDir=run/gametest-actions-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" 2>&1 | tee build/mha-gametests.log
+
+      - name: Summarize verification
+        if: ${{ always() }}
+        env:
+          COMPILE_OUTCOME: ${{ steps.compile.outcome }}
+          ENGINE_OUTCOME: ${{ steps.engine.outcome }}
+        run: python3 tools/ci_report.py
+
+      - name: Prepare checkpoint files
+        run: |
+          cp docs/TRYING_THE_MOD.md build/libs/TRYING_THE_MOD.md
+          cp build/checkpoint-verification.json build/libs/checkpoint-verification.json
+          sha256sum build/libs/*.jar > build/libs/SHA256SUMS.txt
+
+      - name: Upload verified experimental mod and source JARs
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: mha-rising-heroes-jars-${{ github.sha }}
+          path: |
+            build/libs/*.jar
+            build/libs/SHA256SUMS.txt
+            build/libs/TRYING_THE_MOD.md
+            build/libs/checkpoint-verification.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Upload verification evidence
+        if: ${{ always() }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: mha-verification-${{ github.sha }}
+          path: |
+            build/test-results/test/**
+            build/reports/tests/test/**
+            build/reports/dependency-verification/**
+            build/mha-build.log
+            build/mha-gametests.log
+            build/checkpoint-verification.json
+          if-no-files-found: warn
+          retention-days: 30
