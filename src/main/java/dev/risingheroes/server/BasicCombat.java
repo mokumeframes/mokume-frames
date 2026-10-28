@@ -21,7 +21,7 @@ public final class BasicCombat {
     public static boolean active(ServerPlayer p){return ACTIVE.containsKey(p.getUUID());}
     public static boolean eligible(ServerPlayer p){return p.isAlive()&&!p.isSpectator()&&p.getMainHandItem().isEmpty()&&p.getOffhandItem().isEmpty()&&!p.isUsingItem()&&!p.isPassenger()&&!p.isSwimming()&&!p.isFallFlying()&&!p.isSleeping()&&!p.isShiftKeyDown();}
     @SubscribeEvent public static void attack(AttackEntityEvent e){
-        if(e.getEntity() instanceof ServerPlayer p&&eligible(p)){e.setCanceled(true);try{start(p);}catch(IllegalArgumentException ignored){}}
+        if(e.getEntity() instanceof ServerPlayer p&&e.getTarget() instanceof net.minecraft.world.entity.LivingEntity&&eligible(p)){e.setCanceled(true);try{start(p);}catch(IllegalArgumentException ignored){}}
     }
     public static void start(ServerPlayer p){
         if(!eligible(p)||Gameplay.casting(p)||active(p))throw new IllegalArgumentException("Finish your current action before fighting");

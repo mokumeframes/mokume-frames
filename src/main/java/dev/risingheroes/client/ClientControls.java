@@ -16,6 +16,7 @@ public final class ClientControls {
         var mc=Minecraft.getInstance();var p=mc.player;
         if(!e.isAttack()||mc.screen!=null||p==null||ClientState.view==null||p.isSpectator()||!p.getMainHandItem().isEmpty()||!p.getOffhandItem().isEmpty()||p.isUsingItem()||p.isPassenger()||p.isSwimming()||p.isFallFlying()||p.isShiftKeyDown())return;
         if(mc.hitResult!=null&&mc.hitResult.getType()==net.minecraft.world.phys.HitResult.Type.BLOCK)return;
+        if(mc.hitResult instanceof net.minecraft.world.phys.EntityHitResult hit&&!(hit.getEntity() instanceof net.minecraft.world.entity.LivingEntity))return;
         e.setCanceled(true);e.setSwingHand(false);ClientState.send(Gameplay.MELEE,0,"","");
     }
     public static final KeyMapping BOOK=new KeyMapping("key.mha.notebook",InputConstants.Type.KEYSYM,GLFW.GLFW_KEY_J,"key.categories.mha");

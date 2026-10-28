@@ -18,6 +18,9 @@ public final class MeleeTests {
     private record Fixture(ServerPlayer player,LivingEntity target,int x){}
     private static Fixture fixture(GameTestHelper h,int x){
         var p=TestPlayers.survival(h);Gameplay.ledger(p).commit(p.getUUID(),v->HeroRules.assign(v,"explosion"));
+        // Onboarding gives the notebook into the selected hotbar slot; M1 requires empty hands.
+        p.setItemInHand(net.minecraft.world.InteractionHand.MAIN_HAND,net.minecraft.world.item.ItemStack.EMPTY);
+        p.setItemInHand(net.minecraft.world.InteractionHand.OFF_HAND,net.minecraft.world.item.ItemStack.EMPTY);
         var level=h.getLevel();level.getChunkSource().addRegionTicket(TICKET,new ChunkPos(new BlockPos(x+8,0,8008)),3,p.getUUID());
         for(int xx=x;xx<x+16;xx++)for(int z=8000;z<8016;z++)level.setBlock(new BlockPos(xx,0,z),Blocks.SMOOTH_STONE.defaultBlockState(),2);
         p.setPos(x+2.5,1,8000.5);p.setNoGravity(true);p.setYRot(0);p.setXRot(0);p.setOnGround(true);
