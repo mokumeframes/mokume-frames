@@ -9,8 +9,8 @@ public record HudLayout(int x,int y,int width,int height,int cell,float scale,bo
     public static HudLayout at(int viewportWidth,int viewportHeight,double requestedScale,double anchorX,double anchorY,boolean compact,boolean numbers,int bottomInset) {
         if(viewportWidth<160||viewportHeight<40||bottomInset<0||!Double.isFinite(requestedScale)||!Double.isFinite(anchorX)||!Double.isFinite(anchorY))throw new IllegalArgumentException("Invalid HUD viewport or settings");
         bottomInset=Math.min(bottomInset,viewportHeight-2*MARGIN-20);
-        int cell=compact?23:29;
-        int logicalWidth=3*cell+6,logicalHeight=11+2*(cell+3)+15+(numbers?11:0);
+        int cell=compact?34:38;
+        int logicalWidth=3*cell+16,logicalHeight=22+2*(cell+4)+13+3*(numbers?16:7)+5;
         float scale=(float)Math.min(Math.max(.6,Math.min(1.5,requestedScale)),Math.min((viewportWidth-2.0*MARGIN)/logicalWidth,(viewportHeight-bottomInset-2.0*MARGIN)/logicalHeight));
         int width=(int)Math.ceil(logicalWidth*scale),height=(int)Math.ceil(logicalHeight*scale);
         int x=MARGIN+(int)Math.round(clamp(anchorX)*(viewportWidth-2*MARGIN-width));

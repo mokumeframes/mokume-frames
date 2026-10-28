@@ -2,7 +2,7 @@
   "version": 3,
   "name": "inertial_jab",
   "author": "Rising Heroes project",
-  "description": "Original Kinetic Reservoir animation; game adaptation.",
+  "description": "Original combat choreography: anticipation, release, recoil, recovery. Camera remains free.",
   "emote": {
     "beginTick": 0,
     "endTick": 16,
@@ -12,80 +12,112 @@
     "moves": [
       {
         "tick": 0,
-        "rightArm": {
+        "easing": "easeInOutSine",
+        "leftArm": {
           "pitch": 0,
+          "yaw": 0,
           "roll": 0,
           "bend": 0,
           "axis": 0
         },
-        "leftArm": {
+        "rightArm": {
           "pitch": 0,
+          "yaw": 0,
           "roll": 0,
           "bend": 0,
           "axis": 0
         },
         "body": {
-          "pitch": 0,
-          "yaw": 0
+          "yaw": 0,
+          "pitch": 0
+        }
+      },
+      {
+        "tick": 3,
+        "easing": "easeInOutSine",
+        "body": {
+          "yaw": 16,
+          "pitch": 12
+        },
+        "leftArm": {
+          "pitch": -58,
+          "yaw": -8,
+          "roll": 12,
+          "bend": 95,
+          "axis": 0
+        },
+        "rightArm": {
+          "pitch": -60,
+          "yaw": 8,
+          "roll": -12,
+          "bend": 95,
+          "axis": 0
         }
       },
       {
         "tick": 5,
-        "easing": "easeOutQuad",
-        "rightArm": {
-          "pitch": -58.300000000000004,
-          "roll": -3.5,
-          "bend": 55,
-          "axis": 0
+        "easing": "easeOutCubic",
+        "body": {
+          "yaw": -30,
+          "pitch": 16
         },
         "leftArm": {
-          "pitch": -19.25,
-          "roll": 10.5,
-          "bend": 55,
+          "pitch": -68,
+          "yaw": -8,
+          "roll": 12,
+          "bend": 65,
           "axis": 0
         },
-        "body": {
-          "pitch": 0,
-          "yaw": -10
+        "rightArm": {
+          "pitch": -100,
+          "yaw": 8,
+          "roll": -12,
+          "bend": 4,
+          "axis": 0
         }
       },
       {
-        "tick": 6,
-        "rightArm": {
-          "pitch": -106,
-          "roll": -5,
-          "bend": 20,
-          "axis": 0
+        "tick": 13,
+        "easing": "easeInOutSine",
+        "body": {
+          "yaw": -12,
+          "pitch": 6
         },
         "leftArm": {
-          "pitch": -35,
-          "roll": 15,
-          "bend": 20,
+          "pitch": -50,
+          "yaw": -8,
+          "roll": 12,
+          "bend": 75,
           "axis": 0
         },
-        "body": {
-          "pitch": 0,
-          "yaw": 10
+        "rightArm": {
+          "pitch": -65,
+          "yaw": 8,
+          "roll": -12,
+          "bend": 45,
+          "axis": 0
         }
       },
       {
         "tick": 16,
         "easing": "easeInOutSine",
-        "rightArm": {
+        "leftArm": {
           "pitch": 0,
+          "yaw": 0,
           "roll": 0,
           "bend": 0,
           "axis": 0
         },
-        "leftArm": {
+        "rightArm": {
           "pitch": 0,
+          "yaw": 0,
           "roll": 0,
           "bend": 0,
           "axis": 0
         },
         "body": {
-          "pitch": 0,
-          "yaw": 0
+          "yaw": 0,
+          "pitch": 0
         }
       }
     ]

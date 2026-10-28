@@ -20,7 +20,7 @@ import net.neoforged.neoforge.network.PacketDistributor;
 @EventBusSubscriber(modid="mha")
 public final class Gameplay {
     public static final int CAST=0,EQUIP=1,REROLL=2,CHOOSE=3,ACK_REVEAL=4,TRAVEL=5,RETURN=6,BOOKMARK=7,EXCHANGE=8,TRIAL_START=9,TRIAL_CANCEL=10,PRESET_SAVE=11,PRESET_LOAD=12;
-    public static final int MISSION_START=13,MISSION_LEAVE=14,MISSION_DECISION=15;
+    public static final int MISSION_START=13,MISSION_LEAVE=14,MISSION_DECISION=15,MELEE=16;
     public record ClientView(HeroProfile profile,long tick,String open,String objective,List<String> pool,String catalogue) {}
     private record Cast(Move move,long start,long identity,ResourceKey<Level> dimension) {}
     private static final class Session {long sequence=-1,lastAction=-100,lastError=-100;String catalogue="";}
@@ -34,17 +34,18 @@ public final class Gameplay {
     private static final Map<UUID,Cast> CASTS=new HashMap<>();
     private static final Map<UUID,Session> SESSIONS=new HashMap<>();
     private static final Map<UUID,Set<UUID>> OBSERVERS=new HashMap<>();
-    private static void visual(ServerPlayer actor,Network.Visual packet) {
+    public static void visual(ServerPlayer actor,Network.Visual packet) {
         Set<UUID> recipients=new HashSet<>(OBSERVERS.getOrDefault(actor.getUUID(),Set.of()));recipients.add(actor.getUUID());
         for(UUID id:recipients){var player=actor.server.getPlayerList().getPlayer(id);if(player!=null&&player.level()==actor.level()&&player.connection.hasChannel(Network.Visual.TYPE))PacketDistributor.sendToPlayer(player,packet);}
     }
     @SubscribeEvent public static void tracking(PlayerEvent.StartTracking event) {
         if(!(event.getEntity() instanceof ServerPlayer observer)||!(event.getTarget() instanceof ServerPlayer actor)||!observer.connection.hasChannel(Network.Visual.TYPE))return;
         OBSERVERS.computeIfAbsent(actor.getUUID(),id->new HashSet<>()).add(observer.getUUID());var cast=CASTS.get(actor.getUUID());
+        BasicCombat.catchUp(actor,observer);
         if(cast!=null){long age=now(actor)-cast.start;if(age>=0&&age<cast.move.startup()+cast.move.active()+cast.move.recovery())PacketDistributor.sendToPlayer(observer,new Network.Visual(actor.getId(),cast.move.id(),cast.identity,3,(int)age));}
     }
     @SubscribeEvent public static void untracking(PlayerEvent.StopTracking event){if(event.getTarget() instanceof ServerPlayer actor){var set=OBSERVERS.get(actor.getUUID());if(set!=null)set.remove(event.getEntity().getUUID());}}
-    @SubscribeEvent public static void stopped(ServerStoppedEvent e){CASTS.clear();SESSIONS.clear();OBSERVERS.clear();UniqueQuirks.clearAll();Campus.clearRuntime();Quests.clearRuntime();Missions.clearRuntime();}
+    @SubscribeEvent public static void stopped(ServerStoppedEvent e){CASTS.clear();SESSIONS.clear();OBSERVERS.clear();BasicCombat.clear();UniqueQuirks.clearAll();Campus.clearRuntime();Quests.clearRuntime();Missions.clearRuntime();}
     public static HeroLedger ledger(ServerPlayer p){return HeroLedger.get(p.server);}
     public static HeroProfile profile(ServerPlayer p){return ledger(p).profile(p.getUUID());}
     public static long now(ServerPlayer p){return p.server.overworld().getGameTime();}
@@ -81,6 +82,7 @@ public final class Gameplay {
         }
     }
     public static void cancel(ServerPlayer p) {
+        BasicCombat.cancel(p);
         var cast=CASTS.remove(p.getUUID());
         if(cast!=null)visual(p,new Network.Visual(p.getId(),cast.move.id(),cast.identity,2));
     }
@@ -91,6 +93,7 @@ public final class Gameplay {
         try {
             if(!p.isAlive()||p.isSpectator())throw new IllegalArgumentException("This action requires a living player");
             switch(action.operation()) {
+                case MELEE -> BasicCombat.start(p);
                 case CAST -> cast(p,action.slot());
                 case EQUIP -> {if(CASTS.containsKey(p.getUUID()))throw new IllegalArgumentException("Cannot equip during a cast");ledger(p).commit(p.getUUID(),v->HeroRules.equip(v,action.slot(),action.argument(),now));}
                 case REROLL -> {
@@ -119,6 +122,7 @@ public final class Gameplay {
     }
     public static void error(ServerPlayer p,String message){p.displayClientMessage(Component.literal(message==null?"Action unavailable":message).withStyle(net.minecraft.ChatFormatting.GOLD),true);}
     public static void cast(ServerPlayer p,int slot) {
+        if(BasicCombat.active(p))throw new IllegalArgumentException("Finish your strike before casting");
         var holder=new Move[1];long time=now(p);
         if(slot<0||slot>=6)throw new IllegalArgumentException("Invalid slot");String id=profile(p).slots.get(slot);if(!id.isBlank())UniqueQuirks.preflight(p,Catalog.move(id));
         ledger(p).commit(p.getUUID(),data->holder[0]=HeroRules.reserveCast(data,slot,time,CASTS.containsKey(p.getUUID()),!p.onGround(),p.isUnderWater()));
@@ -127,12 +131,14 @@ public final class Gameplay {
         visual(p,new Network.Visual(p.getId(),move.id(),identity,0));
     }
     public static void pulse(ServerPlayer p,Move move){if(DamageResolver.hit(p,move)>0)ledger(p).commit(p.getUUID(),v->v.combatUntil=now(p)+100);}
+    public static boolean casting(ServerPlayer p){return CASTS.containsKey(p.getUUID());}
     @SubscribeEvent public static void tick(ServerTickEvent.Post event) {
         long time=event.getServer().overworld().getGameTime();
         Campus.tick(event.getServer());
         Missions.tick(event.getServer());
         TemporaryConstructs.tick(event.getServer());
         for(var p:event.getServer().getPlayerList().getPlayers()) {
+            BasicCombat.tick(p);
             QuirkRuntime.tick(p);
             var data=profile(p);var cast=CASTS.get(p.getUUID());
             if(cast!=null) {
@@ -141,7 +147,7 @@ public final class Gameplay {
                 if(age==m.startup()||m.shape().equals("VOLLEY")&&(age==m.startup()+4||age==m.startup()+8))activate(p,cast);
                 QuirkRuntime.sustain(p,m,age);
                 if(age>=m.startup()+m.active()+m.recovery())cancel(p);
-            }else if(time>=data.exertionUntil&&p.isAlive()) {
+            }else if(!BasicCombat.active(p)&&time>=data.exertionUntil&&p.isAlive()) {
                 data.stamina=Math.min(100,data.stamina+.32);QuirkResources.recover(data);
             }
             if(time%5==0)Quests.tick(p);

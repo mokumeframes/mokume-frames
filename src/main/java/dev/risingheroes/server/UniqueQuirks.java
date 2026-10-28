@@ -41,6 +41,7 @@ public final class UniqueQuirks {
         if(!marked(p,target))return false;SHADOWS.get(p.getUUID()).marks.remove(target.getUUID());return true;
     }
     public static void landed(ServerPlayer p,LivingEntity target,Move m) {
+        if(MeleeCombo.owns(m.id()))return;
         long now=Gameplay.now(p);
         if(m.id().equals("shadow_lash")){var state=SHADOWS.computeIfAbsent(p.getUUID(),id->new Shadow());state.marks.remove(target.getUUID());while(state.marks.size()>=4)state.marks.remove(state.marks.keySet().iterator().next());state.marks.put(target.getUUID(),now+120);}
         if(m.id().equals("shadow_reel")){var delta=p.position().subtract(target.position()).multiply(1,0,1);if(delta.lengthSqr()>2.25){target.setDeltaMovement(delta.normalize().scale(target.getMaxHealth()>40?.12:.45).add(0,.08,0));target.hurtMarked=true;}}

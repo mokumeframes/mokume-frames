@@ -14,6 +14,7 @@ public final class CastAudio {
     private record Cue(long identity,Entity entity,EntityBoundSoundInstance sound,long expiry) {}
     private static final Map<Integer,Cue> CUES=new HashMap<>();
     public static void receive(Network.Visual msg,Entity entity) {
+        if(dev.risingheroes.core.MeleeCombo.owns(msg.move()))return;
         var mc=Minecraft.getInstance();var old=CUES.get(msg.entity());
         if(msg.phase()!=0) {
             if(old!=null&&old.identity()==msg.identity()){mc.getSoundManager().stop(old.sound());CUES.remove(msg.entity());}
